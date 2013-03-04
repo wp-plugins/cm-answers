@@ -1,0 +1,11 @@
+<style type="text/css">
+    .subsubsub li+li:before {content:'| ';}
+</style>
+<span id="CMDM_admin_nav">
+<ul class="subsubsub">
+    <?php foreach ($submenus as $menu): ?>
+    <li><a href="<?php echo $menu['link']; ?>" <?php echo ($menu['current'])?'class="current"':''; ?>><?php echo $menu['title']; ?></a></li>
+    <?php endforeach; ?>
+</ul>
+<br class="clear" />
+</span>

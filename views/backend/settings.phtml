@@ -1,0 +1,100 @@
+<p class="clear">
+    <?php
+    if (!empty($messages)):
+        foreach ($messages as $message):
+            ?><div class="updated"><p><?php echo $message; ?></p></div><?php
+    endforeach;
+endif;
+    ?>
+<style>
+    #cm-answers-settings-form table {border-spacing:0;}
+    #cm-answers-settings-form tr td, #cm-answers-settings-form tr th {padding:10px; border-bottom: solid 1px #ccc;}
+</style>
+<form method="post" enctype="multipart/form-data" id="cm-answers-settings-form">
+    <h3>General Settings:</h3>
+    <p>You can add "My Questions" and "My Answers" profile views per user anywhere on the site by using shortcodes: [cma-my-questions] and [cma-my-answers]</p>
+    <table>
+         <tr valign="top">
+            <th scope="row" valign="top" align="left" >Enable ratings for answers:</th>
+            <td ><input type="radio" name="ratings" id="ratings_0" value="0" <?php if (!$ratings)
+        echo 'checked="checked"'; ?>/><label for="ratings_0"> No</label> &nbsp; <input type="radio" name="ratings" id="ratings_1" value="1" <?php if ($ratings)
+        echo 'checked="checked"'; ?>/><label for="ratings_1"> Yes</label></td>
+            <td>If enabled, users will be able to rate answers</td>
+        </tr>
+                        <tr valign="top">
+            <th scope="row" valign="top" align="left" >Enable negative ratings:</th>
+            <td ><input type="radio" name="negative_ratings" id="negative_ratings_0" value="0" <?php if (!$negativeRatings)
+        echo 'checked="checked"'; ?>/><label for="negative_ratings_0"> No</label> &nbsp; <input type="radio" name="negative_ratings" id="negative_ratings_1" value="1" <?php if ($negativeRatings)
+        echo 'checked="checked"'; ?>/><label for="negative_ratings_1"> Yes</label></td>
+            <td>If enabled, users will be able to give "thumbs down" for an answer. If previous settings is disabled, this will be ignored.</td>
+        </tr>
+        <tr valign="top">
+            <th scope="row" valign="top" align="left" >On questions list in "votes" box show:</th>
+            <td ><input type="radio" name="votes_mode" id="votes_mode_<?php echo CMA_AnswerThread::VOTES_MODE_COUNT; ?>" value="<?php echo CMA_AnswerThread::VOTES_MODE_COUNT; ?>" <?php if ($votesMode == CMA_AnswerThread::VOTES_MODE_COUNT)
+        echo 'checked="checked"'; ?>/><label for="votes_mode_<?php echo CMA_AnswerThread::VOTES_MODE_COUNT; ?>"> Total number of votes of its answers</label><br /><br />
+                <input type="radio" name="votes_mode" id="votes_mode_<?php echo CMA_AnswerThread::VOTES_MODE_HIGHEST; ?>" value="<?php echo CMA_AnswerThread::VOTES_MODE_HIGHEST; ?>" <?php if ($votesMode == CMA_AnswerThread::VOTES_MODE_HIGHEST)
+        echo 'checked="checked"'; ?>/><label for="votes_mode_<?php echo CMA_AnswerThread::VOTES_MODE_HIGHEST; ?>"> Rating of the best answer</label></td>
+            <td>If ratings are disabled, this setting will be ignored.</td>
+        </tr>
+               
+        <tr valign="top">
+            <th scope="row" valign="middle" align="left" >Auto-approve new questions:</th>
+            <td ><input type="radio" name="questions_auto_approve" id="questions_auto_approve_0" value="0" <?php if (!$questionAutoApproved)
+        echo 'checked="checked"'; ?>/><label for="questions_auto_approve_0"> No</label> &nbsp; <input type="radio" name="questions_auto_approve" id="questions_auto_approve_1" value="1" <?php if ($questionAutoApproved)
+        echo 'checked="checked"'; ?>/><label for="questions_auto_approve_1"> Yes</label></td>
+            <td></td>
+        </tr>
+        <tr valign="top">
+            <th scope="row" valign="middle" align="left" >Auto-approve answers:</th>
+            <td ><input type="radio" name="answers_auto_approve" id="answers_auto_approve_0" value="0" <?php if (!$answerAutoApproved)
+        echo 'checked="checked"'; ?>/><label for="answers_auto_approve_0"> No</label> &nbsp; <input type="radio" name="answers_auto_approve" id="answers_auto_approve_1" value="1" <?php if ($answerAutoApproved)
+        echo 'checked="checked"'; ?>/><label for="answers_auto_approve_1"> Yes</label></td>
+            <td></td>
+        </tr>
+
+        <tr valign="top">
+            <th scope="row" valign="middle" align="left" >Add "Answers" to WP Nav Menu:</th>
+            <td ><input type="radio" name="add_menu" id="add_menu_0" value="0" <?php if (!$addMenu)
+        echo 'checked="checked"'; ?>/><label for="add_menu_0"> No</label> &nbsp; <input type="radio" name="add_menu" id="add_menu_1" value="1" <?php if ($addMenu)
+        echo 'checked="checked"'; ?>/><label for="add_menu_1"> Yes</label></td>
+            <td>You need to have "wp_nav_menu" trigger in your template</td>
+        </tr>
+    </table>
+        <h3>Notifications:</h3>
+        <table>
+         <tr valign="top">
+            <th scope="row" valign="middle" align="left" >Notify about new questions:</th>
+            <td ><input type="text" size="60" name="notification_new_questions" value="<?php echo esc_attr($notificationNewQuestions); ?>" placeholder="Example: email@address.com, name@otheraddress.com"/></td>
+            <td>Separate e-mail addresses by commas or leave empty to disable.</td>
+        </tr>
+        <tr valign="top">
+            <th scope="row" valign="middle" align="left" >New question notification title:</th>
+            <td ><input type="text" size="60" name="new_question_notification_title" value="<?php echo esc_attr($newQuestionNotificationTitle); ?>" /></td>
+            <td></td>
+        </tr>
+        <tr valign="top">
+            <th scope="row" valign="top" align="left" >New question notification content:</th>
+            <td ><textarea cols="60" rows="5" name="new_question_notification_content"><?php echo $newQuestionNotificationContent; ?></textarea></td>
+            <td><em>[blogname]</em> - Name of the site<br />
+                <em>[author]</em> - Author of the question<br />
+                <em>[question_title]</em> - Title of the question<br />
+                <em>[question_status]</em> - Approval status of the question (pending, approved)<br />
+                <em>[question_link]</em> - Link to the new question</td>
+        </tr>
+        <tr valign="top">
+            <th scope="row" valign="middle" align="left" >New answer notification title:</th>
+            <td ><input type="text" size="60" name="notification_title" value="<?php echo esc_attr($notificationTitle); ?>" /></td>
+            <td></td>
+        </tr>
+        <tr valign="top">
+            <th scope="row" valign="top" align="left" >New answer notification content:</th>
+            <td ><textarea cols="60" rows="5" name="notification_content"><?php echo $notificationContent; ?></textarea></td>
+            <td><em>[blogname]</em> - Name of the site<br />
+                <em>[question_title]</em> - Title of the question<br />
+                <em>[comment_link]</em> - Link to the new answer</td>
+        </tr>
+    </table>
+
+    <input type="submit" class="button" value="Update" />
+</form>
+</p>
