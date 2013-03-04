@@ -13,11 +13,17 @@ Allow users to post questions and answers in stackoverflow style
 
 Question & Answer system for WordPress that allows customization of the system look&feel.
 - Includes views count
+
 - Includes answers count
+
 - Admin can moderate question & answers and can receive email notifications
+
 - Users can receive notifications once answering a question on followup
+
 - Sorting option in question and answer page
+
 - Templet can be easily customized
+
 
 **More About this Plugin**
 	
@@ -51,10 +57,10 @@ In your template create a directory "CMA". Inside you can place a structure simi
 
 == Screenshots ==
 
-1. CM-Answers Setting page
-2. CM-Answers Setting notification section 
-3. Questions Page
-4. Answer Page
+1. Setting page.
+2. Setting notification section.
+3. Answer Page.
+4. Questions Page.
 
 
 == Changelog ==
