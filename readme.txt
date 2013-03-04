@@ -12,17 +12,17 @@ Allow users to post questions and answers in stackoverflow style
 == Description ==
 
 Question & Answer system for WordPress that allows customization of the system look&feel.
-- Includes views count
+* Includes views count
 
-- Includes answers count
+* Includes answers count
 
-- Admin can moderate question & answers and can receive email notifications
+* Admin can moderate question & answers and can receive email notifications
 
-- Users can receive notifications once answering a question on followup
+* Users can receive notifications once answering a question on followup
 
-- Sorting option in question and answer page
+* Sorting option in question and answer page
 
-- Templet can be easily customized
+* Templet can be easily customized
 
 
 **More About this Plugin**
