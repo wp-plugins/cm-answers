@@ -12,6 +12,7 @@ Allow users to post questions and answers in stackoverflow style
 == Description ==
 
 Question & Answer system for WordPress that allows customization of the system look&feel.
+
 * Includes views count
 
 * Includes answers count
@@ -22,7 +23,9 @@ Question & Answer system for WordPress that allows customization of the system l
 
 * Sorting option in question and answer page
 
-* Templet can be easily customized
+* Templet can be easily customized [CreativeMinds Website](http://www.cminds.com/answers/).
+
+* Basic demo [View mode only](http://www.cminds.com/answers/).
 
 
 **More About this Plugin**
