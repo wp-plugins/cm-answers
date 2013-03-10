@@ -23,9 +23,11 @@ Question & Answer system for WordPress that allows customization of the system l
 
 * Sorting option in question and answer page
 
-* Templet can be easily customized [CreativeMinds Website](http://www.cminds.com/answers/).
+* Templet can be easily customized 
 
-* Basic demo [View mode only](http://www.cminds.com/answers/).
+**Demo**
+
+* Basic demo [Read Only mode](http://www.cminds.com/answers/).
 
 
 **More About this Plugin**
