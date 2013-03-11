@@ -7,11 +7,11 @@ Requires at least: 3.2
 Tested up to: 3.5
 Stable tag: 1.0
 
-Allow users to post questions and answers in stackoverflow style
+Allow users to post questions and answers (Q&A) in stackoverflow style
 
 == Description ==
 
-Question & Answer system for WordPress that allows customization of the system look&feel.
+Free Question & Answer system for WordPress that allows customization of the system look&feel.
 
 * Includes views count
 
