@@ -11,7 +11,7 @@ Allow users to post questions and answers (Q&A) in stackoverflow style
 
 == Description ==
 
-Free Question & Answer system for WordPress that allows customization of the system look&feel.
+Free Question & Answer forum for WordPress that allows customization of the system look&feel.
 
 * Includes views count
 
