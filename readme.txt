@@ -60,8 +60,8 @@ Note: You must have a call to wp_head() in your template in order for the JS plu
 The template file used to display the 
 Cm-Answers  is located in wp-content/plugins/cm-answers/views/frontend To modify it, do two things:
 
-    Create a folder called CMA inside of your currently active theme’s directory.
-    Copy All php files including folders to the new folder created in 1 in the same structure.
+- Create a folder called CMA inside of your current active theme’s directory.
+-Copy All PHP files including folders to the new folder created in 1 in the same structure.
 
 Once you have created the CMA directory and copied the files over, 
 you can make any change you wish to the files and your changes will be reflected in the way cm-answers looks.
