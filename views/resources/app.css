@@ -38,7 +38,7 @@ table.cma-thread-list td.cma-thread-summary {padding:10px 5px;vertical-align:top
 .cma-form-container {margin-top:10px;}
 .cma-form-container h5 {font-weight:bold;font-size:18px;}
 .cma-form-notes {display:block;float:right;font-size:11px;margin:0;border:solid 1px #ccc; padding:5px 5px 5px 20px;list-style-type:square;line-height:1.5em;}
-.cma-form-container input[type=text], .cma-form-container textarea {width:365px;}
+.cma-form-container input[type=text], .cma-form-container textarea {width:365px;margin-top:0;}
 table.cma-answers-list {width:100%; line-height:1.5em;}
 table.cma-answers-list td {border-bottom:solid 1px #ccc; padding:10px 0;}
 td.cma-answer-content {vertical-align:top;}

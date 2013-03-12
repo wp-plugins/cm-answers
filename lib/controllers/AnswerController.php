@@ -161,6 +161,7 @@ class CMA_AnswerController extends CMA_BaseController {
                 foreach ((array) $messages as $message) {
                     self::_addMessage(self::MESSAGE_ERROR, $message);
                 }
+                wp_redirect(get_post_type_archive_link(CMA_AnswerThread::POST_TYPE), 303);
             } else {
                 $autoApprove = CMA_AnswerThread::isQuestionAutoApproved();
                 if ($autoApprove) {

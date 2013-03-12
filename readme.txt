@@ -5,7 +5,7 @@ Donate link: http://www.cminds.com/plugins
 Tags: answers, forum, questions, comments, question and answer, forum, q&a, list, stackoverflow, splunkbase
 Requires at least: 3.2
 Tested up to: 3.5
-Stable tag: 1.0
+Stable tag: 1.1
 
 Allow users to post questions and answers (Q&A) in stackoverflow style
 
@@ -69,6 +69,12 @@ In your template create a directory "CMA". Inside you can place a structure simi
 
 
 == Changelog ==
+= 1.1 =
+* Renamed main list from "Answers" to "Questions"
+* fixed bug when sorting answers by votes didn't show answers without any votes (will work only for answers added after upgrade)
+* Added validation for question (it's not possible to add empty one now)
+* Minor fix in styling
+* Added link to answers from admin menu
 
 = 1.0 =
 * Initial release

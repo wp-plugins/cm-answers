@@ -72,7 +72,7 @@ Click to see: [comment_link]';
             'supports' => array('title', 'editor'),
             'hierarchical' => TRUE
         );
-        self::registerPostType(self::POST_TYPE, 'Answer', 'Answers', 'CM Answers', $post_type_args);
+        self::registerPostType(self::POST_TYPE, 'Question', 'Questions', 'CM Answers', $post_type_args);
 
         add_filter('CMA_admin_parent_menu', create_function('$q', 'return "' . self::ADMIN_MENU . '";'));
         add_action('admin_menu', array(get_class(), 'registerAdminMenu'));
@@ -101,8 +101,9 @@ Click to see: [comment_link]';
     }
 
     public static function registerAdminMenu() {
-        $page = add_menu_page('Answers', 'CM Answers', 'manage_options', self::ADMIN_MENU, create_function('$q', 'return;'));
-        add_submenu_page(self::ADMIN_MENU, 'Add New', 'Add New', 'manage_options', 'post-new.php?post_type=' . self::POST_TYPE);
+        $page = add_menu_page('Questions', 'CM Answers', 'edit_posts', self::ADMIN_MENU, create_function('$q', 'return;'));
+        add_submenu_page(self::ADMIN_MENU, 'Answers', 'Answers', 'edit_posts', 'edit-comments.php?post_type=' . self::POST_TYPE);
+        add_submenu_page(self::ADMIN_MENU, 'Add New', 'Add New', 'edit_posts', 'post-new.php?post_type=' . self::POST_TYPE);
     }
 
     /**
@@ -322,6 +323,14 @@ Click to see: [comment_link]';
                     'b' => array(),
                     'pre' => array()
                 )));
+        if (empty($title))
+            $errors[] = 'Title cannot be empty';
+        if (empty($content))
+            $errors[] = 'Content cannot be empty';
+        
+        if (!empty($errors)) {
+            throw new Exception(serialize($errors));
+        }
         $id = wp_insert_post(array(
             'post_status' => $status,
             'post_type' => self::POST_TYPE,
@@ -467,7 +476,9 @@ Please visit the questions moderation panel:
             'comment_date' => current_time('mysql')
         );
         $comment_id = wp_insert_comment($data);
+        
         $this->updateThreadMetadata($comment_id, $author_id, $notify, $resolved);
+        update_comment_meta($comment_id, self::$_commentMeta['rating'], 0);
         if ($approved !== 1) {
             wp_notify_moderator($comment_id);
         }
@@ -548,12 +559,12 @@ Please visit the questions moderation panel:
             return '1 day ago';
         else {
             if ($days_ago > 30) {
-                $months_ago = $days_ago / 30;
+                $months_ago = (int)($days_ago / 30);
                 if ($months_ago == 1) {
                     return '1 month ago';
                 } else {
                     if ($months_ago > 12) {
-                        $years_ago = $months_ago / 12;
+                        $years_ago = (int)($months_ago / 12);
                         if ($years_ago == 1)
                             return '1 year ago';
                         else

@@ -13,6 +13,7 @@ endif;
 <form method="post" enctype="multipart/form-data" id="cm-answers-settings-form">
     <h3>General Settings:</h3>
     <p>You can add "My Questions" and "My Answers" profile views per user anywhere on the site by using shortcodes: [cma-my-questions] and [cma-my-answers]</p>
+    <p>Link to questions frontend list: <a href="<?php echo get_post_type_archive_link('cma_thread'); ?>" target="_new"><?php echo get_post_type_archive_link('cma_thread'); ?></a></p>
     <table>
          <tr valign="top">
             <th scope="row" valign="top" align="left" >Enable ratings for answers:</th>
