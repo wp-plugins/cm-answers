@@ -57,8 +57,18 @@ Note: You must have a call to wp_head() in your template in order for the JS plu
 == Frequently Asked Questions ==
 
 = How can I customize look&feel? =
-In your template create a directory "CMA". Inside you can place a structure similar to the one inside "cm-answers/views/frontend/". If the file can be found in your template directory, then it will have a priority. Otherwise, the default from plugin directory will be used.
+The template file used to display the 
+Cm-Answers  is located in wp-content/plugins/cm-answers/views/frontend To modify it, do two things:
 
+    Create a folder called CMA inside of your currently active theme’s directory.
+    Copy All php files including folders to the new folder created in 1 in the same structure.
+
+Once you have created the CMA directory and copied the files over, 
+you can make any change you wish to the files and your changes will be reflected in the way cm-answers looks.
+
+You may decide also to copy only part of the files, only if a file can be found in your template directory, then it will have a priority. Otherwise, the default from plugin directory will be used.
+
+Remmeber for check when new versions are released for changes in the files stracture
 
 == Screenshots ==
 
@@ -66,7 +76,6 @@ In your template create a directory "CMA". Inside you can place a structure simi
 2. Setting notification section.
 3. Answer Page.
 4. Questions Page.
-
 
 == Changelog ==
 = 1.1 =
