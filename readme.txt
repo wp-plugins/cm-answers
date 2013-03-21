@@ -2,28 +2,24 @@
 Name: CM Answers
 Contributors: CreativeMinds (http://www.cminds.com/)
 Donate link: http://www.cminds.com/plugins
-Tags: answers, forum, questions, comments, question and answer, forum, q&a, list, stackoverflow, splunkbase
+Tags: answers, forum, questions, comments, question and answer, forum, q&a, list, stackoverflow, splunkbase, Multilingual, Localization
 Requires at least: 3.2
 Tested up to: 3.5
-Stable tag: 1.1
+Stable tag: 1.2
 
-Allow users to post questions and answers (Q&A) in stackoverflow style
+Allow users to post questions and answers (Q&A) in stackoverflow style with Multilingual/Localization Support
 
 == Description ==
 
 Free Question & Answer forum for WordPress that allows customization of the system look&feel.
 
 * Includes views count
-
 * Includes answers count
-
 * Admin can moderate question & answers and can receive email notifications
-
 * Users can receive notifications once answering a question on followup
-
 * Sorting option in question and answer page
-
 * Templet can be easily customized 
+* Multilingual Support - We will be happy to add more language files submited by WP community members, Currently we support: German, Polish. Some translation are sone using Google so you are also welcome to send us revised files
 
 **Demo**
 
@@ -57,19 +53,8 @@ Note: You must have a call to wp_head() in your template in order for the JS plu
 == Frequently Asked Questions ==
 
 = How can I customize look&feel? =
-The template file used to display the 
-Cm-Answers  is located in wp-content/plugins/cm-answers/views/frontend To modify it, do two things:
+In your template create a directory "CMA". Inside you can place a structure similar to the one inside "cm-answers/views/frontend/". If the file can be found in your template directory, then it will have a priority. Otherwise, the default from plugin directory will be used.
 
-- Create a folder called CMA inside of your current active theme's directory.
-
-- Copy All PHP files including folders to the new folder created in 1 in the same structure.
-
-Once you have created the CMA directory and copied the files over, 
-you can make any change you wish to the files and your changes will be reflected in the way cm-answers looks.
-
-You may decide also to copy only part of the files, only if a file can be found in your template directory, then it will have a priority. Otherwise, the default from plugin directory will be used.
-
-Remmeber for check when new versions are released for changes in the files stracture
 
 == Screenshots ==
 
@@ -78,7 +63,11 @@ Remmeber for check when new versions are released for changes in the files strac
 3. Answer Page.
 4. Questions Page.
 
+
 == Changelog ==
+= 1.2 =
+* Added localizations: German and Polish
+
 = 1.1 =
 * Renamed main list from "Answers" to "Questions"
 * fixed bug when sorting answers by votes didn't show answers without any votes (will work only for answers added after upgrade)

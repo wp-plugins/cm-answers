@@ -468,8 +468,8 @@ wp_enqueue_script('thickbox');
 wp_register_script('CMA-admin-upload', CMA_URL.'/views/resources/js/admin.js', array('jquery','media-upload','thickbox'));
 wp_enqueue_script('CMA-admin-upload');
 wp_enqueue_style('thickbox');
-        add_submenu_page(apply_filters('CMA_admin_parent_menu', 'options-general.php'), 'CM Answers Settings', 'Settings', 'manage_options', self::ADMIN_SETTINGS, array(get_class(), 'displaySettingsPage'));
-        add_submenu_page(apply_filters('CMA_admin_parent_menu', 'options-general.php'), 'About', 'About', 'manage_options', self::ADMIN_ABOUT, array(get_class(), 'displayAboutPage'));
+        add_submenu_page(apply_filters('CMA_admin_parent_menu', 'options-general.php'), __('CM Answers Settings', 'cm-answers'), __('Settings', 'cm-answers'), 'manage_options', self::ADMIN_SETTINGS, array(get_class(), 'displaySettingsPage'));
+        add_submenu_page(apply_filters('CMA_admin_parent_menu', 'options-general.php'), __('About', 'cm-answers'), __('About', 'cm-answers'), 'manage_options', self::ADMIN_ABOUT, array(get_class(), 'displayAboutPage'));
     }
 
     public static function displaySettingsPage() {
@@ -478,7 +478,7 @@ wp_enqueue_style('thickbox');
         if (!empty($_POST['titles'])) {
             self::$_titles = array_map('stripslashes', $_POST['titles']);
             update_option(self::OPTION_TITLES, self::$_titles);
-            $messages[] = 'Settings succesfully updated';
+            $messages[] = __('Settings succesfully updated', 'cm-answers');
         }
         $params = array();
         $params = apply_filters('CMA_admin_settings', $params);
@@ -550,13 +550,13 @@ jQuery(document).ready(function($) {
         if (in_array($typenow, self::$_customPostTypes)) {
             $status = get_query_var('post_status');
             ?><select name="post_status">
-                <option value="0">Filter by status</option>
+                <option value="0"><?php _e('Filter by status', 'cm-answers'); ?></option>
                 <option value="publish"<?php if ($status == 'publish')
-                echo ' selected="selected"'; ?>>Approved</option>
+                echo ' selected="selected"'; ?>><?php _e('Approved', 'cm-answers'); ?></option>
                 <option value="draft"<?php if ($status == 'draft')
-                echo ' selected="selected"'; ?>>Pending</option>
+                echo ' selected="selected"'; ?>><?php _e('Pending', 'cm-answers'); ?></option>
                 <option value="trash"<?php if ($status == 'trash')
-                echo ' selected="selected"'; ?>>Trash</option>
+                echo ' selected="selected"'; ?>><?php _e('Trash', 'cm-answers'); ?></option>
             </select><?php
         }
     }

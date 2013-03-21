@@ -72,7 +72,7 @@ Click to see: [comment_link]';
             'supports' => array('title', 'editor'),
             'hierarchical' => TRUE
         );
-        self::registerPostType(self::POST_TYPE, 'Question', 'Questions', 'CM Answers', $post_type_args);
+        self::registerPostType(self::POST_TYPE, __('Question', 'cm-answers'), __('Questions', 'cm-answers'), 'CM Answers', $post_type_args);
 
         add_filter('CMA_admin_parent_menu', create_function('$q', 'return "' . self::ADMIN_MENU . '";'));
         add_action('admin_menu', array(get_class(), 'registerAdminMenu'));
@@ -101,9 +101,9 @@ Click to see: [comment_link]';
     }
 
     public static function registerAdminMenu() {
-        $page = add_menu_page('Questions', 'CM Answers', 'edit_posts', self::ADMIN_MENU, create_function('$q', 'return;'));
-        add_submenu_page(self::ADMIN_MENU, 'Answers', 'Answers', 'edit_posts', 'edit-comments.php?post_type=' . self::POST_TYPE);
-        add_submenu_page(self::ADMIN_MENU, 'Add New', 'Add New', 'edit_posts', 'post-new.php?post_type=' . self::POST_TYPE);
+        $page = add_menu_page(__('Questions', 'cm-answers'), 'CM Answers', 'edit_posts', self::ADMIN_MENU, create_function('$q', 'return;'));
+        add_submenu_page(self::ADMIN_MENU, __('Answers', 'cm-answers'), __('Answers', 'cm-answers'), 'edit_posts', 'edit-comments.php?post_type=' . self::POST_TYPE);
+        add_submenu_page(self::ADMIN_MENU, __('Add New', 'cm-answers'), __('Add New', 'cm-answers'), 'edit_posts', 'post-new.php?post_type=' . self::POST_TYPE);
     }
 
     /**
@@ -143,9 +143,9 @@ Click to see: [comment_link]';
     public function getStatus() {
         $status = $this->post->post_status;
         if ($status == 'draft')
-            return 'pending';
+            return __('pending', 'cm-answers');
         elseif ($status == 'publish')
-            return 'approved';
+            return __('approved', 'cm-answers');
     }
 
     /**
@@ -204,7 +204,7 @@ Click to see: [comment_link]';
     public function getTitle() {
         $title = parent::getTitle();
         if ($this->isResolved())
-            $title = '[RESOLVED] ' . $title;
+            $title = '['.__('RESOLVED', 'cm-answers').'] ' . $title;
         return $title;
     }
 
@@ -324,9 +324,9 @@ Click to see: [comment_link]';
                     'pre' => array()
                 )));
         if (empty($title))
-            $errors[] = 'Title cannot be empty';
+            $errors[] = __('Title cannot be empty', 'cm-answers');
         if (empty($content))
-            $errors[] = 'Content cannot be empty';
+            $errors[] = __('Content cannot be empty', 'cm-answers');
         
         if (!empty($errors)) {
             throw new Exception(serialize($errors));
@@ -369,19 +369,19 @@ Click to see: [comment_link]';
         $trashLink = admin_url('edit.php?post_status=draft&post_type=' . self::POST_TYPE . '&cma-action=trash&cma-id=' . $this->getId());
         $pendingLink = admin_url('edit.php?post_status=draft&post_type=' . self::POST_TYPE);
 
-        $emailTitle = '[' . get_bloginfo('name') . '] Please moderate: "' . $title . '"';
-        $emailContent = "A new question has been asked and is waiting for your approval {$link}
+        $emailTitle = '[' . get_bloginfo('name') . '] '.__('Please moderate', 'cm-answers').' : "' . $title . '"';
+        $emailContent = __("A new question has been asked and is waiting for your approval", 'cm-answers')." {$link}
 
-Author : {$author}
-E-mail : {$email}
-Title  : {$title}
-Content: 
+".__('Author', 'cm-answers')." : {$author}
+".__('E-mail', 'cm-answers')." : {$email}
+".__('Title', 'cm-answers')."  : {$title}
+".__('Content', 'cm-answers').": 
 {$content}
 
 
-Approve it: {$approveLink}
-Trash it: {$trashLink}
-Please visit the questions moderation panel:
+".__('Approve it', 'cm-answers').": {$approveLink}
+".__('Trash it', 'cm-answers').": {$trashLink}
+".__('Please visit the questions moderation panel', 'cm-answers').":
 {$pendingLink}
 ";
         @wp_mail(get_option('admin_email'), $emailTitle, $emailContent);
@@ -432,6 +432,7 @@ Please visit the questions moderation panel:
         $retVal = array(
             'id' => $comment_id,
             'content' => $comment->comment_content,
+
             'author' => get_comment_author($comment_id),
             'date' => get_comment_date('F j, Y H:i', $comment_id),
             'daysAgo' => self::renderDaysAgo(get_comment_date('', $comment_id)),
@@ -554,27 +555,27 @@ Please visit the questions moderation panel:
         $current = current_time('timestamp');
         $days_ago = floor(( $current - $date ) / ( 60 * 60 * 24 ));
         if ($days_ago == 0)
-            return 'today';
+            return __('today', 'cm-answers');
         elseif ($days_ago == 1)
-            return '1 day ago';
+            return __('1 day ago', 'cm-answers');
         else {
             if ($days_ago > 30) {
                 $months_ago = (int)($days_ago / 30);
                 if ($months_ago == 1) {
-                    return '1 month ago';
+                    return __('1 month ago', 'cm-answers');
                 } else {
                     if ($months_ago > 12) {
                         $years_ago = (int)($months_ago / 12);
                         if ($years_ago == 1)
-                            return '1 year ago';
+                            return __('1 year ago', 'cm-answers');
                         else
-                            return $years_ago . ' years ago';
+                            return sprintf(__('%d years ago', 'cm-answers'), $years_ago);
                     } else {
-                        return $months_ago . ' months ago';
+                        return sprintf(__('%d months ago', 'cm-answers'), $months_ago);
                     }
                 }
             } else
-                return $days_ago . ' days ago';
+                return sprintf(__('%d days ago', 'cm-answers'), $days_ago);
         }
     }
 

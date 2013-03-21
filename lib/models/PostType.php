@@ -61,15 +61,15 @@ abstract class CMA_PostType {
         return array(
             'name' => $plural,
             'singular_name' => $singular,
-            'add_new' => 'Add ' . $singular,
-            'add_new_item' => 'Add New ' . $singular,
-            'edit_item' => 'Edit ' . $singular,
-            'new_item' => 'New ' . $singular,
+            'add_new' => sprintf(__('Add %s', 'cm-answers'), $singular),
+            'add_new_item' => sprintf(__('Add New %s', 'cm-answers'), $singular),
+            'edit_item' => sprintf(__('Edit %s', 'cm-answers'), $singular),
+            'new_item' => sprintf(__('New %s', 'cm-answers'), $singular),
             'all_items' => $plural,
-            'view_item' => 'View ' . $singular,
-            'search_items' => 'Search ' . $plural,
-            'not_found' => 'No ' . $plural . ' found',
-            'not_found_in_trash' => 'No ' . $plural . ' found in Trash',
+            'view_item' => sprintf(__('View %s', 'cm-answers'), $singular),
+            'search_items' => sprintf(__('Search %s', 'cm-answers'), $plural),
+            'not_found' => sprintf(__('No %s found', 'cm-answers'), $plural),
+            'not_found_in_trash' => sprintf(__('No %s found in Trash', 'cm-answers'), $plural),
             'menu_name' => $menu
         );
     }

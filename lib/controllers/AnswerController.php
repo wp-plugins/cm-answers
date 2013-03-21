@@ -15,8 +15,8 @@ class CMA_AnswerController extends CMA_BaseController {
         add_action('pre_get_posts', array(get_class(), 'registerCustomOrder'), 1, 1);
         register_sidebar(array(
             'id' => 'cm-answers-sidebar',
-            'name' => 'CM Answers Sidebar',
-            'description' => 'This sidebar is shown on CM Answers pages'
+            'name' => __('CM Answers Sidebar', 'cm-answers'),
+            'description' => __('This sidebar is shown on CM Answers pages', 'cm-answers')
         ));
         add_shortcode('cma-my-questions', array(get_class(), 'showMyQuestions'));
         add_shortcode('cma-my-answers', array(get_class(), 'showMyAnswers'));
@@ -33,7 +33,7 @@ class CMA_AnswerController extends CMA_BaseController {
                     if (is_numeric($id)) {
                         $thread = CMA_AnswerThread::getInstance($id);
                         $thread->approve();
-                        add_action('admin_notices', create_function('$q', 'echo "<div class=\"updated\"><p>Question: \"'.$thread->getTitle().'\" has been succesfully approved</p></div>";'));
+                        add_action('admin_notices', create_function('$q', 'echo "<div class=\"updated\"><p>'.__('Question', 'cm-answers').': '.sprintf(__('"%s" has been succesfully approved'), $thread->getTitle()).'</p></div>";'));
                     }
                     break;
                 case 'trash':
@@ -41,7 +41,7 @@ class CMA_AnswerController extends CMA_BaseController {
                     if (is_numeric($id)) {
                         $thread = CMA_AnswerThread::getInstance($id);
                         $thread->trash();
-                        add_action('admin_notices', create_function('$q', 'echo "<div class=\"updated\"><p>Question: \"'.$thread->getTitle().'\" has been succesfully moved to trash</p></div>";'));
+                        add_action('admin_notices', create_function('$q', 'echo "<div class=\"updated\"><p>'.__('Question', 'cm-answers').': '.sprintf(__('"%s" has been succesfully moved to trash'), $thread->getTitle()).'</p></div>";'));
                     }
                     break;
             }
@@ -114,11 +114,11 @@ class CMA_AnswerController extends CMA_BaseController {
             } else {
                 $autoApprove = CMA_AnswerThread::isAnswerAutoApproved();
                 if ($autoApprove) {
-                    $msg = 'Your answer has been succesfully added.';
+                    $msg = __('Your answer has been succesfully added.', 'cm-answers');
                     self::_addMessage(self::MESSAGE_SUCCESS, $msg);
                     wp_redirect(get_permalink($post->ID) . '/#comment-' . $comment_id, 303);
                 } else {
-                    $msg = 'Thank you for your answer, it has been held for moderation.';
+                    $msg = __('Thank you for your answer, it has been held for moderation.', 'cm-answers');
                     self::_addMessage(self::MESSAGE_SUCCESS, $msg);
                     wp_redirect(get_permalink($post->ID), 303);
                 }
@@ -165,10 +165,10 @@ class CMA_AnswerController extends CMA_BaseController {
             } else {
                 $autoApprove = CMA_AnswerThread::isQuestionAutoApproved();
                 if ($autoApprove) {
-                    $msg = 'New question has been succesfully added.';
+                    $msg = __('New question has been succesfully added.', 'cm-answers');
                     self::_addMessage(self::MESSAGE_SUCCESS, $msg);
                 } else {
-                    $msg = 'Thank you for your question, it has been held for moderation.';
+                    $msg = __('Thank you for your question, it has been held for moderation.', 'cm-answers');
                     self::_addMessage(self::MESSAGE_SUCCESS, $msg);
                     
                 }
@@ -187,11 +187,11 @@ class CMA_AnswerController extends CMA_BaseController {
                 $thread = CMA_AnswerThread::getInstance($post->ID);
                 $comment = self::_getParam('cma-comment');
                 if (!empty($comment)) {
-                    $response = array('success' => 0, 'message' => 'There was an error while processing your vote');
+                    $response = array('success' => 0, 'message' => __('There was an error while processing your vote', 'cm-answers'));
                     $votes = 0;
                     if (!is_user_logged_in()) {
                         $response['success'] = 0;
-                        $response['message'] = 'You have to be logged-in to vote';
+                        $response['message'] = __('You have to be logged-in to vote', 'cm-answers');
                     } else
                     if ($thread->isVotingAllowed($comment, get_current_user_id())) {
                         $response['success'] = 1;
@@ -200,7 +200,7 @@ class CMA_AnswerController extends CMA_BaseController {
                         } else
                             $response['message'] = $thread->voteDown($comment);
                     } else {
-                        $response['message'] = 'You have already voted for this comment';
+                        $response['message'] = __('You have already voted for this comment', 'cm-answers');
                     }
                     header('Content-type: application/json');
                     echo json_encode($response);
@@ -236,10 +236,10 @@ class CMA_AnswerController extends CMA_BaseController {
     }
 
     public static function registerAdminColumns($columns) {
-        $columns['author'] = 'Author';
-        $columns['views'] = 'Views';
-        $columns['status'] = 'Status';
-        $columns['comments'] = 'Answers';
+        $columns['author'] = __('Author', 'cm-answers');
+        $columns['views'] = __('Views', 'cm-answers');
+        $columns['status'] = __('Status', 'cm-answers');
+        $columns['comments'] = __('Answers', 'cm-answers');
         return $columns;
     }
 
@@ -256,9 +256,9 @@ class CMA_AnswerController extends CMA_BaseController {
                 break;
             case 'status':
                 echo $thread->getStatus();
-                if (strtolower($thread->getStatus())=='pending') {
+                if (strtolower($thread->getStatus())==strtolower(__('pending', 'cm-answers'))) {
                     ?>
- <a href="<?php echo add_query_arg(array('cma-action'=>'approve', 'cma-id'=>$id)); ?>">(Approve)</a>
+ <a href="<?php echo add_query_arg(array('cma-action'=>'approve', 'cma-id'=>$id)); ?>">(<?php _e('Approve', 'cm-answers'); ?>)</a>
                     <?php
                 }
                 break;

@@ -5,7 +5,7 @@
   Plugin URI: http://www.cminds.com/plugins/cm-answers
   Description: Allow users to post downloads in a derctory
   Author: CreativeMinds
-  Version: 1.1
+  Version: 1.2
  */
 
 /*
@@ -24,12 +24,14 @@
   along with this program; if not, write to the Free Software
   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
  */
-
+load_plugin_textdomain( 'cm-answers', false, dirname( plugin_basename( __FILE__ ) ) . '/lang' );
 if (version_compare('5.3', phpversion(), '>')) {
-    die('We are sorry, but you need to have at least PHP 5.3 to run this plugin (currently installed version: '.phpversion().') - please upgrade or contact your system administrator.');
+    die(sprintf(__('We are sorry, but you need to have at least PHP 5.3 to run this plugin (currently installed version: %s) - please upgrade or contact your system administrator.'), phpversion()));
 }
 
 //Define constants
+define('MY_TEXTDOMAIN', 'cm-answers');
+
 define('CMA_PREFIX', 'CMA_');
 define('CMA_PATH', WP_PLUGIN_DIR . '/' . basename(dirname(__FILE__)));
 define('CMA_URL', plugins_url('', __FILE__));
