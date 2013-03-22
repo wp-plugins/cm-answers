@@ -19,7 +19,7 @@ Free Question & Answer forum for WordPress that allows customization of the syst
 * Users can receive notifications once answering a question on followup
 * Sorting option in question and answer page
 * Templet can be easily customized 
-* Multilingual Support - We will be happy to add more language files submited by WP community members, Currently we support: German, Polish. Some translation are sone using Google so you are also welcome to send us revised files
+* We will be happy to add more language files submitted by WP community members, Currently we support: German, Polish. Some translation is shown using Google so you are also welcome to send us revised files
 
 **Demo**
 
