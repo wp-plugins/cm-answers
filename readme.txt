@@ -19,7 +19,7 @@ Free Question & Answer forum for WordPress that allows customization of the syst
 * Users can receive notifications once answering a question on followup
 * Sorting option in question and answer page
 * Templet can be easily customized 
-* We will be happy to add more language files submitted by WP community members, Currently we support: German, Polish. Some translation is shown using Google so you are also welcome to send us revised files
+* We will be happy to add more language files submitted by WP community members, Currently we support: Spanish, German, Polish. Some translation is shown using Google so you are also welcome to send us revised files
 
 **Demo**
 
@@ -66,7 +66,7 @@ In your template create a directory "CMA". Inside you can place a structure simi
 
 == Changelog ==
 = 1.2 =
-* Added localizations: German and Polish
+* Added localizations: Spanish, German and Polish
 
 = 1.1 =
 * Renamed main list from "Answers" to "Questions"
