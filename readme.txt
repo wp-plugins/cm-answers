@@ -2,7 +2,7 @@
 Name: CM Answers
 Contributors: CreativeMinds (http://www.cminds.com/)
 Donate link: http://www.cminds.com/plugins
-Tags: answers, forum, questions, comments, question and answer, Question and Answer Forum, support forum, q&a, list, stackoverflow, stack overflow, stackoverflow answers, splunkbase, bbPress, board, boards, bulletin, bulletin board, bulletin boards, discussion, discussion board, discussion forums, discussions, simple forum, forum plugin, forums, message, message board, messages, messaging, user messages, threads, user forum, wordpress forum, wp, resolved topics, user rankings, post rating, rate, rating, customer service, customer support
+Tags: answers,forum,questions,comments,question and answer,Question and Answer Forum,support forum,q&a,list,stackoverflow,stack overflow,stackoverflow answers,splunkbase,bbPress,board,boards,bulletin,bulletin board,bulletin boards,discussion,discussion board,discussion forums,discussions,simple forum,forum plugin,forums,message,message board,messages,messaging,user messages,threads,user forum,wordpress forum,wp,resolved topics,user rankings,post rating,rate,rating,customer service,customer support
 Requires at least: 3.2
 Tested up to: 3.5
 Stable tag: 1.2
@@ -13,7 +13,7 @@ Allow users to post questions and answers (Q&A) in stackoverflow style with Mult
 
 Free Question & Answer forum for WordPress that allows customization of the system look&feel.
 
-Use-Cases
+**Use-Cases**
 
 * Forum - Put a lightweight and easy to use Forum on your WordPress site/blog. 
 
@@ -27,7 +27,7 @@ Use-Cases
 
 * StackOverflow - Add StackOverflow like forum to your site
 
-Features
+**Features**
 
 * Includes views count 
 
