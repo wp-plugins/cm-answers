@@ -14,7 +14,6 @@ Allow users to post questions and answers (Q&A) in stackoverflow style with Mult
 Free Question & Answer forum for WordPress that allows customization of the system look&feel.
 
 **Use-Cases**
-
 * Forum - Put a lightweight and easy to use Forum on your WordPress site/blog. 
 * Support forum - Support your users while letting them vote and answer existing  topics
 * Community - Add a forum to your site and allow your members to start their own conversations
@@ -23,7 +22,6 @@ Free Question & Answer forum for WordPress that allows customization of the syst
 * StackOverflow - Add StackOverflow like forum to your site
 
 **Features**
-
 * Includes views count 
 * Includes answers count
 * Admin can moderate question & answers and can receive email notifications
@@ -43,7 +41,6 @@ You can find more information about CM Answers at [CreativeMinds Website](http:/
 
 
 **More Plugins by CreativeMinds**
-
 * [CM Enhanced ToolTip Glossary](http://wordpress.org/extend/plugins/enhanced-tooltipglossary/) - Parses posts for defined glossary terms and adds links to the static glossary page containing the definition and a tooltip with the definition. 
 * [CM Multi MailChimp List Manager](http://wordpress.org/extend/plugins/multi-mailchimp-list-manager/) - Allows users to subscribe/unsubscribe from multiple MailChimp lists. 
 * [CM Invitation Codes](http://wordpress.org/extend/plugins/cm-invitation-codes/) - Allows more control over site registration by adding managed groups of invitation codes. 
