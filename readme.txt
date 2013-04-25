@@ -2,7 +2,7 @@
 Name: CM Answers
 Contributors: CreativeMinds (http://www.cminds.com/)
 Donate link: http://www.cminds.com/plugins
-Tags: answers, forum, questions, comments, question and answer, forum, q&a, list, stackoverflow, splunkbase, Multilingual, Localization
+Tags: answers, forum, questions, comments, question and answer, Question and Answer Forum, support forum, q&a, list, stackoverflow, stack overflow, stackoverflow answers, splunkbase, bbPress, board, boards, bulletin, bulletin board, bulletin boards, discussion, discussion board, discussion forums, discussions, simple forum, forum plugin, forums, message, message board, messages, messaging, user messages, threads, user forum, wordpress forum, wp, resolved topics, user rankings, post rating, rate, rating, customer service, customer support
 Requires at least: 3.2
 Tested up to: 3.5
 Stable tag: 1.2
@@ -13,13 +13,22 @@ Allow users to post questions and answers (Q&A) in stackoverflow style with Mult
 
 Free Question & Answer forum for WordPress that allows customization of the system look&feel.
 
-* Includes views count
+Use-Cases
+* Forum - Put a lightweight and easy to use Forum on your WordPress site/blog. 
+* Support forum - Support your users while letting them vote and answer existing  topics
+* Community - Add a forum to your site and allow your members to start their own conversations
+* Questions & Answers - Users can answer questions sent in by other users. 
+* Customer Support - Support customers questions
+* StackOverflow - Add StackOverflow like forum to your site
+
+Features
+* Includes views count 
 * Includes answers count
 * Admin can moderate question & answers and can receive email notifications
 * Users can receive notifications once answering a question on followup
 * Sorting option in question and answer page
 * Templet can be easily customized 
-* We will be happy to add more language files submitted by WP community members, Currently we support: Spanish, German, Polish. Some translation is shown using Google so you are also welcome to send us revised files
+* We will be happy to add more language files submitted by WP community members, Currently we support: Spanish, German, Polish. 
 
 **Demo**
 
