@@ -16,31 +16,20 @@ Free Question & Answer forum for WordPress that allows customization of the syst
 **Use-Cases**
 
 * Forum - Put a lightweight and easy to use Forum on your WordPress site/blog. 
-
 * Support forum - Support your users while letting them vote and answer existing  topics
-
 * Community - Add a forum to your site and allow your members to start their own conversations
-
-* Questions & Answers - Users can answer questions sent in by other users. 
-
+* Questions & Answers - Users can answer questions sent in by other users.
 * Customer Support - Support customers questions
-
 * StackOverflow - Add StackOverflow like forum to your site
 
 **Features**
 
 * Includes views count 
-
 * Includes answers count
-
 * Admin can moderate question & answers and can receive email notifications
-
 * Users can receive notifications once answering a question on followup
-
 * Sorting option in question and answer page
-
 * Templet can be easily customized 
-
 * We will be happy to add more language files submitted by WP community members, Currently we support: Spanish, German, Polish. 
 
 **Demo**
@@ -56,11 +45,8 @@ You can find more information about CM Answers at [CreativeMinds Website](http:/
 **More Plugins by CreativeMinds**
 
 * [CM Enhanced ToolTip Glossary](http://wordpress.org/extend/plugins/enhanced-tooltipglossary/) - Parses posts for defined glossary terms and adds links to the static glossary page containing the definition and a tooltip with the definition. 
-
 * [CM Multi MailChimp List Manager](http://wordpress.org/extend/plugins/multi-mailchimp-list-manager/) - Allows users to subscribe/unsubscribe from multiple MailChimp lists. 
-
 * [CM Invitation Codes](http://wordpress.org/extend/plugins/cm-invitation-codes/) - Allows more control over site registration by adding managed groups of invitation codes. 
-
 * [CM Email Blacklist](http://wordpress.org/extend/plugins/cm-email-blacklist/) - Block users from blacklists domain from registering to your WordPress site.
 
 
