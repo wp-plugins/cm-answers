@@ -16,20 +16,31 @@ Free Question & Answer forum for WordPress that allows customization of the syst
 Use-Cases
 
 * Forum - Put a lightweight and easy to use Forum on your WordPress site/blog. 
+
 * Support forum - Support your users while letting them vote and answer existing  topics
+
 * Community - Add a forum to your site and allow your members to start their own conversations
+
 * Questions & Answers - Users can answer questions sent in by other users. 
+
 * Customer Support - Support customers questions
+
 * StackOverflow - Add StackOverflow like forum to your site
 
 Features
 
 * Includes views count 
+
 * Includes answers count
+
 * Admin can moderate question & answers and can receive email notifications
+
 * Users can receive notifications once answering a question on followup
+
 * Sorting option in question and answer page
+
 * Templet can be easily customized 
+
 * We will be happy to add more language files submitted by WP community members, Currently we support: Spanish, German, Polish. 
 
 **Demo**
