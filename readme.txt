@@ -14,6 +14,7 @@ Allow users to post questions and answers (Q&A) in stackoverflow style with Mult
 Free Question & Answer forum for WordPress that allows customization of the system look&feel.
 
 Use-Cases
+
 * Forum - Put a lightweight and easy to use Forum on your WordPress site/blog. 
 * Support forum - Support your users while letting them vote and answer existing  topics
 * Community - Add a forum to your site and allow your members to start their own conversations
@@ -22,6 +23,7 @@ Use-Cases
 * StackOverflow - Add StackOverflow like forum to your site
 
 Features
+
 * Includes views count 
 * Includes answers count
 * Admin can moderate question & answers and can receive email notifications
