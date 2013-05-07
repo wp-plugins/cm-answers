@@ -54,7 +54,7 @@ You can find more information about CM Answers at [CreativeMinds Website](http:/
 
 1. Upload the plugin folder to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Manage your CM Download Manager from Left Side Admin Menu
+3. Manage your CM Answers from Left Side Admin Menu
 
 Note: You must have a call to wp_head() in your template in order for the JS plugin files to work properly.  If your theme does not support this you will need to link to these files manually in your theme (not recommended).
 

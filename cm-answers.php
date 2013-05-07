@@ -3,7 +3,7 @@
 /*
   Plugin Name: CM Answers
   Plugin URI: http://www.cminds.com/plugins/cm-answers
-  Description: Allow users to post downloads in a derctory
+  Description: Allow users to post questions and answers in stackoverflow style 
   Author: CreativeMinds
   Version: 1.2
  */
