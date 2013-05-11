@@ -260,12 +260,14 @@ Click to see: [comment_link]';
      * @param string $format
      * @return string
      */
-    public function getUpdated($format = 'F j, Y') {
-        return date($format, strtotime($this->post->post_modified));
+    public function getUpdated($format = '') {
+        if (empty($format)) $format = get_option('date_format');
+        return date_i18n($format, strtotime($this->post->post_modified));
     }
 
-    public function getCreationDate($format = 'F j, Y H:i') {
-        return date($format, strtotime($this->post->post_date));
+    public function getCreationDate($format = '') {
+        if (empty($format)) $format = get_option('date_format').' '.get_option('time_format');
+        return date_i18n($format, strtotime($this->post->post_date));
     }
 
     public function setUpdated($date = null) {
@@ -434,7 +436,7 @@ Click to see: [comment_link]';
             'content' => $comment->comment_content,
 
             'author' => get_comment_author($comment_id),
-            'date' => get_comment_date('F j, Y H:i', $comment_id),
+            'date' => get_comment_date(get_option('date_format').' '.get_option('time_format'), $comment_id),
             'daysAgo' => self::renderDaysAgo(get_comment_date('', $comment_id)),
             'rating' => (int) get_comment_meta($comment_id, self::$_commentMeta['rating'], true),
             'status' => $comment->comment_approved==1?'approved':'pending',
@@ -456,7 +458,7 @@ Click to see: [comment_link]';
                     'pre' => array()
                 )));
         if (empty($content))
-            $errors[] = 'Content cannot be empty';
+            $errors[] = __('Content cannot be empty', 'cm-answers');
         if (!empty($errors)) {
             throw new Exception(serialize($errors));
         }

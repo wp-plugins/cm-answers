@@ -5,7 +5,7 @@ Donate link: http://www.cminds.com/plugins
 Tags: answers,forum,questions,comments,question and answer,Question and Answer Forum,support forum,q&a,list,stackoverflow,stack overflow,stackoverflow answers,splunkbase,bbPress,board,boards,bulletin,bulletin board,bulletin boards,discussion,discussion board,discussion forums,discussions,simple forum,forum plugin,forums,message,message board,messages,messaging,user messages,threads,user forum,wordpress forum,wp,resolved topics,user rankings,post rating,rate,rating,customer service,customer support
 Requires at least: 3.2
 Tested up to: 3.5
-Stable tag: 1.2
+Stable tag: 1.4
 
 Allow users to post questions and answers (Q&A) in stackoverflow style with Multilingual/Localization Support
 
@@ -35,6 +35,25 @@ Free Question & Answer forum for WordPress that allows customization of the syst
 **Demo**
 
 * Basic demo [Read Only mode](http://www.cminds.com/answers/).
+
+**Pro Version**	
+
+[Pro Version](http://www.cminds.com/downloads/cm-answers-pro/)
+The Pro version adds a layer of powerful features to the CM Answers giving the admin better tools to customize the Answers system behavior, adding login support from social networks, adding shortcodes and support for categories and a lot more
+
+* Social Media Integration - Integrates with Facebook &amp; Google+ &amp; LinkedIn 
+* Shortcodes - You can generate questions list by using shortcode: cma-questions with additional parameters. For example limit=10 author=123 sort=hottest
+* User Questions &amp; Answers - You can add "My Questions" and "My Answers" profile views per user anywhere on the site by using shortcodes: cma-my-questions and cma-my-answers
+* Categories - Ability to add categories and display on different pages in site by using shortcode cat=catname
+* Widgets - Added Widget which can display hotest questions, most viewed, recent and more
+* User Posting Meter - Ability to add near each user  number of questions and answers already posted 
+* Show/Hide Views - Admin can hide or show number of views
+* Auto-approve questions and answers from users</strong>- Admin can define list of users which do not need moderation
+* Multisite - Supports multisite
+* User Profile - Automaticly generate a profile page per each user containing the questions and answers he posted with link to social media profile
+* Gratitude Message - Does not include Gratitude message in the footer.
+
+[Visit Pro Version Page](http://www.cminds.com/downloads/cm-answers-pro/)
 
 
 **More About this Plugin**
@@ -73,6 +92,12 @@ In your template create a directory "CMA". Inside you can place a structure simi
 
 
 == Changelog ==
+= 1.4 =
+* Datetimes are now formatted according to wordpress general settings
+* Dates use date_i18n function to produce localized names
+* Fixed escaping for notification titles and contents
+* Fixed template
+
 = 1.2 =
 * Added localizations: Spanish, German and Polish
 

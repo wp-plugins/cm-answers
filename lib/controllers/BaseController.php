@@ -6,6 +6,7 @@ abstract class CMA_BaseController {
     const MESSAGE_ERROR = 'error';
     const ADMIN_SETTINGS = 'CMA_admin_settings';
     const ADMIN_ABOUT = 'CMA_admin_about';
+    const ADMIN_PRO = 'CMA_admin_pro';
     const OPTION_TITLES = 'CMA_panel_titles';
     protected static $_titles = array();
     protected static $_fired = false;
@@ -470,6 +471,7 @@ wp_enqueue_script('CMA-admin-upload');
 wp_enqueue_style('thickbox');
         add_submenu_page(apply_filters('CMA_admin_parent_menu', 'options-general.php'), __('CM Answers Settings', 'cm-answers'), __('Settings', 'cm-answers'), 'manage_options', self::ADMIN_SETTINGS, array(get_class(), 'displaySettingsPage'));
         add_submenu_page(apply_filters('CMA_admin_parent_menu', 'options-general.php'), __('About', 'cm-answers'), __('About', 'cm-answers'), 'manage_options', self::ADMIN_ABOUT, array(get_class(), 'displayAboutPage'));
+        add_submenu_page(apply_filters('CMA_admin_parent_menu', 'options-general.php'), __('Pro Version', 'cm-answers'), __('Pro Version', 'cm-answers'), 'manage_options', self::ADMIN_PRO, array(get_class(), 'displayProPage'));
     }
 
     public static function displaySettingsPage() {
@@ -526,6 +528,14 @@ wp_enqueue_style('thickbox');
         ob_end_clean();
         self::displayAdminPage($content);
     }
+    public static function displayProPage() {
+        ob_start();
+        require(CMA_PATH . '/views/backend/pro.phtml');
+        $content = ob_get_contents();
+        ob_end_clean();
+        self::displayAdminPage($content);
+    }
+
     public static function addCustomTaxonomyNav($taxonomy) {
         add_action('after-' . $taxonomy . '-table', array(get_class(), 'filterAdminNavEcho'), 10, 1);
     }

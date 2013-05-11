@@ -5,7 +5,7 @@
   Plugin URI: http://www.cminds.com/plugins/cm-answers
   Description: Allow users to post questions and answers in stackoverflow style 
   Author: CreativeMinds
-  Version: 1.2
+  Version: 1.4
  */
 
 /*

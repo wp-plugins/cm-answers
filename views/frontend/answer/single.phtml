@@ -2,8 +2,8 @@
 get_header();
 the_post();
 $thread = CMA_AnswerThread::getInstance($post->ID);
-?>
-<div id="primary" class="site-content">
+?><div class="cma-main">
+<div id="primary" class="site-content cma-content">
     <div id="content" role="main">
         <header class="entry-header">
         <h1 class="entry-title"><?php echo $thread->getTitle(); ?><a class="cma-backlink" href="<?php echo get_post_type_archive_link(CMA_AnswerThread::POST_TYPE); ?>">&laquo; <?php _e('Back to Questions List', 'cm-answers'); ?></a></h1>
@@ -113,9 +113,9 @@ $thread = CMA_AnswerThread::getInstance($post->ID);
     </div>
 <span class="cma_poweredby"><a href="http://www.cminds.com/" target="_new" class="cma_poweredbylink">CreativeMinds WordPress Plugin</a> <a href="http://www.cminds.com/plugins/cm-answers/" target="_new" class="cma_poweredbylink">Answers</a></span>
 </div>
-<div id="secondary" role="complementary" class="widget-area">
+<div id="secondary" role="complementary" class="widget-area cma-sidebar">
     <?php dynamic_sidebar('cm-answers-sidebar'); ?>
-</div>
+</div></div><div class="cma-clear"></div>
 <?php
 get_footer();
 ?>

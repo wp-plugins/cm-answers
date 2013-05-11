@@ -271,11 +271,11 @@ class CMA_AnswerController extends CMA_BaseController {
             CMA_AnswerThread::setAnswerAutoApproved(isset($_POST['answers_auto_approve']) && $_POST['answers_auto_approve'] == 1);
             CMA_AnswerThread::setRatingAllowed(isset($_POST['ratings']) && $_POST['ratings'] == 1);
             CMA_AnswerThread::setNegativeRatingAllowed(isset($_POST['negative_ratings']) && $_POST['negative_ratings'] == 1);
-            CMA_AnswerThread::setNewQuestionNotification($_POST['notification_new_questions']);
-            CMA_AnswerThread::setNewQuestionNotificationTitle($_POST['new_question_notification_title']);
+            CMA_AnswerThread::setNewQuestionNotification(stripslashes($_POST['notification_new_questions']));
+            CMA_AnswerThread::setNewQuestionNotificationTitle(stripslashes($_POST['new_question_notification_title']));
             CMA_AnswerThread::setNewQuestionNotificationContent($_POST['new_question_notification_content']);
-            CMA_AnswerThread::setNotificationTitle($_POST['notification_title']);
-            CMA_AnswerThread::setNotificationContent($_POST['notification_content']);
+            CMA_AnswerThread::setNotificationTitle(stripslashes($_POST['notification_title']));
+            CMA_AnswerThread::setNotificationContent(stripslashes($_POST['notification_content']));
             CMA_AnswerThread::setVotesMode((int)$_POST['votes_mode']);
             self::setAnswersMenu(isset($_POST['add_menu']) && $_POST['add_menu'] == 1);
         }
