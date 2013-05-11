@@ -67,6 +67,7 @@ You can find more information about CM Answers at [CreativeMinds Website](http:/
 * [CM Multi MailChimp List Manager](http://wordpress.org/extend/plugins/multi-mailchimp-list-manager/) - Allows users to subscribe/unsubscribe from multiple MailChimp lists. 
 * [CM Invitation Codes](http://wordpress.org/extend/plugins/cm-invitation-codes/) - Allows more control over site registration by adding managed groups of invitation codes. 
 * [CM Email Blacklist](http://wordpress.org/extend/plugins/cm-email-blacklist/) - Block users from blacklists domain from registering to your WordPress site.
+* [CM Download manager](http://wordpress.org/support/plugin/cm-download-manager) - Allow users to upload and manage Downloads in a directory structure for others users to use and comment.
 
 
 == Installation ==
