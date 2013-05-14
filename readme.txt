@@ -7,7 +7,7 @@ Requires at least: 3.2
 Tested up to: 3.5
 Stable tag: 1.4
 
-Allow users to post questions and answers (Q&A) in a stackoverflow style forum which is easy to use and install. Easy Social integration & Customization
+Allow users to post questions and answers (Q&A) in a stackoverflow style forum which is easy to use customize and install. w Social integration.
 
 == Description ==
 
