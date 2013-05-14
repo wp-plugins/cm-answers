@@ -7,7 +7,7 @@ Requires at least: 3.2
 Tested up to: 3.5
 Stable tag: 1.4
 
-Allow users to post questions and answers (Q&A) in stackoverflow style with Multilingual/Localization Support
+Allow users to post questions and answers (Q&A) in a stackoverflow style forum which is easy to use and install. Includes social integration and Localization Support
 
 == Description ==
 
