@@ -464,11 +464,6 @@ abstract class CMA_BaseController {
 
     public static function registerAdminPages() {
         wp_enqueue_script('jquery');
-        wp_enqueue_script('media-upload');
-wp_enqueue_script('thickbox');
-wp_register_script('CMA-admin-upload', CMA_URL.'/views/resources/js/admin.js', array('jquery','media-upload','thickbox'));
-wp_enqueue_script('CMA-admin-upload');
-wp_enqueue_style('thickbox');
         add_submenu_page(apply_filters('CMA_admin_parent_menu', 'options-general.php'), __('CM Answers Settings', 'cm-answers'), __('Settings', 'cm-answers'), 'manage_options', self::ADMIN_SETTINGS, array(get_class(), 'displaySettingsPage'));
         add_submenu_page(apply_filters('CMA_admin_parent_menu', 'options-general.php'), __('About', 'cm-answers'), __('About', 'cm-answers'), 'manage_options', self::ADMIN_ABOUT, array(get_class(), 'displayAboutPage'));
         add_submenu_page(apply_filters('CMA_admin_parent_menu', 'options-general.php'), __('Pro Version', 'cm-answers'), __('Pro Version', 'cm-answers'), 'manage_options', self::ADMIN_PRO, array(get_class(), 'displayProPage'));
