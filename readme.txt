@@ -50,6 +50,11 @@ The Pro version adds a layer of powerful features to the CM Answers giving the a
 * Show/Hide Views - Admin can hide or show number of views [See image](http://www.cminds.com/wp-content/uploads/edd/cm-answers-image6.png)
 * Auto-approve questions and answers from users</strong>- Admin can define list of users which do not need moderation [See image](http://www.cminds.com/wp-content/uploads/edd/cm-answers-image7.png)
 * Multisite - Supports multisite
+* Gravatar - Gracatar Support near user name and in user profile
+* Order Answers - Order answers in ascending descending order
+* Attachments - Accept file attachment in question
+* Localization Support - Forntend (user side) is localized
+* View Count - Control how view count is done (by view or by session)
 * User Profile - Automaticly generate a profile page per each user containing the questions and answers he posted with link to social media profile [See image](http://www.cminds.com/wp-content/uploads/edd/cm-answers-image8.png)
 * Gratitude Message - Does not include Gratitude message in the footer.
 
