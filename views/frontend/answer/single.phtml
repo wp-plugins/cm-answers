@@ -75,7 +75,7 @@ $thread = CMA_AnswerThread::getInstance($post->ID);
                         <div class="cma-answer-body"><?php echo $answer['content']; ?></div>
                         <div class="cma-answer-meta">
                             <div class="cma-answer-author"><?php printf(__('Posted by %s', 'cm-answers'), $answer['author']); ?></div>
-                            <div class="cma-answer-date"><?php printf(__('Answered On %s', 'cm-answers'), $answer['date']); ?> <a href="#comment-<?php echo $comment->comment_ID; ?>">#</a></div>
+                            <div class="cma-answer-date"><?php printf(__('Answered On %s', 'cm-answers'), $answer['date']); ?> <a href="#comment-<?php echo $answer['id']; ?>">#</a></div>
                         </div>
                     </td>
                 </tr>

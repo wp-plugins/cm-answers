@@ -133,7 +133,6 @@ class CMA_AnswerController extends CMA_BaseController {
         $title = $_POST['thread_title'];
         $content = $_POST['thread_comment'];
         $notify = (bool) $_POST['thread_notify'];
-
         $author_id = get_current_user_id();
         $error = false;
         $messages = array();

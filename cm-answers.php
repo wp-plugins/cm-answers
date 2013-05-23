@@ -5,7 +5,7 @@
   Plugin URI: http://www.cminds.com/plugins/cm-answers
   Description: Allow users to post questions and answers (Q&A) in a stackoverflow style forum which is easy to use and install. Easy social integration & Customization
   Author: CreativeMinds
-  Version: 1.5.1
+  Version: 1.6.1
  */
 
 /*
@@ -30,7 +30,6 @@ if (version_compare('5.3', phpversion(), '>')) {
 }
 
 //Define constants
-define('MY_TEXTDOMAIN', 'cm-answers');
 
 define('CMA_PREFIX', 'CMA_');
 define('CMA_PATH', WP_PLUGIN_DIR . '/' . basename(dirname(__FILE__)));

@@ -437,7 +437,7 @@ Click to see: [comment_link]';
 
             'author' => get_comment_author($comment_id),
             'date' => get_comment_date(get_option('date_format').' '.get_option('time_format'), $comment_id),
-            'daysAgo' => self::renderDaysAgo(get_comment_date('', $comment_id)),
+            'daysAgo' => self::renderDaysAgo(get_comment_date('Y-m-d', $comment_id)),
             'rating' => (int) get_comment_meta($comment_id, self::$_commentMeta['rating'], true),
             'status' => $comment->comment_approved==1?'approved':'pending',
             'questionId' => $comment->comment_post_ID

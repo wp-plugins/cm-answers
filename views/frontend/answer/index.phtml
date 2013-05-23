@@ -48,7 +48,7 @@ get_header();
             </table>
             <div class="cma-pagination"><?php
                 echo paginate_links(array(
-                    'base' => get_post_type_archive_link(CMA_AnswerThread::POST_TYPE) . '%_%',
+                    'base' => trailingslashit(get_post_type_archive_link(CMA_AnswerThread::POST_TYPE)) . '%_%',
                     'format' => 'page/%#%/',
                     'current' => max(1, get_query_var('paged')),
                     'total' => $GLOBALS['wp_query']->max_num_pages,
