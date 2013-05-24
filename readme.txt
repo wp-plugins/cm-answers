@@ -41,21 +41,21 @@ Free Question & Answer forum for WordPress that allows customization of the syst
 [Pro Version](http://www.cminds.com/downloads/cm-answers-pro/)
 The Pro version adds a layer of powerful features to the CM Answers giving the admin better tools to customize the Answers system behavior, adding login support from social networks, adding shortcodes and support for categories and a lot more
 
-* Social Media Integration - Integrates with Facebook &amp; Google+ &amp; LinkedIn [See Image](http://www.cminds.com/wp-content/uploads/edd/image1.png) [See another image](http://www.cminds.com/wp-content/uploads/edd/cm-answers-image2.png)
-* Shortcodes - You can generate questions list by using shortcode: cma-questions with additional parameters. For example limit=10 author=123 sort=hottest
-* User Questions &amp; Answers - You can add "My Questions" and "My Answers" profile views per user anywhere on the site by using shortcodes: cma-my-questions and cma-my-answers [See image](http://www.cminds.com/wp-content/uploads/edd/cm-answers-image3.png)
-* Categories - Ability to add categories and display on different pages in site by using shortcode cat=catname
-* Widgets - Added Widget which can display hotest questions, most viewed, recent and more [See image](http://www.cminds.com/wp-content/uploads/edd/cm-answers-image4.png)
+* Social Media Registration Integration - Integrates with Facebook &amp; Google+ &amp; LinkedIn [See Image](http://www.cminds.com/wp-content/uploads/edd/image1.png) [See another image](http://www.cminds.com/wp-content/uploads/edd/cm-answers-image2.png)
+* Shortcodes - Generate questions list by using shortcode: cma-questions with additional parameters. For example limit=10 author=123 sort=hottest
+* User Dashboard - Add "My Questions" and "My Answers" dashboards to user profile page by using shortcodes: cma-my-questions and cma-my-answers [See image](http://www.cminds.com/wp-content/uploads/edd/cm-answers-image3.png)
+* Categories - Ability to add categories and display by using shortcode cat=catname
+* Widgets -  Widget can display hottest questions, most viewed, recent and more [See image](http://www.cminds.com/wp-content/uploads/edd/cm-answers-image4.png)
 * User Posting Meter - Ability to add near each user  number of questions and answers already posted [See image](http://www.cminds.com/wp-content/uploads/edd/cm-answers-image5.png)
 * Show/Hide Views - Admin can hide or show number of views [See image](http://www.cminds.com/wp-content/uploads/edd/cm-answers-image6.png)
 * Auto-approve questions and answers from users</strong>- Admin can define list of users which do not need moderation [See image](http://www.cminds.com/wp-content/uploads/edd/cm-answers-image7.png)
 * Multisite - Supports multisite
-* Gravatar - Gracatar Support near user name and in user profile
-* Order Answers - Order answers in ascending descending order
-* Attachments - Accept file attachment in question
+* Gravatar - Ability to show Gravatar near user name and in user profile
+* Order Answers - Show answers in ascending or descending order
+* Attachment - Accept file attachment in question, limit by file type and size
 * Localization Support - Forntend (user side) is localized
-* View Count - Control how view count is done (by view or by session)
-* User Profile - Automaticly generate a profile page per each user containing the questions and answers he posted with link to social media profile [See image](http://www.cminds.com/wp-content/uploads/edd/cm-answers-image8.png)
+* View Count Control - Control how view count is done (by view or by session)
+* Public User Profile - Automatically generate a public profile page containing the questions and answers user posted with link to his social media profile [See image](http://www.cminds.com/wp-content/uploads/edd/cm-answers-image8.png)
 * Gratitude Message - Does not include Gratitude message in the footer.
 
 [Visit Pro Version Page](http://www.cminds.com/downloads/cm-answers-pro/)
