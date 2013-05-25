@@ -5,7 +5,7 @@ Donate link: http://www.cminds.com/plugins
 Tags: answers,forum,questions,comments,question and answer,Question and Answer Forum,support forum,q&a,list,stackoverflow,stack overflow,stackoverflow answers,splunkbase,bbPress,board,boards,bulletin,bulletin board,bulletin boards,discussion,discussion board,discussion forums,discussions,simple forum,forum plugin,forums,message,message board,messages,messaging,user messages,threads,user forum,wordpress forum,wp,resolved topics,user rankings,post rating,rate,rating,customer service,customer support
 Requires at least: 3.2
 Tested up to: 3.5
-Stable tag: 1.6.2
+Stable tag: 1.6.3
 
 Allow users to post questions and answers (Q&A) in a stackoverflow style forum which is easy to use, customize and install. w Social integration.
 
@@ -30,7 +30,7 @@ Free Question & Answer forum for WordPress that allows customization of the syst
 * Users can receive notifications once answering a question on followup
 * Sorting option in question and answer page
 * Templet can be easily customized 
-* We will be happy to add more language files submitted by WP community members, Currently we support: Spanish, German, Polish. 
+* We will be happy to add more language files submitted by WP community members, Currently we support: French, Spanish, German, Polish. 
 
 **Demo**
 
@@ -98,6 +98,10 @@ In your template create a directory "CMA". Inside you can place a structure simi
 
 
 == Changelog ==
+= 1.6.3 = 
+* Added French language file
+
+
 = 1.6.1 = 
 * Fixed renderDaysAgo function
 * Fixed pagination to work with permalink structure without trailing slash
