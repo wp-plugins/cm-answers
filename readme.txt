@@ -12,6 +12,8 @@ Allow users to post questions and answers (Q&A) in a stackoverflow style forum w
 == Description ==
 
 Free Question & Answer forum for WordPress that allows customization of the system look&feel.
+For more information please visit [plugin detailed User Guide](http://www.cminds.com/cm-answers-user-guide/).
+
 
 **Use-Cases**
 
@@ -35,6 +37,7 @@ Free Question & Answer forum for WordPress that allows customization of the syst
 **Demo**
 
 * Basic demo [Read Only mode](http://www.cminds.com/answers/).
+For more information please visit [plugin detailed User Guide](http://www.cminds.com/cm-answers-user-guide/).
 
 **Pro Version**	
 
@@ -64,6 +67,7 @@ The Pro version adds a layer of powerful features to the CM Answers giving the a
 **More About this Plugin**
 	
 You can find more information about CM Answers at [CreativeMinds Website](http://www.cminds.com/plugins/).
+For more information please visit [plugin detailed User Guide](http://www.cminds.com/cm-answers-user-guide/).
 
 
 **More Plugins by CreativeMinds**
