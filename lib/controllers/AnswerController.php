@@ -18,8 +18,6 @@ class CMA_AnswerController extends CMA_BaseController {
             'name' => __('CM Answers Sidebar', 'cm-answers'),
             'description' => __('This sidebar is shown on CM Answers pages', 'cm-answers')
         ));
-        add_shortcode('cma-my-questions', array(get_class(), 'showMyQuestions'));
-        add_shortcode('cma-my-answers', array(get_class(), 'showMyAnswers'));
     }
     public static function addMenuItem($items) {
         $link = self::_loadView('answer/meta/menu-item', array('listUrl' => self::addAnswersMenu() ? get_post_type_archive_link(CMA_AnswerThread::POST_TYPE) : null));
@@ -296,26 +294,6 @@ class CMA_AnswerController extends CMA_BaseController {
     }
     public static function addAnswersMenu() {
         return (bool)get_option(self::OPTION_ADD_ANSWERS_MENU);
-    }
-    public static function showMyQuestions($atts) {
-        if (!is_user_logged_in()) 
-            return;
-        $limit = -1;
-        if (isset($atts['limit'])) {
-            $limit = $atts['limit'];
-        }
-        $questions = CMA_AnswerThread::getQuestionsByUser(get_current_user_id(), $limit);
-        return self::_loadView('answer/widget/my-questions', compact('questions'));
-    }
-    public static function showMyAnswers($atts) {
-        if (!is_user_logged_in()) 
-            return;
-        $limit = 0;
-        if (isset($atts['limit'])) {
-            $limit = $atts['limit'];
-        }
-        $answers = CMA_AnswerThread::getAnswersByUser(get_current_user_id(), $limit);
-        return self::_loadView('answer/widget/my-answers', compact('answers'));
     }
 }
 

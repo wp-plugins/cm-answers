@@ -41,7 +41,7 @@ get_header();
                         </td>
                         <td class="cma-thread-summary">
                             <div class="cma-thread-title"><a href="<?php echo get_permalink($post->ID); ?>"><?php echo $thread->getTitle(); ?></a></div>
-                            <div class="cma-thread-updated"><?php sprintf(__('updated %s by %s', 'cm-answers'), CMA_AnswerThread::renderDaysAgo($thread->getUpdated()), $thread->getLastPosterName()); ?></div></td></tr>
+                            <div class="cma-thread-updated"><?php printf(__('updated %s by %s', 'cm-answers'), CMA_AnswerThread::renderDaysAgo($thread->getUnixUpdated(true), true), $thread->getLastPosterName()); ?></div></td></tr>
                     <?php
                 endwhile;
                 ?>

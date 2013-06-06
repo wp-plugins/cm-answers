@@ -5,7 +5,7 @@ Donate link: http://www.cminds.com/plugins
 Tags: answers,forum,questions,comments,question and answer,Question and Answer Forum,support forum,q&a,list,stackoverflow,stack overflow,stackoverflow answers,splunkbase,bbPress,board,boards,bulletin,bulletin board,bulletin boards,discussion,discussion board,discussion forums,discussions,simple forum,forum plugin,forums,message,message board,messages,messaging,user messages,threads,user forum,wordpress forum,wp,resolved topics,user rankings,post rating,rate,rating,customer service,customer support
 Requires at least: 3.2
 Tested up to: 3.5
-Stable tag: 1.6.3
+Stable tag: 1.7.0
 
 Allow users to post questions and answers (Q&A) in a stackoverflow style forum which is easy to use, customize and install. w Social integration.
 
@@ -98,6 +98,10 @@ In your template create a directory "CMA". Inside you can place a structure simi
 
 
 == Changelog ==
+= 1.7.0 =
+* Corrected daysAgo calculation, added hours/minutes/seconds
+* Corrected translations
+
 = 1.6.3 = 
 * Added French language file
 
