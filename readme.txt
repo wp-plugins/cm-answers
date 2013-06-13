@@ -5,16 +5,13 @@ Donate link: http://www.cminds.com/plugins
 Tags: answers,forum,questions,comments,question and answer,Question and Answer Forum,support forum,q&a,list,stackoverflow,stack overflow,stackoverflow answers,splunkbase,bbPress,board,boards,bulletin,bulletin board,bulletin boards,discussion,discussion board,discussion forums,discussions,simple forum,forum plugin,forums,message,message board,messages,messaging,user messages,threads,user forum,wordpress forum,wp,resolved topics,user rankings,post rating,rate,rating,customer service,customer support
 Requires at least: 3.2
 Tested up to: 3.5
-Stable tag: 1.7.0
+Stable tag: 1.8.2
 
 Allow users to post questions and answers (Q&A) in a stackoverflow style forum which is easy to use, customize and install. w Social integration.
 
 == Description ==
 
 Free Question & Answer forum for WordPress that allows customization of the system look&feel.
-
-For more information please visit [plugin detailed User Guide](http://www.cminds.com/cm-answers-user-guide/).
-
 
 **Use-Cases**
 
@@ -35,16 +32,17 @@ For more information please visit [plugin detailed User Guide](http://www.cminds
 * Templet can be easily customized 
 * We will be happy to add more language files submitted by WP community members, Currently we support: French, Spanish, German, Polish. 
 
-**Demo**
+**Demo & User Guide**
 
 * Basic demo [Read Only mode](http://www.cminds.com/answers/).
-For more information please visit [plugin detailed User Guide](http://www.cminds.com/cm-answers-user-guide/).
+* [User Guide](http://www.cminds.com/cm-answers-user-guide/)
 
 **Pro Version**	
 
 [Pro Version](http://www.cminds.com/downloads/cm-answers-pro/)
 The Pro version adds a layer of powerful features to the CM Answers giving the admin better tools to customize the Answers system behavior, adding login support from social networks, adding shortcodes and support for categories and a lot more
 
+* Ajax Support - Using shortcode to display Category now supports Ajax. View fits intself into current site templet [See example](http://jumpstartcto.com/cm-answers-ajax-example)
 * Social Media Registration Integration - Integrates with Facebook &amp; Google+ &amp; LinkedIn [See Image](http://www.cminds.com/wp-content/uploads/edd/image1.png) [See another image](http://www.cminds.com/wp-content/uploads/edd/cm-answers-image2.png)
 * Shortcodes - Generate questions list by using shortcode: cma-questions with additional parameters. For example limit=10 author=123 sort=hottest
 * User Dashboard - Add "My Questions" and "My Answers" dashboards to user profile page by using shortcodes: cma-my-questions and cma-my-answers [See image](http://www.cminds.com/wp-content/uploads/edd/cm-answers-image3.png)
@@ -68,8 +66,6 @@ The Pro version adds a layer of powerful features to the CM Answers giving the a
 **More About this Plugin**
 	
 You can find more information about CM Answers at [CreativeMinds Website](http://www.cminds.com/plugins/).
-
-For more information please visit [plugin detailed User Guide](http://www.cminds.com/cm-answers-user-guide/).
 
 
 **More Plugins by CreativeMinds**
@@ -104,6 +100,16 @@ In your template create a directory "CMA". Inside you can place a structure simi
 
 
 == Changelog ==
+= 1.8.2 =
+* Fixed bug with not displaying last poster name for new threads
+* Added option to disable sidebar or set its max-width
+
+= 1.8.1 =
+* Fixed bug with parsing error upon new thread/comment approval
+
+= 1.8.0 =
+* Added user guide
+
 = 1.7.0 =
 * Corrected daysAgo calculation, added hours/minutes/seconds
 * Corrected translations

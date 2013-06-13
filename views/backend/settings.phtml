@@ -62,7 +62,20 @@ endif;
         echo 'checked="checked"'; ?>/><label for="answers_auto_approve_1"> <?php _e('Yes', 'cm-answers'); ?></label></td>
             <td></td>
         </tr>
-
+        <tr valign="top">
+                    <th scope="row" valign="middle" align="left" >Enable sidebar:</th>
+                    <td ><input type="radio" name="sidebar_enable" id="sidebar_enable_0" value="0" <?php if (!$sidebarEnable)
+                                        echo 'checked="checked"';
+    ?>/><label for="sidebar_enable_0"> No</label> &nbsp; <input type="radio" name="sidebar_enable" id="sidebar_enable_1" value="1" <?php if ($sidebarEnable)
+                                        echo 'checked="checked"';
+    ?>/><label for="sidebar_enable_1"> Yes</label></td>
+                    <td>Enable separate sidebar for CM Answers pages</td>
+                </tr>
+                <tr valign="top">
+                    <th scope="row" valign="middle" align="left">Set sidebar max width (in px):</th>
+                    <td><input type="number" name="sidebar_max_width" value="<?php echo esc_attr($sidebarMaxWidth); ?>" /></td>
+                    <td>Set maximum width of sidebar or leave 0 to auto-adjust</td>
+                </tr>
         <tr valign="top">
             <th scope="row" valign="middle" align="left" ><?php _e('Add "Answers" to WP Nav Menu', 'cm-answers'); ?>:</th>
             <td ><input type="radio" name="add_menu" id="add_menu_0" value="0" <?php if (!$addMenu)

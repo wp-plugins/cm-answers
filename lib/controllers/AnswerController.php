@@ -31,7 +31,7 @@ class CMA_AnswerController extends CMA_BaseController {
                     if (is_numeric($id)) {
                         $thread = CMA_AnswerThread::getInstance($id);
                         $thread->approve();
-                        add_action('admin_notices', create_function('$q', 'echo "<div class=\"updated\"><p>'.__('Question', 'cm-answers').': '.sprintf(__('"%s" has been succesfully approved'), $thread->getTitle()).'</p></div>";'));
+                        add_action('admin_notices', create_function('$q', 'echo "<div class=\"updated\"><p>'.addslashes(__('Question', 'cm-answers').': '.sprintf(__('"%s" has been succesfully approved'), $thread->getTitle())).'</p></div>";'));
                     }
                     break;
                 case 'trash':
@@ -39,7 +39,7 @@ class CMA_AnswerController extends CMA_BaseController {
                     if (is_numeric($id)) {
                         $thread = CMA_AnswerThread::getInstance($id);
                         $thread->trash();
-                        add_action('admin_notices', create_function('$q', 'echo "<div class=\"updated\"><p>'.__('Question', 'cm-answers').': '.sprintf(__('"%s" has been succesfully moved to trash'), $thread->getTitle()).'</p></div>";'));
+                        add_action('admin_notices', create_function('$q', 'echo "<div class=\"updated\"><p>'.addslashes(__('Question', 'cm-answers').': '.sprintf(__('"%s" has been succesfully moved to trash'), $thread->getTitle())).'</p></div>";'));
                     }
                     break;
             }
@@ -229,6 +229,8 @@ class CMA_AnswerController extends CMA_BaseController {
             if ($value == 'singular')
                 unset($wp_classes[$key]);
         }
+         if (!CMA_AnswerThread::isSidebarEnabled() || !is_active_sidebar('cm-answers-sidebar'))
+            $extra_classes[] = 'full-width';
         return array_merge($wp_classes, (array) $extra_classes);
     }
 
@@ -274,6 +276,8 @@ class CMA_AnswerController extends CMA_BaseController {
             CMA_AnswerThread::setNotificationTitle(stripslashes($_POST['notification_title']));
             CMA_AnswerThread::setNotificationContent(stripslashes($_POST['notification_content']));
             CMA_AnswerThread::setVotesMode((int)$_POST['votes_mode']);
+            CMA_AnswerThread::setSidebarEnabled(isset($_POST['sidebar_enable']) && $_POST['sidebar_enable']==1);
+            CMA_AnswerThread::setSidebarMaxWidth((int)$_POST['sidebar_max_width']);
             self::setAnswersMenu(isset($_POST['add_menu']) && $_POST['add_menu'] == 1);
         }
         $params['ratings'] = CMA_AnswerThread::isRatingAllowed();
@@ -286,6 +290,8 @@ class CMA_AnswerController extends CMA_BaseController {
         $params['notificationTitle'] = CMA_AnswerThread::getNotificationTitle();
         $params['notificationContent'] = CMA_AnswerThread::getNotificationContent();
         $params['votesMode'] = CMA_AnswerThread::getVotesMode();
+        $params['sidebarEnable'] = CMA_AnswerThread::isSidebarEnabled();
+        $params['sidebarMaxWidth'] = CMA_AnswerThread::getSidebarMaxWidth();
         $params['addMenu'] = self::addAnswersMenu();
         return $params;
     }

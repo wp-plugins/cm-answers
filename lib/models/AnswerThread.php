@@ -19,6 +19,8 @@ class CMA_AnswerThread extends CMA_PostType
     const OPTION_RATING_ALLOWED = 'cma_rating_allowed';
     const OPTION_NEGATIVE_RATING_ALLOWED = 'cma_negative_rating_allowed';
     const OPTION_VOTES_MODE = 'cma_votes_mode';
+    const OPTION_SIDEBAR_ENABLED = 'cma_sidebar_enabled';
+    const OPTION_SIDEBAR_MAX_WIDTH = 'cma_sidebar_max_width';
     const VOTES_MODE_COUNT = 1;
     const VOTES_MODE_HIGHEST = 2;
     const OPTION_NEW_QUESTION_NOTIFICATION = 'cma_new_question_notification';
@@ -193,7 +195,9 @@ Click to see: [comment_link]';
 
     public function getLastPoster()
     {
-        return $this->getPostMeta(self::$_meta['lastPoster']);
+        $lastPoster = $this->getPostMeta(self::$_meta['lastPoster']);
+        if (empty($lastPoster)) $lastPoster = $this->getAuthorId();
+        return $lastPoster;
     }
 
     public function getLastPosterName()
@@ -737,7 +741,26 @@ Click to see: [comment_link]';
     {
         update_option(self::OPTION_VOTES_MODE, $mode);
     }
+public static function isSidebarEnabled()
+    {
+        $allowed = get_option(self::OPTION_SIDEBAR_ENABLED, 1);
+        return (bool) $allowed;
+    }
 
+    public static function setSidebarEnabled($value = true)
+    {
+        update_option(self::OPTION_SIDEBAR_ENABLED, (int) $value);
+    }
+    public static function getSidebarMaxWidth()
+    {
+        $width = get_option(self::OPTION_SIDEBAR_MAX_WIDTH, 0);
+        return (int) $width;
+    }
+
+    public static function setSidebarMaxWidth($value = 0)
+    {
+        update_option(self::OPTION_SIDEBAR_MAX_WIDTH, (int) $value);
+    }
     public static function getNotificationTitle()
     {
         return get_option(self::OPTION_THREAD_NOTIFICATION_TITLE,
