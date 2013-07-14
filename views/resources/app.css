@@ -15,7 +15,7 @@ a.cma-backlink {
 }
 .cma-clear {clear:both;float:none;}
 .cma-thread-orderby {list-style-type:none;margin:0 5px;font-size:12px;display:inline-block;}
-.cma-thread-orderby li {float:left; margin-right:15px; text-decoration:none;color:#000;background-color:#fff;border-radius:8px;padding:2px 10px; line-height:1.5em}
+.cma-thread-orderby li {float:left; margin-right:15px; text-decoration:none;color:#000;background-color:#fff;border-radius:8px;padding:2px 10px; line-height:1.5em; list-style: none;}
 .cma-thread-orderby li a {color:#000;font-weight:normal; text-decoration:none; font-size:14px; }
 .cma-thread-orderby li a:hover {text-decoration:none;}
 .cma-thread-orderby li.cma-current-sort {background-color:#777;color:#fff;}
