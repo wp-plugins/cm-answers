@@ -14,6 +14,7 @@ class CMA_AnswerThread extends CMA_PostType
      */
     const REWRITE_SLUG = 'answers';
     const ADMIN_MENU = 'CMA_answers_menu';
+    const OPTION_QUESTIONS_TITLE = 'cma_questions_title';
     const OPTION_QUESTION_AUTO_APPROVE = 'cma_question_auto_approve';
     const OPTION_ANSWER_AUTO_APPROVE = 'cma_answer_auto_approve';
     const OPTION_RATING_ALLOWED = 'cma_rating_allowed';
@@ -77,11 +78,12 @@ Click to see: [comment_link]';
             'supports' => array('title', 'editor'),
             'hierarchical' => TRUE
         );
+        $plural = self::getQuestionsTitle();
         self::registerPostType(self::POST_TYPE, __('Question', 'cm-answers'),
-                __('Questions', 'cm-answers'), 'CM Answers', $post_type_args);
+            $plural, 'CM Answers', $post_type_args);
 
         add_filter('CMA_admin_parent_menu',
-                create_function('$q', 'return "' . self::ADMIN_MENU . '";'));
+            create_function('$q', 'return "' . self::ADMIN_MENU . '";'));
         add_action('admin_menu', array(get_class(), 'registerAdminMenu'));
 
         /**
@@ -108,16 +110,21 @@ Click to see: [comment_link]';
         return self::$instances[$id];
     }
 
+    public static function getQuestionsTitle()
+    {
+        return get_option(self::OPTION_QUESTIONS_TITLE, 'Questions');
+    }
+
     public static function registerAdminMenu()
     {
         $page = add_menu_page(__('Questions', 'cm-answers'), 'CM Answers',
-                'edit_posts', self::ADMIN_MENU, create_function('$q', 'return;'));
+            'edit_posts', self::ADMIN_MENU, create_function('$q', 'return;'));
         add_submenu_page(self::ADMIN_MENU, __('Answers', 'cm-answers'),
-                __('Answers', 'cm-answers'), 'edit_posts',
-                'edit-comments.php?post_type=' . self::POST_TYPE);
+            __('Answers', 'cm-answers'), 'edit_posts',
+            'edit-comments.php?post_type=' . self::POST_TYPE);
         add_submenu_page(self::ADMIN_MENU, __('Add New', 'cm-answers'),
-                __('Add New', 'cm-answers'), 'edit_posts',
-                'post-new.php?post_type=' . self::POST_TYPE);
+            __('Add New', 'cm-answers'), 'edit_posts',
+            'post-new.php?post_type=' . self::POST_TYPE);
     }
 
     /**
@@ -256,7 +263,7 @@ Click to see: [comment_link]';
     {
         global $wpdb;
         $sql = $wpdb->prepare("SELECT MAX(m.meta_value*1) FROM {$wpdb->commentmeta} m JOIN {$wpdb->comments} c ON c.comment_ID=m.comment_id AND m.meta_key='%s' AND c.comment_post_ID='%d'",
-                self::$_commentMeta['rating'], $this->getId());
+            self::$_commentMeta['rating'], $this->getId());
         $highest = (int) $wpdb->get_var($sql);
         $this->savePostMeta(array(self::$_meta['highestRatedAnswer'] => $highest));
         return $this;
@@ -336,7 +343,7 @@ Click to see: [comment_link]';
         } elseif ($sort == 'votes') {
             global $wpdb;
             $sql = $wpdb->prepare("SELECT c.comment_ID FROM {$wpdb->comments} c JOIN {$wpdb->commentmeta} cm ON c.comment_post_ID=%d AND c.comment_ID=cm.comment_id AND cm.meta_key=%s ORDER BY cm.meta_value*1 DESC",
-                    $this->getId(), self::$_commentMeta['rating']);
+                $this->getId(), self::$_commentMeta['rating']);
             $rawComments = $wpdb->get_results($sql);
         }
         $comments = array();
@@ -359,7 +366,7 @@ Click to see: [comment_link]';
         else $status = 'draft';
         $title = trim(wp_kses($data['title'], array()));
         $content = trim(wp_kses($data['content'],
-                        array(
+                array(
             'a' => array(
                 'href' => array(),
                 'title' => array()
@@ -390,8 +397,8 @@ Click to see: [comment_link]';
         } else {
             $instance = self::getInstance($id);
             $instance->setUpdated()
-                    ->setResolved(false)
-                    ->setLastPoster(get_current_user_id());
+                ->setResolved(false)
+                ->setLastPoster(get_current_user_id());
             if ($data['notify'] == 1)
                     $instance->addListener(get_current_user_id());
             $instance->savePostMeta(array(self::$_meta['votes'] => 0));
@@ -416,26 +423,25 @@ Click to see: [comment_link]';
         $pendingLink = admin_url('edit.php?post_status=draft&post_type=' . self::POST_TYPE);
 
         $emailTitle = '[' . get_bloginfo('name') . '] ' . __('Please moderate',
-                        'cm-answers') . ' : "' . $title . '"';
+                'cm-answers') . ' : "' . $title . '"';
         $emailContent = __("A new question has been asked and is waiting for your approval",
-                        'cm-answers') . " {$link}
+                'cm-answers') . " {$link}
 
 " . __('Author', 'cm-answers') . " : {$author}
 " . __('E-mail',
-                        'cm-answers') . " : {$email}
-" . __('Title',
-                        'cm-answers') . "  : {$title}
+                'cm-answers') . " : {$email}
+" . __('Title', 'cm-answers') . "  : {$title}
 " . __('Content',
-                        'cm-answers') . ": 
+                'cm-answers') . ": 
 {$content}
 
 
 " . __('Approve it',
-                        'cm-answers') . ": {$approveLink}
+                'cm-answers') . ": {$approveLink}
 " . __('Trash it',
-                        'cm-answers') . ": {$trashLink}
+                'cm-answers') . ": {$trashLink}
 " . __('Please visit the questions moderation panel',
-                        'cm-answers') . ":
+                'cm-answers') . ":
 {$pendingLink}
 ";
         @wp_mail(get_option('admin_email'), $emailTitle, $emailContent);
@@ -461,7 +467,7 @@ Click to see: [comment_link]';
             $content = str_replace('[author]', $author, $content);
             $content = str_replace('[question_title]', $questionTitle, $content);
             $content = str_replace('[question_status]', $questionStatus,
-                    $content);
+                $content);
             $content = str_replace('[question_link]', $questionLink, $content);
             foreach ($receivers as $receiver) {
                 if (is_email($receiver)) {
@@ -494,11 +500,10 @@ Click to see: [comment_link]';
             'content' => $comment->comment_content,
             'author' => get_comment_author($comment_id),
             'date' => get_comment_date(get_option('date_format') . ' ' . get_option('time_format'),
-                    $comment_id),
-            'daysAgo' => self::renderDaysAgo(get_comment_date('G',
-                            $comment_id)),
+                $comment_id),
+            'daysAgo' => self::renderDaysAgo(get_comment_date('G', $comment_id)),
             'rating' => (int) get_comment_meta($comment_id,
-                    self::$_commentMeta['rating'], true),
+                self::$_commentMeta['rating'], true),
             'status' => $comment->comment_approved == 1 ? 'approved' : 'pending',
             'questionId' => $comment->comment_post_ID
         );
@@ -506,11 +511,11 @@ Click to see: [comment_link]';
     }
 
     public function addCommentToThread($content, $author_id, $notify = false,
-            $resolved = false)
+        $resolved = false)
     {
         $user = get_userdata($author_id);
         $content = trim(wp_kses($content,
-                        array(
+                array(
             'a' => array(
                 'href' => array(),
                 'title' => array()
@@ -554,9 +559,9 @@ Click to see: [comment_link]';
         $listeners = $this->getListeners();
         if (!empty($listeners)) {
             $message = get_option(self::OPTION_THREAD_NOTIFICATION,
-                    self::DEFAULT_THREAD_NOTIFICATION);
+                self::DEFAULT_THREAD_NOTIFICATION);
             $title = get_option(self::OPTION_THREAD_NOTIFICATION_TITLE,
-                    self::DEFAULT_THREAD_NOTIFICATION_TITLE);
+                self::DEFAULT_THREAD_NOTIFICATION_TITLE);
 
             $postTitle = $this->getTitle();
             $commentLink = get_permalink($this->getId()) . '/#comment-' . $lastCommentId;
@@ -574,22 +579,22 @@ Click to see: [comment_link]';
     }
 
     public function updateThreadMetadata($comment_id, $author_id, $notify,
-            $resolved)
+        $resolved)
     {
         if ($notify) {
             $this->addListener($author_id);
         }
         $this->setResolved($resolved)
-                ->setLastPoster($author_id)
-                ->setUpdated()
-                ->savePost();
+            ->setLastPoster($author_id)
+            ->setUpdated()
+            ->savePost();
         $this->_notifyOnFollow($comment_id);
     }
 
     public function getVoters($comment_id)
     {
         return (array) get_comment_meta($comment_id,
-                        self::$_commentMeta['usersRated'], true);
+                self::$_commentMeta['usersRated'], true);
     }
 
     public function addVoter($comment_id, $user_id)
@@ -598,7 +603,7 @@ Click to see: [comment_link]';
         $voters[] = $user_id;
         $voters = array_unique($voters);
         update_comment_meta($comment_id, self::$_commentMeta['usersRated'],
-                $voters);
+            $voters);
         return $this;
     }
 
@@ -610,9 +615,9 @@ Click to see: [comment_link]';
     public function voteUp($comment_id)
     {
         $currentRating = (int) get_comment_meta($comment_id,
-                        self::$_commentMeta['rating'], true);
+                self::$_commentMeta['rating'], true);
         update_comment_meta($comment_id, self::$_commentMeta['rating'],
-                $currentRating + 1);
+            $currentRating + 1);
         $this->addVoter($comment_id, get_current_user_id())->addVote();
         return $currentRating + 1;
     }
@@ -620,9 +625,9 @@ Click to see: [comment_link]';
     public function voteDown($comment_id)
     {
         $currentRating = (int) get_comment_meta($comment_id,
-                        self::$_commentMeta['rating'], true);
+                self::$_commentMeta['rating'], true);
         update_comment_meta($comment_id, self::$_commentMeta['rating'],
-                $currentRating - 1);
+            $currentRating - 1);
 
         $this->addVoter($comment_id, get_current_user_id())->addVote();
         return $currentRating - 1;
@@ -642,45 +647,38 @@ Click to see: [comment_link]';
         else {
             if ($seconds_ago < 60) {
                 return sprintf(_n('1 second ago', '%d seconds ago',
-                                $seconds_ago, 'cm-answers'), $seconds_ago);
+                        $seconds_ago, 'cm-answers'), $seconds_ago);
             } else {
                 $minutes_ago = floor($seconds_ago / 60);
                 if ($minutes_ago < 60) {
                     return sprintf(_n('1 minute ago', '%d minutes ago',
-                                    $minutes_ago, 'cm-answers'),
-                            $minutes_ago);
+                            $minutes_ago, 'cm-answers'), $minutes_ago);
                 } else {
                     $hours_ago = floor($minutes_ago / 60);
                     if ($hours_ago < 24) {
                         return sprintf(_n('1 hour ago', '%d hours ago',
-                                        $hours_ago, 'cm-answers'),
-                                $hours_ago);
+                                $hours_ago, 'cm-answers'), $hours_ago);
                     } else {
                         $days_ago = floor($hours_ago / 24);
                         if ($days_ago < 7) {
                             return sprintf(_n('1 day ago', '%d days ago',
-                                            $days_ago, 'cm-answers'),
-                                    $days_ago);
+                                    $days_ago, 'cm-answers'), $days_ago);
                         } else {
                             $weeks_ago = floor($days_ago / 7);
                             if ($weeks_ago < 4) {
                                 return sprintf(_n('1 week ago', '%d weeks ago',
-                                                $weeks_ago, 'cm-answers'),
-                                        $weeks_ago);
+                                        $weeks_ago, 'cm-answers'), $weeks_ago);
                             } else {
                                 $months_ago = floor($weeks_ago / 4);
                                 if ($months_ago < 12) {
                                     return sprintf(_n('1 month ago',
-                                                    '%d months ago',
-                                                    $months_ago,
-                                                    'cm-answers'),
-                                            $months_ago);
+                                            '%d months ago', $months_ago,
+                                            'cm-answers'), $months_ago);
                                 } else {
                                     $years_ago = floor($months_ago / 12);
                                     return sprintf(_n('1 year ago',
-                                                    '%d years ago', $years_ago,
-                                                    'cm-answers'),
-                                            $years_ago);
+                                            '%d years ago', $years_ago,
+                                            'cm-answers'), $years_ago);
                                 }
                             }
                         }
@@ -741,7 +739,8 @@ Click to see: [comment_link]';
     {
         update_option(self::OPTION_VOTES_MODE, $mode);
     }
-public static function isSidebarEnabled()
+
+    public static function isSidebarEnabled()
     {
         $allowed = get_option(self::OPTION_SIDEBAR_ENABLED, 1);
         return (bool) $allowed;
@@ -751,6 +750,7 @@ public static function isSidebarEnabled()
     {
         update_option(self::OPTION_SIDEBAR_ENABLED, (int) $value);
     }
+
     public static function getSidebarMaxWidth()
     {
         $width = get_option(self::OPTION_SIDEBAR_MAX_WIDTH, 0);
@@ -761,10 +761,11 @@ public static function isSidebarEnabled()
     {
         update_option(self::OPTION_SIDEBAR_MAX_WIDTH, (int) $value);
     }
+
     public static function getNotificationTitle()
     {
         return get_option(self::OPTION_THREAD_NOTIFICATION_TITLE,
-                self::DEFAULT_THREAD_NOTIFICATION_TITLE);
+            self::DEFAULT_THREAD_NOTIFICATION_TITLE);
     }
 
     public static function getNewQuestionNotification($asString = true)
@@ -787,7 +788,7 @@ public static function isSidebarEnabled()
     public static function getNotificationContent()
     {
         return get_option(self::OPTION_THREAD_NOTIFICATION,
-                self::DEFAULT_THREAD_NOTIFICATION);
+            self::DEFAULT_THREAD_NOTIFICATION);
     }
 
     public static function setNotificationTitle($title)
@@ -803,13 +804,13 @@ public static function isSidebarEnabled()
     public static function getNewQuestionNotificationContent()
     {
         return get_option(self::OPTION_NEW_QUESTION_NOTIFICATION_CONTENT,
-                self::DEFAULT_NEW_QUESTION_NOTIFICATION_CONTENT);
+            self::DEFAULT_NEW_QUESTION_NOTIFICATION_CONTENT);
     }
 
     public static function getNewQuestionNotificationTitle()
     {
         return get_option(self::OPTION_NEW_QUESTION_NOTIFICATION_TITLE,
-                self::DEFAULT_NEW_QUESTION_NOTIFICATION_TITLE);
+            self::DEFAULT_NEW_QUESTION_NOTIFICATION_TITLE);
     }
 
     public static function setNewQuestionNotificationTitle($title)
@@ -834,7 +835,7 @@ public static function isSidebarEnabled()
                         $query->set('meta_key', self::$_meta['votes']);
                 else
                         $query->set('meta_key',
-                            self::$_meta['highestRatedAnswer']);
+                        self::$_meta['highestRatedAnswer']);
                 $query->set('orderby', 'meta_value_num');
                 $query->set('order', 'DESC');
                 break;

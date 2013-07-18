@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: CM Answers v1.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-06-06 08:28+0100\n"
-"PO-Revision-Date: 2013-06-06 08:30+0100\n"
+"POT-Creation-Date: 2013-07-16 14:10+0100\n"
+"PO-Revision-Date: 2013-07-16 14:10+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -43,7 +43,7 @@ msgstr "Diese Seitenleiste auf CM Answers Seiten dargestellt"
 
 # @ cm-answers
 #: lib/controllers/AnswerController.php:34
-#: lib/controllers/AnswerController.php:42 lib/models/AnswerThread.php:78
+#: lib/controllers/AnswerController.php:42 lib/models/AnswerThread.php:82
 msgid "Question"
 msgstr "Frage"
 
@@ -95,33 +95,33 @@ msgid "You have already voted for this comment"
 msgstr "Sie haben bereits für diesen Kommentar zum"
 
 # @ cm-answers
-#: lib/controllers/AnswerController.php:236 lib/models/AnswerThread.php:419
+#: lib/controllers/AnswerController.php:238 lib/models/AnswerThread.php:430
 msgid "Author"
 msgstr "Autor"
 
 # @ cm-answers
-#: lib/controllers/AnswerController.php:237
+#: lib/controllers/AnswerController.php:239
 msgid "Views"
 msgstr "Aufrufe"
 
 # @ cm-answers
-#: lib/controllers/AnswerController.php:238
+#: lib/controllers/AnswerController.php:240
 msgid "Status"
 msgstr "Status"
 
 # @ cm-answers
-#: lib/controllers/AnswerController.php:239 lib/models/AnswerThread.php:113
-#: lib/models/AnswerThread.php:114
+#: lib/controllers/AnswerController.php:241 lib/models/AnswerThread.php:122
+#: lib/models/AnswerThread.php:123
 msgid "Answers"
 msgstr "Antworten"
 
 # @ cm-answers
-#: lib/controllers/AnswerController.php:256 lib/models/AnswerThread.php:159
+#: lib/controllers/AnswerController.php:258 lib/models/AnswerThread.php:168
 msgid "pending"
 msgstr "schwebend"
 
 # @ cm-answers
-#: lib/controllers/AnswerController.php:258
+#: lib/controllers/AnswerController.php:260
 msgid "Approve"
 msgstr "Genehmigen"
 
@@ -145,107 +145,107 @@ msgid "Pro Version"
 msgstr "Pro Version"
 
 # @ cm-answers
-#: lib/controllers/BaseController.php:478
+#: lib/controllers/BaseController.php:480
 msgid "Settings succesfully updated"
 msgstr "Einstellungen erfolgreich aktualisiert"
 
 # @ cm-answers
-#: lib/controllers/BaseController.php:558
+#: lib/controllers/BaseController.php:560
 msgid "Filter by status"
 msgstr "Filtern nach Status"
 
 # @ cm-answers
-#: lib/controllers/BaseController.php:560
+#: lib/controllers/BaseController.php:562
 msgid "Approved"
 msgstr "Genehmigt"
 
 # @ cm-answers
-#: lib/controllers/BaseController.php:562
+#: lib/controllers/BaseController.php:564
 msgid "Pending"
 msgstr "Schwebend"
 
 # @ cm-answers
-#: lib/controllers/BaseController.php:564
+#: lib/controllers/BaseController.php:566
 msgid "Trash"
 msgstr "Trash"
 
 # @ cm-answers
-#: lib/models/AnswerThread.php:79 lib/models/AnswerThread.php:111
+#: lib/models/AnswerThread.php:120
 #: views/frontend/answer/meta/menu-item.phtml:1
 msgid "Questions"
 msgstr "Fragen"
 
 # @ cm-answers
-#: lib/models/AnswerThread.php:116 lib/models/AnswerThread.php:117
+#: lib/models/AnswerThread.php:125 lib/models/AnswerThread.php:126
 msgid "Add New"
 msgstr "Hinzufügen"
 
 # @ cm-answers
-#: lib/models/AnswerThread.php:160
+#: lib/models/AnswerThread.php:169
 msgid "approved"
 msgstr "genehmigt"
 
 # @ cm-answers
-#: lib/models/AnswerThread.php:227
+#: lib/models/AnswerThread.php:238
 msgid "RESOLVED"
 msgstr "ENTSCHLOSSEN"
 
 # @ cm-answers
-#: lib/models/AnswerThread.php:369
+#: lib/models/AnswerThread.php:380
 msgid "Title cannot be empty"
 msgstr "Titel darf nicht leer sein"
 
 # @ cm-answers
-#: lib/models/AnswerThread.php:371 lib/models/AnswerThread.php:520
+#: lib/models/AnswerThread.php:382 lib/models/AnswerThread.php:529
 msgid "Content cannot be empty"
 msgstr "Inhalt darf nicht leer sein"
 
 # @ cm-answers
-#: lib/models/AnswerThread.php:414
+#: lib/models/AnswerThread.php:425
 msgid "Please moderate"
 msgstr "Bitte moderieren"
 
 # @ cm-answers
-#: lib/models/AnswerThread.php:416
+#: lib/models/AnswerThread.php:427
 msgid "A new question has been asked and is waiting for your approval"
 msgstr "Eine neue Frage wurde gestellt und wird für Ihre Zustimmung warten"
 
 # @ cm-answers
-#: lib/models/AnswerThread.php:420
+#: lib/models/AnswerThread.php:431
 msgid "E-mail"
 msgstr "E-mail"
 
 # @ cm-answers
-#: lib/models/AnswerThread.php:422
+#: lib/models/AnswerThread.php:433
 msgid "Title"
 msgstr "Titel"
 
 # @ cm-answers
-#: lib/models/AnswerThread.php:424
+#: lib/models/AnswerThread.php:434
 msgid "Content"
 msgstr "Inhalt"
 
 # @ cm-answers
-#: lib/models/AnswerThread.php:429
+#: lib/models/AnswerThread.php:439
 msgid "Approve it"
 msgstr "Genehmigen"
 
 # @ cm-answers
-#: lib/models/AnswerThread.php:431
+#: lib/models/AnswerThread.php:441
 msgid "Trash it"
 msgstr "Trash es"
 
 # @ cm-answers
-#: lib/models/AnswerThread.php:433
+#: lib/models/AnswerThread.php:443
 msgid "Please visit the questions moderation panel"
 msgstr "Bitte besuchen Sie die Fragen Moderation Panel"
 
-#: lib/models/AnswerThread.php:637
+#: lib/models/AnswerThread.php:646
 msgid "some time ago"
 msgstr "vor einiger Zeit"
 
 # @ cm-answers
-#: lib/models/AnswerThread.php:640
+#: lib/models/AnswerThread.php:649
 #, php-format
 msgid "1 second ago"
 msgid_plural "%d seconds ago"
@@ -253,7 +253,7 @@ msgstr[0] "Vor 1 Sekunde"
 msgstr[1] "Vor %d Sekunden"
 
 # @ cm-answers
-#: lib/models/AnswerThread.php:645
+#: lib/models/AnswerThread.php:654
 #, php-format
 msgid "1 minute ago"
 msgid_plural "%d minutes ago"
@@ -261,7 +261,7 @@ msgstr[0] "Vor 1 Minute"
 msgstr[1] "Vor %d Minuten"
 
 # @ cm-answers
-#: lib/models/AnswerThread.php:651
+#: lib/models/AnswerThread.php:659
 #, php-format
 msgid "1 hour ago"
 msgid_plural "%d hours ago"
@@ -269,7 +269,7 @@ msgstr[0] "Vor 1 Stunde"
 msgstr[1] "Vor %d Stunden"
 
 # @ cm-answers
-#: lib/models/AnswerThread.php:657
+#: lib/models/AnswerThread.php:664
 #, php-format
 msgid "1 day ago"
 msgid_plural "%d days ago"
@@ -277,7 +277,7 @@ msgstr[0] "Gestern"
 msgstr[1] "Vor %d Tagen"
 
 # @ cm-answers
-#: lib/models/AnswerThread.php:663
+#: lib/models/AnswerThread.php:669
 #, php-format
 msgid "1 week ago"
 msgid_plural "%d weeks ago"
@@ -285,7 +285,7 @@ msgstr[0] "Vor 1 Woche"
 msgstr[1] "Vor %d Wochen"
 
 # @ cm-answers
-#: lib/models/AnswerThread.php:669
+#: lib/models/AnswerThread.php:674
 #, php-format
 msgid "1 month ago"
 msgid_plural "%d months ago"
@@ -293,7 +293,7 @@ msgstr[0] "Vor 1 Monat"
 msgstr[1] "Vor %d Monaten"
 
 # @ cm-answers
-#: lib/models/AnswerThread.php:676
+#: lib/models/AnswerThread.php:679
 #, php-format
 msgid "1 year ago"
 msgid_plural "%d years ago"
@@ -370,37 +370,42 @@ msgid "Link to questions frontend list"
 msgstr "Link zu Fragen Frontend-Liste"
 
 # @ cm-answers
-#: views/backend/settings.phtml:29
+#: views/backend/settings.phtml:29 views/backend/settings.phtml:30
+msgid "Questions listing title"
+msgstr "Fragen Auflistungstitel"
+
+# @ cm-answers
+#: views/backend/settings.phtml:34
 msgid "Enable ratings for answers"
 msgstr "Aktivieren Bewertungen für Antworten"
 
 # @ cm-answers
-#: views/backend/settings.phtml:31 views/backend/settings.phtml:38
-#: views/backend/settings.phtml:54 views/backend/settings.phtml:61
-#: views/backend/settings.phtml:69
+#: views/backend/settings.phtml:36 views/backend/settings.phtml:43
+#: views/backend/settings.phtml:59 views/backend/settings.phtml:66
+#: views/backend/settings.phtml:87
 msgid "No"
 msgstr "Nein"
 
 # @ cm-answers
-#: views/backend/settings.phtml:32 views/backend/settings.phtml:39
-#: views/backend/settings.phtml:55 views/backend/settings.phtml:62
-#: views/backend/settings.phtml:70
+#: views/backend/settings.phtml:37 views/backend/settings.phtml:44
+#: views/backend/settings.phtml:60 views/backend/settings.phtml:67
+#: views/backend/settings.phtml:88
 msgid "Yes"
 msgstr "Ja"
 
 # @ cm-answers
-#: views/backend/settings.phtml:33
+#: views/backend/settings.phtml:38
 msgid "If enabled, users will be able to rate answers"
 msgstr ""
 "Wenn aktiviert, werden die Nutzer in der Lage sein um zu bewerten Antworten"
 
 # @ cm-answers
-#: views/backend/settings.phtml:36
+#: views/backend/settings.phtml:41
 msgid "Enable negative ratings"
 msgstr "Aktivieren negative Bewertungen"
 
 # @ cm-answers
-#: views/backend/settings.phtml:40
+#: views/backend/settings.phtml:45
 msgid ""
 "If enabled, users will be able to give \"thumbs down\" for an answer. If "
 "previous settings is disabled, this will be ignored."
@@ -410,118 +415,118 @@ msgstr ""
 "ignoriert."
 
 # @ cm-answers
-#: views/backend/settings.phtml:43
+#: views/backend/settings.phtml:48
 msgid "On questions list in \"votes\" box show"
 msgstr "Bei Fragen Liste \"Stimmen\" box Show"
 
 # @ cm-answers
-#: views/backend/settings.phtml:45
+#: views/backend/settings.phtml:50
 msgid "Total number of votes of its answers"
 msgstr "Gesamtzahl der Stimmen der Antworten"
 
 # @ cm-answers
-#: views/backend/settings.phtml:47
+#: views/backend/settings.phtml:52
 msgid "Rating of the best answer"
 msgstr "Bewertung des beste Antwort"
 
 # @ cm-answers
-#: views/backend/settings.phtml:48
+#: views/backend/settings.phtml:53
 msgid "If ratings are disabled, this setting will be ignored."
 msgstr "Wenn Bewertungen deaktiviert sind, wird diese Einstellung ignoriert."
 
 # @ cm-answers
-#: views/backend/settings.phtml:52
+#: views/backend/settings.phtml:57
 msgid "Auto-approve new questions"
 msgstr "Auto-genehmigen neue Fragen"
 
 # @ cm-answers
-#: views/backend/settings.phtml:59
+#: views/backend/settings.phtml:64
 msgid "Auto-approve answers"
 msgstr "Auto-genehmigen neue Antworten"
 
 # @ cm-answers
-#: views/backend/settings.phtml:67
+#: views/backend/settings.phtml:85
 msgid "Add \"Answers\" to WP Nav Menu"
 msgstr "Hinzufügen \"Antworten\", um WP Nav Menu"
 
 # @ cm-answers
-#: views/backend/settings.phtml:71
+#: views/backend/settings.phtml:89
 msgid "You need to have \"wp_nav_menu\" trigger in your template"
 msgstr "Sie müssen \"wp_nav_menu\" Trigger in Ihrer Vorlage haben"
 
 # @ cm-answers
-#: views/backend/settings.phtml:74
+#: views/backend/settings.phtml:92
 msgid "Notifications"
 msgstr "Benachrichtigungen"
 
 # @ cm-answers
-#: views/backend/settings.phtml:77
+#: views/backend/settings.phtml:95
 msgid "Notify about new questions"
 msgstr "Benachrichtigen Sie über neue Fragen"
 
 # @ cm-answers
-#: views/backend/settings.phtml:78
+#: views/backend/settings.phtml:96
 msgid "Example"
 msgstr "Beispiel"
 
 # @ cm-answers
-#: views/backend/settings.phtml:79
+#: views/backend/settings.phtml:97
 msgid "Separate e-mail addresses by commas or leave empty to disable."
 msgstr ""
 "Separate E-Mail-Adressen durch Kommas oder leer lassen, um zu deaktivieren."
 
 # @ cm-answers
-#: views/backend/settings.phtml:82
+#: views/backend/settings.phtml:100
 msgid "New question notification title"
 msgstr "Neue Frage Bekanntgabe Titel"
 
 # @ cm-answers
-#: views/backend/settings.phtml:87
+#: views/backend/settings.phtml:105
 msgid "New question notification content"
 msgstr "Neue Frage Bekanntgabe Inhalt"
 
 # @ cm-answers
-#: views/backend/settings.phtml:89 views/backend/settings.phtml:103
+#: views/backend/settings.phtml:107 views/backend/settings.phtml:121
 msgid "Name of the site"
 msgstr "Namen der Site"
 
 # @ cm-answers
-#: views/backend/settings.phtml:90
+#: views/backend/settings.phtml:108
 msgid "Author of the question"
 msgstr "Autor der Frage"
 
 # @ cm-answers
-#: views/backend/settings.phtml:91 views/backend/settings.phtml:104
+#: views/backend/settings.phtml:109 views/backend/settings.phtml:122
 msgid "Title of the question"
 msgstr "Titel der Frage"
 
 # @ cm-answers
-#: views/backend/settings.phtml:92
+#: views/backend/settings.phtml:110
 msgid "Approval status of the question (pending, approved)"
 msgstr "Genehmigungsstatus der Frage (anhängig, genehmigt)"
 
 # @ cm-answers
-#: views/backend/settings.phtml:93
+#: views/backend/settings.phtml:111
 msgid "Link to the new question"
 msgstr "Link zu der neuen Frage"
 
 # @ cm-answers
-#: views/backend/settings.phtml:96
+#: views/backend/settings.phtml:114
 msgid "New answer notification title"
 msgstr "Neue Antwort Bekanntgabe Titel"
 
 # @ cm-answers
-#: views/backend/settings.phtml:101
+#: views/backend/settings.phtml:119
 msgid "New answer notification content"
 msgstr "Neue Antwort Benachrichtigungsinhalt"
 
 # @ cm-answers
-#: views/backend/settings.phtml:105
+#: views/backend/settings.phtml:123
 msgid "Link to the new answer"
 msgstr "Link zu der neuen Antwort"
 
 # @ cm-answers
-#: views/backend/settings.phtml:109
+#: views/backend/settings.phtml:127
 msgid "Update"
 msgstr "Aktualisieren"
 
@@ -557,16 +562,20 @@ msgstr "Die meisten Ansichten"
 
 # @ cm-answers
 #: views/frontend/answer/index.phtml:36
+#: views/frontend/answer/widget/my-answers.phtml:7
+#: views/frontend/answer/widget/my-questions.phtml:7
 msgid "vote"
 msgstr "Stimme"
 
 # @ cm-answers
 #: views/frontend/answer/index.phtml:36
+#: views/frontend/answer/widget/my-answers.phtml:7
 msgid "votes"
 msgstr "Stimmen"
 
 # @ cm-answers
 #: views/frontend/answer/index.phtml:38
+#: views/frontend/answer/widget/my-questions.phtml:9
 msgid "view"
 msgstr "Ansicht"
 
@@ -577,6 +586,7 @@ msgstr "Ansichten"
 
 # @ cm-answers
 #: views/frontend/answer/index.phtml:40
+#: views/frontend/answer/widget/my-questions.phtml:11
 msgid "answer"
 msgstr "Antwort"
 
@@ -587,6 +597,7 @@ msgstr "Antworten"
 
 # @ cm-answers
 #: views/frontend/answer/index.phtml:44
+#: views/frontend/answer/widget/my-questions.phtml:19
 #, php-format
 msgid "updated %s by %s"
 msgstr "aktualisiert %s von %s"
@@ -684,3 +695,9 @@ msgstr "Schreiben Sie Ihre Antwort hier"
 #: views/frontend/answer/single.phtml:107
 msgid "Mark as resolved"
 msgstr "Als aufgelöst markieren"
+
+# @ cm-answers
+#: views/frontend/answer/widget/my-answers.phtml:16
+#, php-format
+msgid "posted %s in reply to %s"
+msgstr "geschrieben %s als Antwort auf %s"

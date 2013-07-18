@@ -25,6 +25,11 @@ endif;
     <p><?php _e('You can add "My Questions" and "My Answers" profile views per user anywhere on the site by using shortcodes: [cma-my-questions] and [cma-my-answers]', 'cm-answers'); ?></p>
     <p><?php _e('Link to questions frontend list', 'cm-answers'); ?>: <a href="<?php echo get_post_type_archive_link('cma_thread'); ?>" target="_new"><?php echo get_post_type_archive_link('cma_thread'); ?></a></p>
     <table>
+        <tr valign="top">
+                   <th scope="row" valign="middle" align="left" ><?php _e('Questions listing title', 'cm-answers'); ?>:</th>
+                   <td ><input type="text" name="questions_title" value="<?php echo esc_attr($questions_title); ?>" placeholder="<?php _e('Questions listing title', 'cm-answers'); ?>"/></td>
+                   <td></td>
+               </tr>
          <tr valign="top">
             <th scope="row" valign="top" align="left" ><?php _e('Enable ratings for answers', 'cm-answers'); ?>:</th>
             <td ><input type="radio" name="ratings" id="ratings_0" value="0" <?php if (!$ratings)

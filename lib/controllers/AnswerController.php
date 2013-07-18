@@ -278,6 +278,10 @@ class CMA_AnswerController extends CMA_BaseController {
             CMA_AnswerThread::setVotesMode((int)$_POST['votes_mode']);
             CMA_AnswerThread::setSidebarEnabled(isset($_POST['sidebar_enable']) && $_POST['sidebar_enable']==1);
             CMA_AnswerThread::setSidebarMaxWidth((int)$_POST['sidebar_max_width']);
+            if (!empty($_POST['questions_title'])) {
+                update_option(CMA_AnswerThread::OPTION_QUESTIONS_TITLE,
+                    $_POST['questions_title']);
+            }
             self::setAnswersMenu(isset($_POST['add_menu']) && $_POST['add_menu'] == 1);
         }
         $params['ratings'] = CMA_AnswerThread::isRatingAllowed();
@@ -293,6 +297,7 @@ class CMA_AnswerController extends CMA_BaseController {
         $params['sidebarEnable'] = CMA_AnswerThread::isSidebarEnabled();
         $params['sidebarMaxWidth'] = CMA_AnswerThread::getSidebarMaxWidth();
         $params['addMenu'] = self::addAnswersMenu();
+        $params['questions_title'] = CMA_AnswerThread::getQuestionsTitle();
         return $params;
     }
     public static function setAnswersMenu($value = false) {

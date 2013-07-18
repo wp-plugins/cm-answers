@@ -5,7 +5,7 @@ Donate link: http://www.cminds.com/plugins
 Tags:answers,forum,questions,comments,question and answer,Question and Answer Forum,support forum,q&a,list,stackoverflow,stack overflow,stackoverflow answers,splunkbase,bbPress,board,boards,bulletin,bulletin board,bulletin boards,discussion,discussion board,discussion forums,discussions,simple forum,forum plugin,forums,message,message board,messages,messaging,user messages,threads,user forum,wordpress forum,wp,resolved topics,user rankings,post rating,rate,rating,customer service,customer support,community,embed,embedded forum,discussion group,website forum,community,conversation,discussions,message,network,notification,social,thread,topic,group,groups,support
 Requires at least: 3.2
 Tested up to: 3.5
-Stable tag: 1.8.2
+Stable tag: 1.9.1
 
 Allow users to post questions and answers (Q&A) in a stackoverflow style forum which is easy to use, customize and install. w Social integration.
 
@@ -30,7 +30,7 @@ Free Question & Answer forum for WordPress that allows customization of the syst
 * Users can receive notifications once answering a question on followup
 * Sorting option in question and answer page
 * Templet can be easily customized 
-* We will be happy to add more language files submitted by WP community members, Currently we support: French, Spanish, German, Polish. 
+* We will be happy to add more language files submitted by WP community members, Currently we support: Spanish, German, Polish, Russain (only regular version), French(only regular version). 
 
 **Demo & User Guide**
 
@@ -59,6 +59,9 @@ The Pro version adds a layer of powerful features to the CM Answers giving the a
 * View Count Control - Control how view count is done (by view or by session)
 * Public User Profile - Automatically generate a public profile page containing the questions and answers user posted with link to his social media profile [See image](http://www.cminds.com/wp-content/uploads/edd/cm-answers-image8.png)
 * Gratitude Message - Does not include Gratitude message in the footer.
+* Tags - Tags are support. Admin can control the appearance of tags. Tags widget is also available
+* Sticky Posts  -  Support sticky posts with admin defined background color
+* Code Snippets Posts  - Support code snippets and background color
 
 [Visit Pro Version Page](http://www.cminds.com/downloads/cm-answers-pro/)
 
@@ -100,6 +103,12 @@ In your template create a directory "CMA". Inside you can place a structure simi
 
 
 == Changelog ==
+= 1.9.1 =
+* CSS and style changes
+
+= 1.8.3 =
+* Added option to edit "Questions" listing title
+
 = 1.8.2 =
 * Fixed bug with not displaying last poster name for new threads
 * Added option to disable sidebar or set its max-width
