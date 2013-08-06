@@ -565,9 +565,12 @@ Click to see: [comment_link]';
 
             $postTitle = $this->getTitle();
             $commentLink = get_permalink($this->getId()) . '/#comment-' . $lastCommentId;
-            $title = str_replace('[question_title]', $threadTitle, $title);
+            $blogname = get_bloginfo('name');
+            $title = str_replace('[blogname]', $blogname, $title);
+            $title = str_replace('[question_title]', $postTitle, $title);
             $title = str_replace('[comment_link]', $commentLink, $title);
-            $message = str_replace('[question_title]', $threadTitle, $message);
+            $message = str_replace('[blogname]', $blogname, $message);
+            $message = str_replace('[question_title]', $postTitle, $message);
             $message = str_replace('[comment_link]', $commentLink, $message);
             foreach ($listeners as $user_id) {
                 $user = get_userdata($user_id);
