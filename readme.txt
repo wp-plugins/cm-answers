@@ -1,35 +1,35 @@
 === Plugin Name ===
 Name: CM Answers
-Contributors: CreativeMinds (http://www.cminds.com/)
-Donate link: http://www.cminds.com/plugins
+Contributors: CreativeMinds (http://plugins.cminds.com/)
+Donate link: http://answers.cminds.com/
 Tags:answers,forum,questions,comments,question and answer,Question and Answer Forum,support forum,q&a,list,stackoverflow,stack overflow,stackoverflow answers,splunkbase,bbPress,board,boards,bulletin,bulletin board,bulletin boards,discussion,discussion board,discussion forums,discussions,simple forum,forum plugin,forums,message,message board,messages,messaging,user messages,threads,user forum,wordpress forum,wp,resolved topics,user rankings,post rating,rate,rating,customer service,customer support,community,embed,embedded forum,discussion group,website forum,community,conversation,discussions,message,network,notification,social,thread,topic,group,groups,support
 Requires at least: 3.2
 Tested up to: 3.5
-Stable tag: 1.9.8
+Stable tag: 1.9.12
 
-Allow users to post questions and answers (Q&A) in a stackoverflow style forum which is easy to use, customize and install. w Social integration.
+Enables users to post questions and answers (Q&A) in a stack overflow style, Plugin includes social registration and can be customized easily
 
 == Description ==
 
-Free Question & Answer forum for WordPress that allows customization of the system look&feel.
+CM Answers is a plugin for WordPress that enables users to post questions and answers (Q&A) in a stack overflow style, Plugin also includes social registration using Facebook, LinkedIn or Google+ and has many other unique features which allow administrators to customize the plugin according to his or her needs
 
 **Use-Cases**
 
 * Forum - Put a lightweight and easy to use Forum on your WordPress site/blog. 
-* Support forum - Support your users while letting them vote and answer existing  topics
-* Community - Add a forum to your site and allow your members to start their own conversations
+* Support forum - Support your users while letting them vote and answer existing topics 
+* Community - Add a discussion forum to your site that allow your members to start their own conversations
 * Questions & Answers - Users can answer questions sent in by other users.
 * Customer Support - Support customers questions
 * StackOverflow - Add StackOverflow like forum to your site
 
 **Features**
 
-* Includes views count 
-* Includes answers count
+* Includes a views count 
+* Includes an answers count
 * Admin can moderate question & answers and can receive email notifications
 * Users can receive notifications once answering a question on followup
 * Sorting option in question and answer page
-* Templet can be easily customized 
+* Template can be easily customized 
 * We will be happy to add more language files submitted by WP community members, Currently we support: Spanish, German, Polish, Russain, French, Czech. 
 
 **Demo & User Guide**
@@ -39,7 +39,7 @@ Free Question & Answer forum for WordPress that allows customization of the syst
 
 **Pro Version**	
 
-[Pro Version](http://www.cminds.com/downloads/cm-answers-pro/)
+[Pro Version](http://answers.cminds.com/)
 The Pro version adds a layer of powerful features to the CM Answers giving the admin better tools to customize the Answers system behavior, adding login support from social networks, adding shortcodes and support for categories and a lot more
 
 * Ajax Support - Using shortcode to display Category now supports Ajax. View fits intself into current site templet [See example](http://jumpstartcto.com/cm-answers-ajax-example)
@@ -48,12 +48,12 @@ The Pro version adds a layer of powerful features to the CM Answers giving the a
 * User Dashboard - Add "My Questions" and "My Answers" dashboards to user profile page by using shortcodes: cma-my-questions and cma-my-answers [See image](http://www.cminds.com/wp-content/uploads/edd/cm-answers-image3.png)
 * Categories - Ability to add categories and display by using shortcode cat=catname
 * Widgets -  Widget can display hottest questions, most viewed, recent and more [See image](http://www.cminds.com/wp-content/uploads/edd/cm-answers-image4.png)
-* User Posting Meter - Ability to add near each user  number of questions and answers already posted [See image](http://www.cminds.com/wp-content/uploads/edd/cm-answers-image5.png)
+* User Posting Meter - Ability to add beside each user profile the number of questions and answers already posted [See image](http://www.cminds.com/wp-content/uploads/edd/cm-answers-image5.png)
 * Show/Hide Views - Admin can hide or show number of views [See image](http://www.cminds.com/wp-content/uploads/edd/cm-answers-image6.png)
 * Auto-approve questions and answers from users</strong>- Admin can define list of users which do not need moderation [See image](http://www.cminds.com/wp-content/uploads/edd/cm-answers-image7.png)
 * Multisite - Supports multisite
 * Gravatar - Ability to show Gravatar near user name and in user profile
-* Order Answers - Show answers in ascending or descending order
+* Order Answers - Show and sort all answers in ascending or descending order
 * Attachment - Accept file attachment in question, limit by file type and size
 * Localization Support - Forntend (user side) is localized
 * View Count Control - Control how view count is done (by view or by session)
@@ -65,12 +65,16 @@ The Pro version adds a layer of powerful features to the CM Answers giving the a
 * Homepage - Support option to define cm answers as Site/Blog homepage
 * Disclaimer - Added Discliamer support for first time users
 
-[Visit Pro Version Page](http://www.cminds.com/downloads/cm-answers-pro/)
+[Visit Pro Version Page](http://answers.cminds.com/)
 
 
 **More About this Plugin**
 	
-You can find more information about CM Answers at [CreativeMinds Website](http://www.cminds.com/plugins/).
+You can find more information about CM Answers at [CreativeMinds Website](http://plugins.cminds.com/).
+
+**Pro Version Video**	
+
+[youtube http://www.youtube.com/watch?v=px1IOEKOcr4]
 
 
 **More Plugins by CreativeMinds**
@@ -105,7 +109,11 @@ In your template create a directory "CMA". Inside you can place a structure simi
 
 
 == Changelog ==
-= 1.9.8 =
+= 1.9.12 =
+*  Update readme and plugin homepage
+
+= 1.9.11 =
+* Update readme file
 * Added language files (cz)
 
 = 1.9.4 =

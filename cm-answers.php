@@ -2,10 +2,10 @@
 
 /*
   Plugin Name: CM Answers
-  Plugin URI: http://www.cminds.com/plugins/cm-answers
+  Plugin URI: http://answers.cminds.com/
   Description: Allow users to post questions and answers (Q&A) in a stackoverflow style forum which is easy to use and install. Easy social integration & Customization
   Author: CreativeMinds
-  Version: 1.9.8
+  Version: 1.9.11
  */
 
 /*
