@@ -42,7 +42,7 @@ CM Answers is a plugin for WordPress that enables users to post questions and an
 [youtube http://www.youtube.com/watch?v=px1IOEKOcr4]
 
 
-**Pro Version**	
+**Pro Version Features**	
 
 [Pro Version](http://answers.cminds.com/)
 The Pro version adds a layer of powerful features to the CM Answers giving the admin better tools to customize the Answers system behavior, adding login support from social networks, adding shortcodes and support for categories and a lot more
