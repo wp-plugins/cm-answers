@@ -64,7 +64,7 @@ The Pro version adds a layer of powerful features to the CM Answers giving the a
 * View Count Control - Control how view count is done (by view or by session) [See image from Settings](http://answers.cminds.com/wp-content/uploads/edd/Answers99C)
 * Public User Profile - Automatically generate a public profile page containing the questions and answers user posted with link to his social media profile [See image](http://www.cminds.com/wp-content/uploads/edd/cm-answers-image8.png)
 * Gratitude Message - Does not include Gratitude message in the footer.
-* Tags - Tags are support. Admin can control the appearance of tags. Tags widget is also available  [See demo – Widget on the right](http://answers.cminds.com/answers) , [See image](http://answers.cminds.com/wp-content/uploads/edd/Answers99E)
+* Tags - Tags are support. Admin can control the appearance of tags. Tags widget is also available  [See demo - Widget on the right](http://answers.cminds.com/answers) , [See image](http://answers.cminds.com/wp-content/uploads/edd/Answers99E)
 * Sticky Questions  -  upport sticky questions with admin defined background color  [See Demo - First question is sticky](http://answers.cminds.com/answers), [See image When Admin edit question post](http://answers.cminds.com/wp-content/uploads/edd/Answers99F) , [See image from settings](http://answers.cminds.com/wp-content/uploads/edd/Answers99H)
 * Code Snippets Posts  - Support code snippets and background color [See Demo of code inside a question](http://answers.cminds.com/answers/code-example/) , [See image from settings](http://answers.cminds.com/wp-content/uploads/edd/Answers99G)
 * Homepage - Support option to define cm answers as Site/Blog homepage
