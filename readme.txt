@@ -22,6 +22,17 @@ CM Answers is a plugin for WordPress that enables users to post questions and an
 * Customer Support - Support customers questions
 * StackOverflow - Add StackOverflow like forum to your site
 
+**Demo & User Guide**
+
+* [Plugin Site](http://answers.cminds.com/)
+* Basic demo [Read Only mode](http://answers.cminds.com/answers/).
+* [User Guide](http://www.cminds.com/cm-answers-user-guide/)
+
+**Pro Version Video**	
+
+[youtube http://www.youtube.com/watch?v=px1IOEKOcr4]
+
+
 **Features**
 
 * Includes a views count 
@@ -31,15 +42,6 @@ CM Answers is a plugin for WordPress that enables users to post questions and an
 * Sorting option in question and answer page
 * Template can be easily customized 
 * We will be happy to add more language files submitted by WP community members, Currently we support: Spanish, German, Polish, Russain, French, Czech. 
-
-**Demo & User Guide**
-
-* Basic demo [Read Only mode](http://answers.cminds.com/answers/).
-* [User Guide](http://www.cminds.com/cm-answers-user-guide/)
-
-**Pro Version Video**	
-
-[youtube http://www.youtube.com/watch?v=px1IOEKOcr4]
 
 
 **Pro Version Features**	
