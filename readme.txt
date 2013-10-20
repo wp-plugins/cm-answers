@@ -5,7 +5,7 @@ Donate link: http://answers.cminds.com/
 Tags:answers,forum,questions,comments,question and answer,Question and Answer Forum,support forum,q&a,list,stackoverflow,stack overflow,stackoverflow answers,splunkbase,bbPress,board,boards,bulletin,bulletin board,bulletin boards,discussion,discussion board,discussion forums,discussions,simple forum,forum plugin,forums,message,message board,messages,messaging,user messages,threads,user forum,wordpress forum,wp,resolved topics,user rankings,post rating,rate,rating,customer service,customer support,community,embed,embedded forum,discussion group,website forum,community,conversation,discussions,message,network,notification,social,thread,topic,group,groups,support
 Requires at least: 3.2
 Tested up to: 3.6
-Stable tag: 1.9.12
+Stable tag: 2.0.0
 
 Enables users to post questions and answers (Q&A) in a Stackoverflow style. Plugin includes social media login registration and can be customized easily
 
@@ -15,8 +15,8 @@ CM Answers is a plugin for WordPress that enables users to post questions and an
 
 **Use-Cases**
 
-* Forum - Puts a lightweight and easy to use Discussion Forum on your WordPress site or blog. 
-* Support Forum - Supports your users while allowing them vote and answer existing topics that you moderate. 
+* Forum - Puts a lightweight and easy to use Discussion Forum on your WordPress site or blog.
+* Support Forum - Supports your users while allowing them vote and answer existing topics that you moderate.
 * Community - Adds a discussion forum to your site that allow your members to start their own conversations and ask questions.
 * Questions & Answers - Users can answer questions sent in by other users.
 * Customer Support - Support for retail customer's questions.
@@ -28,23 +28,23 @@ CM Answers is a plugin for WordPress that enables users to post questions and an
 * Basic demo [Read Only mode](http://answers.cminds.com/answers/).
 * [User Guide](http://www.cminds.com/cm-answers-user-guide/)
 
-**Pro Version Video**	
+**Pro Version Video**
 
 [youtube http://www.youtube.com/watch?v=px1IOEKOcr4]
 
 
 **Features**
 
-* Includes a views count 
+* Includes a views count
 * Includes an answers count
 * Administrators can moderate question & answers and can receive email notifications.
 * Users can receive notifications when answering a question pending follow-up.
 * Sorting options in the question and answer pages.
-* Template can be easily customized according to users requirements. 
-* We will be happy to add more language files and submit them to our WP community members. Currently we support: Spanish, German, Polish, Russian, French and Czech. 
+* Template can be easily customized according to users requirements.
+* We will be happy to add more language files and submit them to our WP community members. Currently we support: Spanish, German, Polish, Russian, French and Czech.
 
 
-**Pro Version Features**	
+**Pro Version Features**
 
 [Pro Version](http://answers.cminds.com/)
 The Pro version adds a layer of powerful features to the standard CM Answers plugin, giving administrators better tools to customize their Answers discussion forum behavior by allowing you to add login support from social networks, add Shortcodes and moderate support for specific categories, and a lot more...
@@ -78,17 +78,17 @@ The Pro version adds a layer of powerful features to the standard CM Answers plu
 
 
 **More About this Plugin**
-	
+
 You can find more information about the CM Answers WordPress plugin at [CreativeMinds Website](http://plugins.cminds.com/).
 
 
 **More Plugins by CreativeMinds**
 
-* [CM Super ToolTip Glossary](http://wordpress.org/extend/plugins/enhanced-tooltipglossary/) - Easily creates a Glossary, Encyclopedia or Dictionary of your website's terms and shows them as a tooltip in posts and pages when hovering. With many more powerful features. 
+* [CM Super ToolTip Glossary](http://wordpress.org/extend/plugins/enhanced-tooltipglossary/) - Easily creates a Glossary, Encyclopedia or Dictionary of your website's terms and shows them as a tooltip in posts and pages when hovering. With many more powerful features.
 * [CM Download Manager](http://wordpress.org/extend/plugins/cm-download-manager) - Allows users to upload, manage, track and support documents or files in a download directory listing database for others to contribute, use and comment upon.
-* [CM Answers](http://wordpress.org/extend/plugins/cm-answers/) - Allows users to post questions and answers (Q&A) in a Stackoverflow style community forum which is easy to use, customize and install. Comes with Social integration Shortcodes. 
-* [CM Email Blacklist](http://wordpress.org/extend/plugins/cm-email-blacklist/) - Blocks users using blacklists of domains and prevents them from registering to your WordPress site. 
-* [CM Multi MailChimp List Manager](http://wordpress.org/extend/plugins/multi-mailchimp-list-manager/) - Allows users to subscribe and unsubscribe from multiple MailChimp email lists. 
+* [CM Answers](http://wordpress.org/extend/plugins/cm-answers/) - Allows users to post questions and answers (Q&A) in a Stackoverflow style community forum which is easy to use, customize and install. Comes with Social integration Shortcodes.
+* [CM Email Blacklist](http://wordpress.org/extend/plugins/cm-email-blacklist/) - Blocks users using blacklists of domains and prevents them from registering to your WordPress site.
+* [CM Multi MailChimp List Manager](http://wordpress.org/extend/plugins/multi-mailchimp-list-manager/) - Allows users to subscribe and unsubscribe from multiple MailChimp email lists.
 
 
 == Installation ==
@@ -114,8 +114,11 @@ In your template you can custom create a directory called "CMA". Inside this dir
 
 
 == Changelog ==
+= 2.0.0 =
+* Show only approved comments on highest rating
+
 = 1.9.12 =
-*  Update readme and plugin homepage
+* Update readme and plugin homepage
 
 = 1.9.11 =
 * Update readme file
@@ -144,11 +147,11 @@ In your template you can custom create a directory called "CMA". Inside this dir
 * Corrected daysAgo calculation, added hours/minutes/seconds
 * Corrected translations
 
-= 1.6.3 = 
+= 1.6.3 =
 * Added French language file
 
 
-= 1.6.1 = 
+= 1.6.1 =
 * Fixed renderDaysAgo function
 * Fixed pagination to work with permalink structure without trailing slash
 * Fixed comment direct link

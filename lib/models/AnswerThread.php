@@ -31,7 +31,7 @@ class CMA_AnswerThread extends CMA_PostType
     const DEFAULT_NEW_QUESTION_NOTIFICATION_CONTENT = 'A new question has been asked by [author]:
 Title: [question_title]
 Approval status: [question_status]
-            
+
 Click to see: [question_link]';
     const OPTION_THREAD_NOTIFICATION = 'cma_thread_notification';
     const OPTION_THREAD_NOTIFICATION_TITLE = 'cma_thread_notification_title';
@@ -42,12 +42,12 @@ Click to see: [comment_link]';
     const DEFAULT_THREAD_NOTIFICATION_TITLE = '[[blogname]] Someone has posted a new answer on the topic you subscribed to';
 
     /**
-     * @var CMA_AnswerThread[] singletones cache 
+     * @var CMA_AnswerThread[] singletones cache
      */
     protected static $instances = array();
 
     /**
-     * @var array meta keys mapping 
+     * @var array meta keys mapping
      */
     protected static $_meta = array(
         'lastPoster' => '_last_poster',
@@ -117,19 +117,25 @@ Click to see: [comment_link]';
 
     public static function registerAdminMenu()
     {
-        $page = add_menu_page(__('Questions', 'cm-answers'), 'CM Answers',
-            'edit_posts', self::ADMIN_MENU, create_function('$q', 'return;'));
-        add_submenu_page(self::ADMIN_MENU, __('Answers', 'cm-answers'),
-            __('Answers', 'cm-answers'), 'edit_posts',
-            'edit-comments.php?post_type=' . self::POST_TYPE);
-        add_submenu_page(self::ADMIN_MENU, __('Add New', 'cm-answers'),
-            __('Add New', 'cm-answers'), 'edit_posts',
-            'post-new.php?post_type=' . self::POST_TYPE);
+        $current_user = wp_get_current_user();
+
+        if(user_can($current_user, 'edit_posts')) {
+            
+            $page = add_menu_page(__('Questions', 'cm-answers'), 'CM Answers',
+                'edit_posts', self::ADMIN_MENU, create_function('$q', 'return;'));
+            add_submenu_page(self::ADMIN_MENU, __('Answers', 'cm-answers'),
+                __('Answers', 'cm-answers'), 'edit_posts',
+                'edit-comments.php?post_type=' . self::POST_TYPE);
+            add_submenu_page(self::ADMIN_MENU, __('Add New', 'cm-answers'),
+                __('Add New', 'cm-answers'), 'edit_posts',
+                'post-new.php?post_type=' . self::POST_TYPE);
+
+        }
     }
 
     /**
      * Get content of answer
-     * @return string 
+     * @return string
      */
     public function getContent()
     {
@@ -153,7 +159,7 @@ Click to see: [comment_link]';
      * Set status
      * @param string $_status
      * @param bool $save Save immediately?
-     * @return CMA_AnswerThread 
+     * @return CMA_AnswerThread
      */
     public function setStatus($_status, $save = false)
     {
@@ -180,7 +186,7 @@ Click to see: [comment_link]';
 
     /**
      * Get author
-     * @return WP_User 
+     * @return WP_User
      */
     public function getAuthor()
     {
@@ -191,7 +197,7 @@ Click to see: [comment_link]';
      * Set author
      * @param int $_author
      * @param bool $save Save immediately?
-     * @return CMA_AnswerThread 
+     * @return CMA_AnswerThread
      */
     public function setAuthor($_author, $save = false)
     {
@@ -342,7 +348,7 @@ Click to see: [comment_link]';
             $rawComments = get_comments($args);
         } elseif ($sort == 'votes') {
             global $wpdb;
-            $sql = $wpdb->prepare("SELECT c.comment_ID FROM {$wpdb->comments} c JOIN {$wpdb->commentmeta} cm ON c.comment_post_ID=%d AND c.comment_ID=cm.comment_id AND cm.meta_key=%s ORDER BY cm.meta_value*1 DESC",
+            $sql = $wpdb->prepare("SELECT c.comment_ID FROM {$wpdb->comments} c JOIN {$wpdb->commentmeta} cm ON c.comment_post_ID=%d AND c.comment_ID=cm.comment_id AND c.comment_approved AND cm.meta_key=%s ORDER BY cm.meta_value*1 DESC",
                 $this->getId(), self::$_commentMeta['rating']);
             $rawComments = $wpdb->get_results($sql);
         }
@@ -432,7 +438,7 @@ Click to see: [comment_link]';
                 'cm-answers') . " : {$email}
 " . __('Title', 'cm-answers') . "  : {$title}
 " . __('Content',
-                'cm-answers') . ": 
+                'cm-answers') . ":
 {$content}
 
 

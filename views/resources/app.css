@@ -6,9 +6,9 @@ body.full-width .cma-content {float:none; width:100%;}
 .cma_success {color:#4f8a10; background-color: #dff2bf; background-image:url(imgs/success.png);}
 .cma_error {color:#d8000c; background-color:#ffbaba; background-image:url(imgs/error.png);}
 .cma_success li, .cma_error li {display: block;
-line-height: 20px;
-margin:0;
-list-style-type: none;}
+                                line-height: 20px;
+                                margin:0;
+                                list-style-type: none;}
 a.cma-backlink {
     float:right;
     font-size:11px;
@@ -70,86 +70,89 @@ a.cma-thumbs-down:hover {color:#c0462e;}
 .cma_poweredbylink:hover{color:#bbb;text-decoration:none;}
 .cma_poweredby:before {content:'Powered by ';}
 /* template specifics, copied from twenty twelve theme */
-.site-content {
-	margin: 24px 0 0;
-	margin: 1.714285714rem 0 0;
+.cma-content .site-content {
+    margin: 24px 0 0;
+    margin: 1.714285714rem 0 0;
 }
-.entry-header {
-	margin-bottom: 24px;
-	margin-bottom: 1.714285714rem;
+.cma-content .entry-header {
+    margin-bottom: 24px;
+    margin-bottom: 1.714285714rem;
 }
-.entry-header .entry-title {
-	font-size: 20px;
-	font-size: 1.428571429rem;
-	line-height: 1.2;
-	font-weight: normal;
+.cma-content .entry-header .entry-title {
+    font-size: 20px;
+    font-size: 1.428571429rem;
+    line-height: 1.2;
+    font-weight: normal;
 }
-.entry-header .entry-title a {
-	text-decoration: none;
+.cma-content .entry-header .entry-title a {
+    text-decoration: none;
 }
-.widget-area {
-	margin: 24px 0 0;
-	margin: 1.714285714rem 0 0;
+.cma-content .widget-area {
+    margin: 24px 0 0;
+    margin: 1.714285714rem 0 0;
 }
 /* Sidebar */
-.widget-area .widget {
-	-webkit-hyphens: auto;
-	-moz-hyphens: auto;
-	hyphens: auto;
-	margin-bottom: 48px;
-	margin-bottom: 3.428571429rem;
-	word-wrap: break-word;
-	list-style: none;
+.cma-content .widget-area .widget {
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+    margin-bottom: 48px;
+    margin-bottom: 3.428571429rem;
+    word-wrap: break-word;
+    list-style: none;
 }
-.widget-area .widget h3 {
-	margin-bottom: 24px;
-	margin-bottom: 1.714285714rem;
+.cma-content .widget-area .widget h3 {
+    margin-bottom: 24px;
+    margin-bottom: 1.714285714rem;
 }
-.widget-area .widget p,
-.widget-area .widget li,
-.widget-area .widget .textwidget {
-	font-size: 13px;
-	font-size: 0.928571429rem;
-	line-height: 1.846153846;
+.cma-content .widget-area .widget p,
+.cma-content .widget-area .widget li,
+.cma-content .widget-area .widget .textwidget {
+    font-size: 13px;
+    font-size: 0.928571429rem;
+    line-height: 1.846153846;
 }
-.widget-area .widget p {
-	margin-bottom: 24px;
-	margin-bottom: 1.714285714rem;
+.cma-content .widget-area .widget p {
+    margin-bottom: 24px;
+    margin-bottom: 1.714285714rem;
 }
-.widget-area .textwidget ul {
-	list-style: disc outside;
-	margin: 0 0 24px;
-	margin: 0 0 1.714285714rem;
+.cma-content .widget-area .textwidget ul {
+    list-style: disc outside;
+    margin: 0 0 24px;
+    margin: 0 0 1.714285714rem;
 }
-.widget-area .textwidget li {
-	margin-left: 36px;
-	margin-left: 2.571428571rem;
+.cma-content .widget-area .textwidget li {
+    margin-left: 36px;
+    margin-left: 2.571428571rem;
 }
-.widget-area .widget a {
-	color: #757575;
+.cma-content .widget-area .widget a {
+    color: #757575;
 }
-.widget-area .widget a:hover {
-	color: #21759b;
+.cma-content .widget-area .widget a:hover {
+    color: #21759b;
 }
-.widget-area #s {
-	width: 53.66666666666%; /* define a width to avoid dropping a wider submit button */
+.cma-content .widget-area #s {
+    width: 53.66666666666%; /* define a width to avoid dropping a wider submit button */
 }
-.widget-area .widget ul ul {
-	margin-left: 12px;
-	margin-left: 0.857142857rem;
+.cma-content .widget-area .widget ul ul {
+    margin-left: 12px;
+    margin-left: 0.857142857rem;
 }
 /* Minimum width of 600 pixels. */
 @media screen and (min-width: 600px) {
- 	.site-content {
-		float: left;
-		width: 65.104166667%;
-	}
-        	.entry-header .entry-title {
-		font-size: 22px;
-		font-size: 1.571428571rem;
-	}
+    .cma-content.site-content {
+        float: left;
+        width: 65.104166667%;
+    }
+    .site-footer {
+        clear: both;
+    }
+    .entry-header .entry-title {
+        font-size: 22px;
+        font-size: 1.571428571rem;
+    }
 }
 
 @media print {
-    .widget-area {display:none;}
+    .cma-content .widget-area {display:none;}
 }
