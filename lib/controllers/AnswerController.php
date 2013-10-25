@@ -14,6 +14,8 @@ class CMA_AnswerController extends CMA_BaseController
         add_action('parse_query', array(get_class(), 'processStatusChange'));
         add_filter('wp_nav_menu_items', array(get_class(), 'addMenuItem'), 1, 1);
         add_action('pre_get_posts', array(get_class(), 'registerCustomOrder'), 1, 1);
+        add_action('CMA_login_form', array(get_class(), 'showLoginForm'));
+
         register_sidebar(array(
             'id' => 'cm-answers-sidebar',
             'name' => __('CM Answers Sidebar', 'cm-answers'),
@@ -25,6 +27,11 @@ class CMA_AnswerController extends CMA_BaseController
     {
         $link = self::_loadView('answer/meta/menu-item', array('listUrl' => self::addAnswersMenu() ? get_post_type_archive_link(CMA_AnswerThread::POST_TYPE) : null));
         return $items . $link;
+    }
+
+    public static function showLoginForm()
+    {
+        echo self::_loadView('answer/widget/login');
     }
 
     public static function processStatusChange()
