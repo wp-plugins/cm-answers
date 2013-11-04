@@ -5,7 +5,7 @@ Donate link: http://answers.cminds.com/
 Tags:answers,forum,questions,comments,question and answer,Question and Answer Forum,support forum,q&a,list,stackoverflow,stack overflow,stackoverflow answers,splunkbase,bbPress,board,boards,bulletin,bulletin board,bulletin boards,discussion,discussion board,discussion forums,discussions,simple forum,forum plugin,forums,message,message board,messages,messaging,user messages,threads,user forum,wordpress forum,wp,resolved topics,user rankings,post rating,rate,rating,customer service,customer support,community,embed,embedded forum,discussion group,website forum,community,conversation,discussions,message,network,notification,social,thread,topic,group,groups,support
 Requires at least: 3.2
 Tested up to: 3.6
-Stable tag: 2.0.5
+Stable tag: 2.0.6
 
 Enables users to post questions and answers (Q&A) in a Stackoverflow style. Plugin includes social media login registration and can be customized easily
 
