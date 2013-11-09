@@ -13,6 +13,9 @@ Enables users to post questions and answers (Q&A) in a Stackoverflow style. Plug
 
 CM Answers is a plugin for WordPress that enables users to post questions and answers (Q&A) in a Stackoverflow style. Plugin also includes social media registration using Facebook, LinkedIn or Google+ authentication. The CM Answers discussion forum plugin has many other unique features which allow administrators to customize it according to his or her needs.
 
+[youtube http://www.youtube.com/watch?v=nPJjVpN-ZpA]
+
+
 **Use-Cases**
 
 * Forum - Puts a lightweight and easy to use Discussion Forum on your WordPress site or blog.
@@ -27,11 +30,6 @@ CM Answers is a plugin for WordPress that enables users to post questions and an
 * [Plugin Site](http://answers.cminds.com/)
 * Basic demo [Read Only mode](http://answers.cminds.com/answers/).
 * [User Guide](http://www.cminds.com/cm-answers-user-guide/)
-
-**Pro Version Video**
-
-[youtube http://www.youtube.com/watch?v=px1IOEKOcr4]
-
 
 **Features**
 
