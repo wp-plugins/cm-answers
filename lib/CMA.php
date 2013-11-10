@@ -31,7 +31,7 @@ class CMA
         if (current_user_can('manage_options')) {
             ?>
             <div id="message" class="updated fade">
-                <p><strong>New !! A Pro version of CM Answers is <a href="http://answers.cminds.com/"  target="new">available here</a></strong></p>
+                <p><strong>New !! A Pro version of CM Answers is <a href="http://answers.cminds.com/"  target="_blank">available here</a></strong></p>
             </div><?php
             delete_option('cma_afterActivation');
         }

@@ -5,16 +5,16 @@ Donate link: http://answers.cminds.com/
 Tags:answers,forum,questions,comments,question and answer,Question and Answer Forum,support forum,q&a,list,stackoverflow,stack overflow,stackoverflow answers,splunkbase,bbPress,board,boards,bulletin,bulletin board,bulletin boards,discussion,discussion board,discussion forums,discussions,simple forum,forum plugin,forums,message,message board,messages,messaging,user messages,threads,user forum,wordpress forum,wp,resolved topics,user rankings,post rating,rate,rating,customer service,customer support,community,embed,embedded forum,discussion group,website forum,community,conversation,discussions,message,network,notification,social,thread,topic,group,groups,support
 Requires at least: 3.2
 Tested up to: 3.7.1
-Stable tag: 2.0.6
+Stable tag: 2.0.8
 
 Enables users to post questions and answers (Q&A) in a Stackoverflow style. Plugin includes social media login registration and can be customized easily
 
 == Description ==
 
-CM Answers is a plugin for WordPress that enables users to post questions and answers (Q&A) in a Stackoverflow style. Plugin also includes social media registration using Facebook, LinkedIn or Google+ authentication. The CM Answers discussion forum plugin has many other unique features which allow administrators to customize it according to his or her needs.  [Visit Plugin Site](http://answers.cminds.com/)
+CM Answers is a plugin for WordPress that enables users to post questions and answers (Q&A) in a Stackoverflow style. Plugin also includes social media registration using Facebook, LinkedIn or Google+ authentication. The CM Answers discussion forum plugin has many other unique features which allow administrators to customize it according to his or her needs.  
+[Visit Plugin Site](http://answers.cminds.com/)
 
 [youtube http://www.youtube.com/watch?v=nPJjVpN-ZpA]
-
 
 **Use-Cases**
 
@@ -112,6 +112,11 @@ In your template you can custom create a directory called "CMA". Inside this dir
 
 
 == Changelog ==
+= 2.0.8 =
+* Changes to the CSS to make the plugin suit into WP default themes
+* Fixed the rare bug with question's 'asked on' format
+* Removed confusing answers permalink
+
 = 2.0.2 =
 * Added the login box
 

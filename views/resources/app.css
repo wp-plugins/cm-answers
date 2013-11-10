@@ -1,7 +1,10 @@
-.cma-main {width:980px; margin:0 auto;}
-.cma-content {float:left; width:65%}
-body.full-width .cma-content {float:none; width:100%;}
-.cma-sidebar {float:right; }
+div.cma-main {display: table; width: 100%; max-width: 1040px; margin: 0 auto;}
+div.cma-wrapper {display: table-row; width: 100%}
+div.cma-content, div.cma-sidebar{display: table-cell; vertical-align: top; float: none !important}
+div.site-content.cma-content{padding: 1%; width: 99%}
+div.cma-sidebar{white-space: nowrap}
+div.cma-main .cma-wrapper .cma-content #content {width: 100%; margin: 0}
+
 .cma_success, .cma_error {border:solid 1px; margin:10px 0; padding:15px 10px 15px 50px;list-style-type:none; background-repeat:no-repeat;background-position:10px center;}
 .cma_success {color:#4f8a10; background-color: #dff2bf; background-image:url(imgs/success.png);}
 .cma_error {color:#d8000c; background-color:#ffbaba; background-image:url(imgs/error.png);}
