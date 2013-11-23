@@ -58,18 +58,18 @@ The Pro version adds a layer of powerful features to the standard CM Answers plu
 * Moderation- Administrators can define a list of users who are exempt and can post without any need of moderation. [View Image](http://www.cminds.com/wp-content/uploads/edd/cm-answers-image7.png)
 * Multisite - Supports multisite.
 * Gravatar - Ability to display a Gravatar near the user's name and in the user's profile.
-* Order Answers - Shows and sorts all answers in ascending or descending order. [View Image from Settings](http://answers.cminds.com/wp-content/uploads/edd/Answers99D), [View Demo](http://answers.cminds.com/contributor/admin/)
-* Attachment - Accepts file attachments when posting a question. Limits for file types and sizes. [View Image](http://answers.cminds.com/wp-content/uploads/edd/Answers99A.png), [View Image from Settings](http://answers.cminds.com/wp-content/uploads/edd/Answers99B)
+* Order Answers - Shows and sorts all answers in ascending or descending order. [View Image from Settings](http://answers.cminds.com/wp-content/uploads/edd/Answers99D.png), [View Demo](http://answers.cminds.com/contributor/admin/)
+* Attachment - Accepts file attachments when posting a question. Limits for file types and sizes. [View Image](http://answers.cminds.com/wp-content/uploads/edd/Answers99A.png), [View Image from Settings](http://answers.cminds.com/wp-content/uploads/edd/Answers99B.png)
 * Localization Support - Frontend (user side) is localized.
-* View Count Control - Controls how a view count is tabulated (by view or by session). [View Image from Settings](http://answers.cminds.com/wp-content/uploads/edd/Answers99C)
+* View Count Control - Controls how a view count is tabulated (by view or by session). [View Image from Settings](http://answers.cminds.com/wp-content/uploads/edd/Answers99C.png)
 * Public User Profile - Automatically generates a public profile page containing all the questions and answers a user has posted, with a link to his or her social media profile. [View Image](http://www.cminds.com/wp-content/uploads/edd/cm-answers-image8.png)
 * Gratitude Message - Does not include our Gratitude Message in the footer.
-* Tags - Tags are fully supported. Administrators can control the appearance of tags with an available Tags widget. [View Demo - Widget on the right](http://answers.cminds.com/answers), [View Image](http://answers.cminds.com/wp-content/uploads/edd/Answers99E)
-* Sticky Questions  - Supports sticky questions with an administrator defined background color. [View Demo - First question is sticky](http://answers.cminds.com/answers), [View Image When Admin edit question post](http://answers.cminds.com/wp-content/uploads/edd/Answers99F), [View Image from settings](http://answers.cminds.com/wp-content/uploads/edd/Answers99H)
-* Code Snippets in Posts - Support for code snippets and custom background color. [View Demo of code inside a question](http://answers.cminds.com/answers/code-example/), [View Image from settings](http://answers.cminds.com/wp-content/uploads/edd/Answers99G)
+* Tags - Tags are fully supported. Administrators can control the appearance of tags with an available Tags widget. [View Demo - Widget on the right](http://answers.cminds.com/answers), [View Image](http://answers.cminds.com/wp-content/uploads/edd/Answers99E.png)
+* Sticky Questions  - Supports sticky questions with an administrator defined background color. [View Demo - First question is sticky](http://answers.cminds.com/answers), [View Image When Admin edit question post](http://answers.cminds.com/wp-content/uploads/edd/Answers99F.png), [View Image from settings](http://answers.cminds.com/wp-content/uploads/edd/Answers99H.png)
+* Code Snippets in Posts - Support for code snippets and custom background color. [View Demo of code inside a question](http://answers.cminds.com/answers/code-example/), [View Image from settings](http://answers.cminds.com/wp-content/uploads/edd/Answers99G.png)
 * Homepage - Supports options to define CM Answers as the Site or Blog homepage
-* Permalink - Customizable CM Answers permalink. [View Image from settings](http://answers.cminds.com/wp-content/uploads/edd/Answers99N)
-* Disclaimer - Added Disclaimer support for first time users. [View Image from Settings](http://answers.cminds.com/wp-content/uploads/edd/Answers99O), [View Image of when disclaimer appears](http://answers.cminds.com/wp-content/uploads/edd/Answers99P)
+* Permalink - Customizable CM Answers permalink. [View Image from settings](http://answers.cminds.com/wp-content/uploads/edd/Answers99N.png)
+* Disclaimer - Added Disclaimer support for first time users. [View Image from Settings](http://answers.cminds.com/wp-content/uploads/edd/Answers99O.png), [View Image of when disclaimer appears](http://answers.cminds.com/wp-content/uploads/edd/Answers99P.png)
 * Social Share - Includes a social share widget in the question page. [View Demo](http://answers.cminds.com/answers/code-example/)
 
 [Visit Pro Version Page](http://answers.cminds.com/)
