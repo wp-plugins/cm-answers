@@ -33,7 +33,7 @@ abstract class CMA_PostType {
         if (!$plural) {
             $plural = $singular . 's';
         }
-        if (!$menu) 
+        if (!$menu)
             $menu = $plural;
         $defaults = array(
             'show_ui' => true,
@@ -222,7 +222,10 @@ abstract class CMA_PostType {
      * @param int $id
      * @return PostType|NULL
      */
-    public static abstract function getInstance($id = 0);
+    public static function getInstance($id = 0)
+    {
+        trigger_error(__CLASS__ . ' may not be instantialized', E_USER_ERROR);
+    }
 
     /**
      * @param int $id The ID of the post

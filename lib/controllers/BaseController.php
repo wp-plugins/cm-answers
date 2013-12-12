@@ -105,7 +105,7 @@ abstract class CMA_BaseController
         $rules = get_option('rewrite_rules');
         foreach(self::$_pages as $page)
         {
-            if(!isset($rules['^' . $slug . '(?=\/|$)']))
+            if(!isset($rules['^' . $page['slug'] . '(?=\/|$)']))
             {
                 global $wp_rewrite;
                 $wp_rewrite->flush_rules();

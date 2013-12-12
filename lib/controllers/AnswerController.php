@@ -64,7 +64,7 @@ class CMA_AnswerController extends CMA_BaseController
 
     public static function registerCustomOrder($query)
     {
-        if($query->query_vars['post_type'] == CMA_AnswerThread::POST_TYPE && $query->query_vars['widget'] !== true && !$query->is_single && !$query->is_404 && !$query->is_author && isset($_GET['sort']))
+        if(isset($query->query_vars['post_type']) && $query->query_vars['post_type'] == CMA_AnswerThread::POST_TYPE || ( isset($query->query_vars['widget']) && $query->query_vars['widget'] !== true ) && !$query->is_single && !$query->is_404 && !$query->is_author && isset($_GET['sort']))
         {
             $query         = CMA_AnswerThread::customOrder($query, $_GET['sort']);
             $query->is_top = true;
