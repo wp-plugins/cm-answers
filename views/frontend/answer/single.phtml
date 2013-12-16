@@ -3,10 +3,10 @@ get_header();
 the_post();
 $thread = CMA_AnswerThread::getInstance($post->ID);
 ?>
-<div class="cma-main">
-    <div class="cma-wrapper">
-        <div id="primary" class="site-content cma-content">
-            <div id="content" role="main">
+<div id="primary" class="site-content cma-content">
+    <div class="cma-main">
+        <div class="cma-wrapper">
+            <div id="content" role="main" class="entry-content">
                 <header class="entry-header">
                     <h1 class="entry-title"><?php echo $thread->getTitle(); ?><a class="cma-backlink" href="<?php echo get_post_type_archive_link(CMA_AnswerThread::POST_TYPE); ?>">&laquo; <?php _e('Back to Questions List', 'cm-answers'); ?></a></h1>
 
