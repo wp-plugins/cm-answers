@@ -530,7 +530,7 @@ abstract class CMA_BaseController
         $current_user = wp_get_current_user();
         if(user_can($current_user, 'edit_posts'))
         {
-            $submenu[apply_filters('CMA_admin_parent_menu', 'options-general.php')][500] = array('User Guide', 'manage_options', 'http://www.cminds.com/cm-answers-user-guide/');
+            $submenu[apply_filters('CMA_admin_parent_menu', 'options-general.php')][500] = array('User Guide', 'manage_options', 'http://answers.cminds.com/cm-answers-user-guide/');
         }
     }
 

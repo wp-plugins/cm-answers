@@ -16,15 +16,15 @@ get_header();
                 $currentSort = !empty($_GET['sort']) ? $_GET['sort'] : 'newest';
                 ?>
                 <ul class="cma-thread-orderby">
-                    <li<?php if($currentSort == 'newest'): ?> class="cma-current-sort"<?php endif; ?>><a href="<?php echo add_query_arg(array('sort' => 'newest'), get_pagenum_link(0)); ?>"><?php _e('Newest', 'cm-answers'); ?></a></li>
-                    <li<?php if($currentSort == 'hottest'): ?> class="cma-current-sort"<?php endif; ?>><a href="<?php echo add_query_arg(array('sort' => 'hottest'), get_pagenum_link(0)); ?>"><?php _e('Hottest', 'cm-answers'); ?></a></li>
-                    <?php if(CMA_AnswerThread::isRatingAllowed()): ?><li<?php if($currentSort == 'votes'): ?> class="cma-current-sort"<?php endif; ?>><a href="<?php echo add_query_arg(array('sort' => 'votes'), get_pagenum_link(0)); ?>"><?php _e('Most votes', 'cm-answers'); ?></a></li><?php endif; ?>
-                    <li<?php if($currentSort == 'views'): ?> class="cma-current-sort"<?php endif; ?>><a href="<?php echo add_query_arg(array('sort' => 'views'), get_pagenum_link(0)); ?>"><?php _e('Most views', 'cm-answers'); ?></a></li>
+                    <li<?php if( $currentSort == 'newest' ): ?> class="cma-current-sort"<?php endif; ?>><a href="<?php echo add_query_arg(array('sort' => 'newest'), get_pagenum_link(0)); ?>"><?php _e('Newest', 'cm-answers'); ?></a></li>
+                    <li<?php if( $currentSort == 'hottest' ): ?> class="cma-current-sort"<?php endif; ?>><a href="<?php echo add_query_arg(array('sort' => 'hottest'), get_pagenum_link(0)); ?>"><?php _e('Hottest', 'cm-answers'); ?></a></li>
+                    <?php if( CMA_AnswerThread::isRatingAllowed() ): ?><li<?php if( $currentSort == 'votes' ): ?> class="cma-current-sort"<?php endif; ?>><a href="<?php echo add_query_arg(array('sort' => 'votes'), get_pagenum_link(0)); ?>"><?php _e('Most votes', 'cm-answers'); ?></a></li><?php endif; ?>
+                    <li<?php if( $currentSort == 'views' ): ?> class="cma-current-sort"<?php endif; ?>><a href="<?php echo add_query_arg(array('sort' => 'views'), get_pagenum_link(0)); ?>"><?php _e('Most views', 'cm-answers'); ?></a></li>
                 </ul>
                 <div class="cma-clear"></div>
                 <?php
                 do_action('CMA_show_messages');
-                if(have_posts()):
+                if( have_posts() ):
                     ?>
                     <table class="cma-thread-list">
                         <?php
@@ -32,24 +32,24 @@ get_header();
                             the_post();
                             $thread = CMA_AnswerThread::getInstance($post->ID);
                             ?>
-                            <tr><?php if(CMA_AnswerThread::isRatingAllowed()): ?><td class="cma-thread-meta">
+                            <tr><?php if( CMA_AnswerThread::isRatingAllowed() ): ?><td class="cma-thread-meta">
                                         <div class="cma-thread-numbers cma-thread-votes"><div class="cma-thread-numbers-count cma-thread-votes-count"><?php
                                                 $votes = $thread->getVotes();
                                                 echo $votes;
                                                 ?></div><div class="cma-thread-numbers-caption cma-thread-votes-caption"><?php
-                                                if($votes == 1) _e('vote', 'cm-answers');
+                                                if( $votes == 1 ) _e('vote', 'cm-answers');
                                                 else _e('votes', 'cm-answers');
                                                 ?></div></div></td><?php endif; ?>
                                 <td class="cma-thread-meta"><div class="cma-thread-numbers cma-thread-views"><div class="cma-thread-numbers-count cma-thread-views-count"><?php
-                                            $views           = $thread->getViews();
+                                            $views = $thread->getViews();
                                             echo $views;
                                             ?></div><div class="cma-thread-numbers-caption cma-thread-views-caption"><?php
-                                            if($views == 1) _e('view', 'cm-answers');
+                                            if( $views == 1 ) _e('view', 'cm-answers');
                                             else _e('views', 'cm-answers');
                                             ?></div></div></td>
                                     <?php $numberOfAnswers = $thread->getNumberOfAnswers(); ?>
-                                <td class="cma-thread-meta"><div class="cma-thread-numbers cma-thread-answers<?php if($numberOfAnswers == 0): ?> cma-thread-no-answers<?php endif; ?>"><div class="cma-thread-numbers-count cma-thread-answers-count"><?php echo $numberOfAnswers; ?></div><div class="cma-thread-numbers-caption cma-thread-answers-caption"><?php
-                                            if($numberOfAnswers == 1) _e('answer', 'cm-answers');
+                                <td class="cma-thread-meta"><div class="cma-thread-numbers cma-thread-answers<?php if( $numberOfAnswers == 0 ): ?> cma-thread-no-answers<?php endif; ?>"><div class="cma-thread-numbers-count cma-thread-answers-count"><?php echo $numberOfAnswers; ?></div><div class="cma-thread-numbers-caption cma-thread-answers-caption"><?php
+                                            if( $numberOfAnswers == 1 ) _e('answer', 'cm-answers');
                                             else _e('answers', 'cm-answers');
                                             ?></div></div>
                                 </td>
@@ -62,17 +62,17 @@ get_header();
                     </table>
                     <div class="cma-pagination"><?php
                         echo paginate_links(array(
-                            'base' => trailingslashit(get_post_type_archive_link(CMA_AnswerThread::POST_TYPE)) . '%_%',
-                            'format' => 'page/%#%/',
-                            'current' => max(1, get_query_var('paged')),
-                            'total' => $GLOBALS['wp_query']->max_num_pages,
+                            'base'     => trailingslashit(get_post_type_archive_link(CMA_AnswerThread::POST_TYPE)) . '%_%',
+                            'format'   => 'page/%#%/',
+                            'current'  => max(1, get_query_var('paged')),
+                            'total'    => $GLOBALS['wp_query']->max_num_pages,
                             'add_args' => $currentSort != 'newest' ? array('sort' => $currentSort) : array()
                         ));
                         ?></div><?php
                 endif;
                 ?>
                 <div class="cma-form-container">
-                    <?php if(is_user_logged_in()): ?>
+                    <?php if( is_user_logged_in() ): ?>
                         <div style="clear:both;height:40px;"></div>
                         <form method="post" class="cma-thread-add" id="cma-thread-add">
                             <input type="hidden" name="cma-action" value="add" />
@@ -101,14 +101,14 @@ get_header();
             <span class="cma_poweredby"><a href="http://plugins.cminds.com/" target="_blank" class="cma_poweredbylink">CreativeMinds WordPress Plugins</a> <a href="http://answers.cminds.com/" target="_blank" class="cma_poweredbylink">CM Answers</a></span>
 
         </div>
-        <?php if(CMA_AnswerThread::isSidebarEnabled() && is_active_sidebar('cm-answers-sidebar')): ?>
+        <?php if( CMA_AnswerThread::isSidebarEnabled() && is_active_sidebar('cm-answers-sidebar') ): ?>
             <?php
             $maxWidth = CMA_AnswerThread::getSidebarMaxWidth() > 0 ? 'style="max-width:' . $maxWidth . 'px"' : '';
             ?>
             <div id="secondary" role="complementary" class="widget-area cma-sidebar" <?php echo $maxWidth; ?>>
                 <?php dynamic_sidebar('cm-answers-sidebar'); ?>
-            <?php endif; ?>
-        </div>
+            </div>
+        <?php endif; ?>
     </div>
 </div>
 <?php

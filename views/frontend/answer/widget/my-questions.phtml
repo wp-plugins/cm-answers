@@ -1,7 +1,7 @@
 <table class="cma-thread-list">
     <?php foreach($questions as $thread): ?>
         <tr>
-            <?php if(CMA_AnswerThread::isRatingAllowed()): ?>
+            <?php if( CMA_AnswerThread::isRatingAllowed() ): ?>
                 <td class="cma-thread-meta">
                     <div class="cma-thread-numbers cma-thread-votes">
                         <div class="cma-thread-numbers-count cma-thread-votes-count"><?php
@@ -17,7 +17,7 @@
             <td class="cma-thread-meta">
                 <div class="cma-thread-numbers cma-thread-views">
                     <div class="cma-thread-numbers-count cma-thread-views-count"><?php
-                        $views           = $thread->getViews();
+                        $views = $thread->getViews();
                         echo $views;
                         ?>
                     </div>
@@ -27,7 +27,7 @@
             </td>
             <?php $numberOfAnswers = $thread->getNumberOfAnswers(); ?>
             <td class="cma-thread-meta">
-                <div class="cma-thread-numbers cma-thread-answers<?php if($numberOfAnswers == 0): ?> cma-thread-no-answers<?php endif; ?>">
+                <div class="cma-thread-numbers cma-thread-answers<?php if( $numberOfAnswers == 0 ): ?> cma-thread-no-answers<?php endif; ?>">
                     <div class="cma-thread-numbers-count cma-thread-answers-count">
                         <?php echo $numberOfAnswers; ?>
                     </div>
@@ -36,7 +36,7 @@
                     </div>
                 </div>
             </td>
-            <?php if(!CMA_AnswerThread::isQuestionAutoApproved()): ?>
+            <?php if( !CMA_AnswerThread::isQuestionAutoApproved() ): ?>
                 <td class="cma-thread-meta">
                     <?php echo $thread->getStatus(); ?>
                 </td><?php endif; ?>
