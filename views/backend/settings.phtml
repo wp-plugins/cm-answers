@@ -10,6 +10,13 @@ endif;
     #cm-answers-settings-form table {border-spacing:0;}
     #cm-answers-settings-form tr td, #cm-answers-settings-form tr th {padding:10px; border-bottom: solid 1px #ccc;}
 </style>
+<?php
+// check permalink settings 
+if (get_option('permalink_structure') == '') {
+      echo '<span style="color:red">Your WordPress Permalinks needs to be set to allow plugin to work correctly. Please Go to <a href="'.admin_url().'options-permalink.php" target="new">Settings->Permalinks</a> to set Permalinks to Post Name.</span><br><br>';
+}
+
+?>
 
 <h3>Upgrade to Pro</h3>
 <table>
