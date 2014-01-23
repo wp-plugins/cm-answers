@@ -5,13 +5,13 @@ Donate link: http://answers.cminds.com/
 Tags:answers,forum,questions,comments,question and answer,Question and Answer Forum,support forum,q&a,list,stackoverflow,stack overflow,stackoverflow answers,splunkbase,bbPress,board,boards,bulletin,bulletin board,bulletin boards,discussion,discussion board,discussion forums,discussions,simple forum,forum plugin,forums,message,message board,messages,messaging,user messages,threads,user forum,wordpress forum,wp,resolved topics,user rankings,post rating,rate,rating,customer service,customer support,community,embed,embedded forum,discussion group,website forum,community,conversation,discussions,message,network,notification,social,thread,topic,group,groups,support
 Requires at least: 3.2
 Tested up to: 3.8.0
-Stable tag: 2.1.4
+Stable tag: 2.1.5
 
 Enables users to post questions and answers (Q&A) in a Stackoverflow style. Plugin includes social media login registration and can be customized easily
 
 == Description ==
 
-CM Answers is a plugin for WordPress that enables users to post questions and answers (Q&A) in a Stackoverflow style. Plugin also includes social media registration using Facebook, LinkedIn or Google+ authentication. The CM Answers discussion forum plugin has many other unique features which allow administrators to customize it according to his or her needs.  
+CM Answers is a plugin for WordPress that enables users to post questions and answers (Q&A) in a Stackoverflow style. Plugin also includes social media registration using Facebook, LinkedIn or Google+ authentication. The CM Answers discussion forum plugin has many other unique features which allow administrators to customize it according to his or her needs.
 [Visit Plugin Site](http://answers.cminds.com/) or [plugin video review](http://www.youtube.com/watch?v=w6w3zyfi7-c)
 
 [youtube http://www.youtube.com/watch?v=w6w3zyfi7-c]
@@ -112,6 +112,9 @@ In your template you can custom create a directory called "CMA". Inside this dir
 
 
 == Changelog ==
+= 2.1.5 =
+* Added the support for BuddyPress (custom type for filter: "bp_blogs_record_comment_post_types")
+
 = 2.1.2 =
 * Fixed the bug with unclosed div
 * Updated the User Guide link

@@ -12,6 +12,8 @@ class CMA
             add_action('admin_notices', array(get_class(), 'showProMessages'));
         }
         add_action('init', array('CMA_BaseController', 'bootstrap'));
+
+        add_filter('bp_blogs_record_comment_post_types', array(get_class(), 'bp_record_my_custom_post_type_comments'));
     }
 
     public static function install()
@@ -21,7 +23,7 @@ class CMA
 
     public static function uninstall()
     {
-        
+
     }
 
     public static function showProMessages()
@@ -37,5 +39,14 @@ class CMA
         }
     }
 
+    /**
+     * BuddyPress record custom post type comments
+     * @param array $post_types
+     * @return string
+     */
+    public static function bp_record_my_custom_post_type_comments($post_types)
+    {
+        $post_types[] = CMA_AnswerThread::POST_TYPE;
+        return $post_types;
+    }
 }
-?>
