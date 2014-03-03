@@ -5,7 +5,7 @@ Donate link: http://answers.cminds.com/
 Tags: answers,forum,questions,comments,question and answer,Question and Answer Forum,support forum,q&a,list,stackoverflow,stack overflow,stackoverflow answers,splunkbase,bbPress,board,boards,bulletin,bulletin board,bulletin boards,discussion,discussion board,discussion forums,discussions,simple forum,forum plugin,forums,message,message board,messages,messaging,user messages,threads,user forum,wordpress forum,wp,resolved topics,user rankings,post rating,rate,rating,customer service,customer support,community,embed,embedded forum,discussion group,website forum,community,conversation,discussions,message,network,notification,social,thread,topic,group,groups,support
 Requires at least: 3.2
 Tested up to: 3.8.1
-Stable tag: 2.1.7
+Stable tag: 2.1.9
 
 Enables users to post questions and answers (Q&A) in a Stackoverflow style. Plugin includes social media login registration and can be customized easily
 
@@ -51,6 +51,8 @@ The Pro version adds a layer of powerful features to the standard CM Answers plu
 * [New] Access Control - Admin can define who can ask questions and who can answer based on user role.
 * [New] Integration with Twitter - Users can register and post using existing Twitter account 
 * [New] Edit Question / Answers - Users can edit the question or the answer after submission.
+* [New] BuddyPress - Stronger Integration with BuddyPress.
+* [New] Two Levels Category Navigation - Support two level category navigation.
 * Ajax Support - Uses a Shortcode that displays the Category, supported by Ajax. Views of categories fit within the current site template. [See example](http://jumpstartcto.com/cm-answers-ajax-example)
 * Social Media Registration Integration - Integrates with Facebook, Google+, and LinkedIn profiles. [View Image](http://www.cminds.com/wp-content/uploads/edd/image1.png), [See another image] (http://www.cminds.com/wp-content/uploads/edd/cm-answers-image2.png)
 * Shortcodes - Generates a Questions List by using a Shortcode: cma-questions with additional parameters. For example, limit=10 author=123 sort=hottest [View Demo] (http://answers.cminds.com/cm-answers-shortcode-example/)
