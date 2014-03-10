@@ -53,7 +53,7 @@ The Pro version adds a layer of powerful features to the standard CM Answers plu
 * [New] Edit Question / Answers - Users can edit the question or the answer after submission.
 * [New] BuddyPress - Stronger Integration with BuddyPress.
 * [New] Two Levels Category Navigation - Support two level category navigation.
-* Ajax Support - Uses a Shortcode that displays the Category, supported by Ajax. Views of categories fit within the current site template. [See example](http://jumpstartcto.com/cm-answers-ajax-example)
+* Ajax Support - Uses a Shortcode that displays the Category, supported by Ajax. Views of categories fit within the current site template. 
 * Social Media Registration Integration - Integrates with Facebook, Google+, and LinkedIn profiles. [View Image](http://www.cminds.com/wp-content/uploads/edd/image1.png), [See another image] (http://www.cminds.com/wp-content/uploads/edd/cm-answers-image2.png)
 * Shortcodes - Generates a Questions List by using a Shortcode: cma-questions with additional parameters. For example, limit=10 author=123 sort=hottest [View Demo] (http://answers.cminds.com/cm-answers-shortcode-example/)
 * User Dashboard - Adds "My Questions" and "My Answers" dashboards to the user profile page by using Shortcodes: cma-my-questions and cma-my-answers [View Image](http://www.cminds.com/wp-content/uploads/edd/cm-answers-image3.png)
