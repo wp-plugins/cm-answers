@@ -17,11 +17,13 @@ CM Answers is a plugin for WordPress that enables users to post questions and an
 [youtube http://www.youtube.com/watch?v=w6w3zyfi7-c]
 
 **Demo & User Guide**
+
 * [Plugin Site](http://answers.cminds.com/)
 * Basic demo [Read Only mode](http://answers.cminds.com/answers/).
 * [User Guide](http://answers.cminds.com/cm-answers-user-guide/)
 
 **Use-Cases**
+
 * Forum - Puts a lightweight and easy to use Discussion Forum on your WordPress site or blog.
 * Support Forum - Supports your users while allowing them vote and answer existing topics that you moderate.
 * Community - Adds a discussion forum to your site that allow your members to start their own conversations and ask questions.
@@ -30,6 +32,7 @@ CM Answers is a plugin for WordPress that enables users to post questions and an
 * StackOverflow - Adds a StackOverflow style forum to your site.
 
 **Features**
+
 * Includes a views count
 * Includes an answers count
 * Administrators can moderate question & answers and can receive email notifications.
@@ -42,6 +45,7 @@ CM Answers is a plugin for WordPress that enables users to post questions and an
 **Pro Version Features**
 
 [Pro Version](http://answers.cminds.com/)
+
 * [New] Access Control - Admin can define who can ask questions and who can answer based on user role.
 * [New] Integration with Twitter - Users can register and post using existing Twitter account 
 * [New] Edit Question / Answers - Users can edit the question or the answer after submission.
