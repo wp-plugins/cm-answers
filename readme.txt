@@ -16,11 +16,14 @@ CM Answers is a plugin for WordPress that enables users to post questions and an
 
 [youtube http://www.youtube.com/watch?v=w6w3zyfi7-c]
 
-**Demo & User Guide**
-
-* [Plugin Site](http://answers.cminds.com/)
-* Basic demo [Read Only mode](http://answers.cminds.com/answers/).
-* [User Guide](http://answers.cminds.com/cm-answers-user-guide/)
+> #### Plugin Site
+>
+> * [Plugin Site](http://answers.cminds.com/)
+>
+> #### Demo & User Guide
+>
+> * Basic demo [Read Only mode](http://answers.cminds.com/answers/).
+> * [User Guide](http://answers.cminds.com/cm-answers-user-guide/)
 
 **Use-Cases**
 
@@ -31,7 +34,7 @@ CM Answers is a plugin for WordPress that enables users to post questions and an
 * Customer Support - Support for retail customer's questions.
 * StackOverflow - Adds a StackOverflow style forum to your site.
 
-**Features**
+**Basic Features**
 
 * Includes a views count
 * Includes an answers count
@@ -42,41 +45,41 @@ CM Answers is a plugin for WordPress that enables users to post questions and an
 * We will be happy to add more language files and submit them to our WP community members. Currently we support: Spanish, German, Polish, Russian, French and Czech.
 
 
-**Pro Version Features**
-
-[Pro Version](http://answers.cminds.com/)
-
-* [New] Access Control - Admin can define who can ask questions and who can answer based on user role.
-* [New] Integration with Twitter - Users can register and post using existing Twitter account 
-* [New] Edit Question / Answers - Users can edit the question or the answer after submission.
-* [New] BuddyPress - Stronger Integration with BuddyPress.
-* [New] Two Levels Category Navigation - Support two level category navigation.
-* Ajax Support - Uses a Shortcode that displays the Category, supported by Ajax. Views of categories fit within the current site template. 
-* Social Media Registration Integration - Integrates with Facebook, Google+, and LinkedIn profiles. [View Image](http://www.cminds.com/wp-content/uploads/edd/image1.png), [See another image] (http://www.cminds.com/wp-content/uploads/edd/cm-answers-image2.png)
-* Shortcodes - Generates a Questions List by using a Shortcode: cma-questions with additional parameters. For example, limit=10 author=123 sort=hottest [View Demo] (http://answers.cminds.com/cm-answers-shortcode-example/)
-* User Dashboard - Adds "My Questions" and "My Answers" dashboards to the user profile page by using Shortcodes: cma-my-questions and cma-my-answers [View Image](http://www.cminds.com/wp-content/uploads/edd/cm-answers-image3.png)
-* Categories - Ability to add categories and display them using a Shortcode. cat=catname  [View Demo](http://answers.cminds.com/cm-answers-shortcode-example/), [View Demo in Questions Index](http://answers.cminds.com/answers)
-* Widgets -  Widget integration that can sort and display hottest questions, most viewed, most recent answers and more. [View Image](http://www.cminds.com/wp-content/uploads/edd/cm-answers-image4.png)
-* User Posting Meter - Ability to add the user's profile of the number of posted questions and answers that the user has contributed displayed beside their user name. [View Image](http://www.cminds.com/wp-content/uploads/edd/cm-answers-image5.png)
-* Show/Hide Views - Administrator can choose to hide or show the number of views that a topic has. [View Image](http://www.cminds.com/wp-content/uploads/edd/cm-answers-image6.png)
-* Moderation- Administrators can define a list of users who are exempt and can post without any need of moderation. [View Image](http://www.cminds.com/wp-content/uploads/edd/cm-answers-image7.png)
-* Multisite - Supports multisite.
-* Gravatar - Ability to display a Gravatar near the user's name and in the user's profile.
-* Order Answers - Shows and sorts all answers in ascending or descending order. [View Image from Settings](http://answers.cminds.com/wp-content/uploads/edd/Answers99D.png), [View Demo](http://answers.cminds.com/contributor/admin/)
-* Attachment - Accepts file attachments when posting a question. Limits for file types and sizes. [View Image](http://answers.cminds.com/wp-content/uploads/edd/Answers99A.png), [View Image from Settings](http://answers.cminds.com/wp-content/uploads/edd/Answers99B.png)
-* Localization Support - Frontend (user side) is localized.
-* View Count Control - Controls how a view count is tabulated (by view or by session). [View Image from Settings](http://answers.cminds.com/wp-content/uploads/edd/Answers99C.png)
-* Public User Profile - Automatically generates a public profile page containing all the questions and answers a user has posted, with a link to his or her social media profile. [View Image](http://www.cminds.com/wp-content/uploads/edd/cm-answers-image8.png)
-* Gratitude Message - Does not include our Gratitude Message in the footer.
-* Tags - Tags are fully supported. Administrators can control the appearance of tags with an available Tags widget. [View Demo - Widget on the right](http://answers.cminds.com/answers), [View Image](http://answers.cminds.com/wp-content/uploads/edd/Answers99E.png)
-* Sticky Questions  - Supports sticky questions with an administrator defined background color. [View Demo - First question is sticky](http://answers.cminds.com/answers), [View Image When Admin edit question post](http://answers.cminds.com/wp-content/uploads/edd/Answers99F.png), [View Image from settings](http://answers.cminds.com/wp-content/uploads/edd/Answers99H.png)
-* Code Snippets in Posts - Support for code snippets and custom background color. [View Demo of code inside a question](http://answers.cminds.com/answers/code-example/), [View Image from settings](http://answers.cminds.com/wp-content/uploads/edd/Answers99G.png)
-* Homepage - Supports options to define CM Answers as the Site or Blog homepage
-* Permalink - Customizable CM Answers permalink. [View Image from settings](http://answers.cminds.com/wp-content/uploads/edd/Answers99N.png)
-* Disclaimer - Added Disclaimer support for first time users. [View Image from Settings](http://answers.cminds.com/wp-content/uploads/edd/Answers99O.png), [View Image of when disclaimer appears](http://answers.cminds.com/wp-content/uploads/edd/Answers99P.png)
-* Social Share - Includes a social share widget in the question page. [View Demo](http://answers.cminds.com/answers/code-example/)
-
-[Visit Pro Version Page](http://answers.cminds.com/)
+> #### Pro Version Features
+>
+> [Pro Version](http://answers.cminds.com/)
+>
+> * [New] Access Control - Admin can define who can ask questions and who can answer based on user role.
+> * [New] Integration with Twitter - Users can register and post using existing Twitter account 
+> * [New] Edit Question / Answers - Users can edit the question or the answer after submission.
+> * [New] BuddyPress - Stronger Integration with BuddyPress.
+> * [New] Two Levels Category Navigation - Support two level category navigation.
+> * Ajax Support - Uses a Shortcode that displays the Category, supported by Ajax. Views of categories fit within the current site template. 
+> * Social Media Registration Integration - Integrates with Facebook, Google+, and LinkedIn profiles. [View Image](http://www.cminds.com/wp-content/uploads/edd/image1.png), [See another image] (http://www.cminds.com/wp-content/uploads/edd/cm-answers-image2.png)
+> * Shortcodes - Generates a Questions List by using a Shortcode: cma-questions with additional parameters. For example, limit=10 author=123 sort=hottest [View Demo] (http://answers.cminds.com/cm-answers-shortcode-example/)
+> * User Dashboard - Adds "My Questions" and "My Answers" dashboards to the user profile page by using Shortcodes: cma-my-questions and cma-my-answers [View Image](http://www.cminds.com/wp-content/uploads/edd/cm-answers-image3.png)
+> * Categories - Ability to add categories and display them using a Shortcode. cat=catname  [View Demo](http://answers.cminds.com/cm-answers-shortcode-example/), [View Demo in Questions Index](http://answers.cminds.com/answers)
+> * Widgets -  Widget integration that can sort and display hottest questions, most viewed, most recent answers and more. [View Image](http://www.cminds.com/wp-content/uploads/edd/cm-answers-image4.png)
+> * User Posting Meter - Ability to add the user's profile of the number of posted questions and answers that the user has contributed displayed beside their user name. [View Image](http://www.cminds.com/wp-content/uploads/edd/cm-answers-image5.png)
+> * Show/Hide Views - Administrator can choose to hide or show the number of views that a topic has. [View Image](http://www.cminds.com/wp-content/uploads/edd/cm-answers-image6.png)
+> * Moderation- Administrators can define a list of users who are exempt and can post without any need of moderation. [View Image](http://www.cminds.com/wp-content/uploads/edd/cm-answers-image7.png)
+> * Multisite - Supports multisite.
+> * Gravatar - Ability to display a Gravatar near the user's name and in the user's profile.
+> * Order Answers - Shows and sorts all answers in ascending or descending order. [View Image from Settings](http://answers.cminds.com/wp-content/uploads/edd/Answers99D.png), [View Demo](http://answers.cminds.com/contributor/admin/)
+> * Attachment - Accepts file attachments when posting a question. Limits for file types and sizes. [View Image](http://answers.cminds.com/wp-content/uploads/edd/Answers99A.png), [View Image from Settings](http://answers.cminds.com/wp-content/uploads/edd/Answers99B.png)
+> * Localization Support - Frontend (user side) is localized.
+> * View Count Control - Controls how a view count is tabulated (by view or by session). [View Image from Settings](http://answers.cminds.com/wp-content/uploads/edd/Answers99C.png)
+> * Public User Profile - Automatically generates a public profile page containing all the questions and answers a user has posted, with a link to his or her social media profile. [View Image](http://www.cminds.com/wp-content/uploads/edd/cm-answers-image8.png)
+> * Gratitude Message - Does not include our Gratitude Message in the footer.
+> * Tags - Tags are fully supported. Administrators can control the appearance of tags with an available Tags widget. [View Demo - Widget on the right](http://answers.cminds.com/answers), [View Image](http://answers.cminds.com/wp-content/uploads/edd/Answers99E.png)
+> * Sticky Questions  - Supports sticky questions with an administrator defined background color. [View Demo - First question is sticky](http://answers.cminds.com/answers), [View Image When Admin edit question post](http://answers.cminds.com/wp-content/uploads/edd/Answers99F.png), [View Image from settings](http://answers.cminds.com/wp-content/uploads/edd/Answers99H.png)
+> * Code Snippets in Posts - Support for code snippets and custom background color. [View Demo of code inside a question](http://answers.cminds.com/answers/code-example/), [View Image from settings](http://answers.cminds.com/wp-content/uploads/edd/Answers99G.png)
+> * Homepage - Supports options to define CM Answers as the Site or Blog homepage
+> * Permalink - Customizable CM Answers permalink. [View Image from settings](http://answers.cminds.com/wp-content/uploads/edd/Answers99N.png)
+> * Disclaimer - Added Disclaimer support for first time users. [View Image from Settings](http://answers.cminds.com/wp-content/uploads/edd/Answers99O.png), [View Image of when disclaimer appears](http://answers.cminds.com/wp-content/uploads/edd/Answers99P.png)
+> * Social Share - Includes a social share widget in the question page. [View Demo](http://answers.cminds.com/answers/code-example/)
+> 
+> #### [Visit Pro Version Page](http://answers.cminds.com/)
 
 
 **More About this Plugin**
