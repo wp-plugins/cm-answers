@@ -55,7 +55,8 @@ CM Answers is a plugin for WordPress that enables users to post questions and an
 
 > #### Pro Version Features
 >
-> [Pro Version](http://answers.cminds.com/)
+>
+> [Pro Version Features List](http://answers.cminds.com/features/)
 >
 > * [New] Access Control - Admin can define who can ask questions and who can answer based on user role.
 > * [New] Integration with Twitter - Users can register and post using existing Twitter account 
