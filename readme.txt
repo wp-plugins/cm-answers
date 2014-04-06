@@ -17,13 +17,21 @@ CM Answers is a plugin for WordPress that enables users to post questions and an
 [youtube http://www.youtube.com/watch?v=w6w3zyfi7-c]
 
 > #### Plugin Site
->
 > * [Plugin Site](http://answers.cminds.com/)
->
-> #### Demo & User Guide
->
+
+---
+ 
+
+> #### Demo & User Guide`
 > * Basic demo [Read Only mode](http://answers.cminds.com/answers/).
 > * [User Guide](http://answers.cminds.com/cm-answers-user-guide/)
+
+---
+ 
+> #### Follow Us
+> [Blog](http://plugin.cminds.com/blog/) | [Twitter](http://twitter.com/cmplugins)  | [Google+](https://plus.google.com/108513627228464018583/) | [LinkedIn](https://www.linkedin.com/company/creativeminds) | [YouTube](https://www.youtube.com/user/cmindschannel) | [Pinterest](http://www.pinterest.com/cmplugins/)
+
+---
 
 **Use-Cases**
 
@@ -80,12 +88,6 @@ CM Answers is a plugin for WordPress that enables users to post questions and an
 > * Social Share - Includes a social share widget in the question page. [View Demo](http://answers.cminds.com/answers/code-example/)
 > 
 > #### [Visit Pro Version Page](http://answers.cminds.com/)
-
-
-**More About this Plugin**
-
-You can find more information about the CM Answers WordPress plugin at [CreativeMinds Website](http://plugins.cminds.com/).
-
 
 **More Plugins by CreativeMinds**
 
