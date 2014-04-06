@@ -88,8 +88,6 @@ CM Answers is a plugin for WordPress that enables users to post questions and an
 > * Permalink - Customizable CM Answers permalink. [View Image from settings](http://answers.cminds.com/wp-content/uploads/edd/Answers99N.png)
 > * Disclaimer - Added Disclaimer support for first time users. [View Image from Settings](http://answers.cminds.com/wp-content/uploads/edd/Answers99O.png), [View Image of when disclaimer appears](http://answers.cminds.com/wp-content/uploads/edd/Answers99P.png)
 > * Social Share - Includes a social share widget in the question page. [View Demo](http://answers.cminds.com/answers/code-example/)
-> 
-> #### [Visit Pro Version Page](http://answers.cminds.com/)
 
 **More Plugins by CreativeMinds**
 
