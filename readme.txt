@@ -99,6 +99,9 @@ CM Answers is a plugin for WordPress that enables users to post questions and an
 
 == Installation ==
 
+> [Detailed User Guide](http://answers.cminds.com/cm-answers-user-guide)
+>
+
 1. Upload the plugin folder to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Manage your CM Answers plugin from Left Side Admin Dashboard
@@ -106,6 +109,12 @@ CM Answers is a plugin for WordPress that enables users to post questions and an
 Note: You must have a call to wp_head() in your template in order for the JS plugin files to work properly.  If your theme does not support this you will need to link them files manually in your theme (not recommended).
 
 == Frequently Asked Questions ==
+
+> [More FAQ's](http://answers.cminds.com/faq)
+>
+> [Detailed User Guide](http://answers.cminds.com/cm-answers-user-guide)
+>
+
 
 = How can I customize the look & feel of the plugin? =
 In your template you can custom create a directory called "CMA". Inside this directory you can place a structure that is similar to the one inside "cm-answers/views/frontend/". If the file is properly able to be found in your template's directory, then it will have priority over the default. Otherwise, the default file from our plugin directory will be used.
@@ -120,90 +129,6 @@ In your template you can custom create a directory called "CMA". Inside this dir
 
 
 == Changelog ==
-= 2.1.5 =
-* Added the support for BuddyPress (custom type for filter: "bp_blogs_record_comment_post_types")
 
-= 2.1.2 =
-* Fixed the bug with unclosed div
-* Updated the User Guide link
-* Changed the CSS class of the question
-
-= 2.1.1 =
-* Fixed the theme compatibility with 20-14 theme bundled with Wordpress 3.8
-
-= 2.1.0 =
-* Fixed notifications appearing on some plugin installations
-* Fixed answers count after manual SQL removal
-
-= 2.0.8 =
-* Changes to the CSS to make the plugin suit into WP default themes
-* Fixed the rare bug with question's 'asked on' format
-* Removed confusing answers permalink
-
-= 2.0.2 =
-* Added the login box
-
-= 2.0.0 =
-* Show only approved comments on highest rating
-
-= 1.9.12 =
-* Update readme and plugin homepage
-
-= 1.9.11 =
-* Update readme file
-* Added language files (cz)
-
-= 1.9.4 =
-* Fixed notify on follow email
-
-= 1.9.1 =
-* CSS and style changes
-
-= 1.8.3 =
-* Added option to edit "Questions" listing title
-
-= 1.8.2 =
-* Fixed bug with not displaying last poster name for new threads
-* Added option to disable sidebar or set its max-width
-
-= 1.8.1 =
-* Fixed bug with parsing error upon new thread/comment approval
-
-= 1.8.0 =
-* Added user guide
-
-= 1.7.0 =
-* Corrected daysAgo calculation, added hours/minutes/seconds
-* Corrected translations
-
-= 1.6.3 =
-* Added French language file
-
-
-= 1.6.1 =
-* Fixed renderDaysAgo function
-* Fixed pagination to work with permalink structure without trailing slash
-* Fixed comment direct link
-
-= 1.5.1 =
-* Removed unused admin.js
-
-= 1.4 =
-* Datetimes are now formatted according to wordpress general settings
-* Dates use date_i18n function to produce localized names
-* Fixed escaping for notification titles and contents
-* Fixed template
-
-= 1.2 =
-* Added localizations: Spanish, German and Polish
-
-= 1.1 =
-* Renamed main list from "Answers" to "Questions"
-* fixed bug when sorting answers by votes didn't show answers without any votes (will work only for answers added after upgrade)
-* Added validation for question (it's not possible to add empty one now)
-* Minor fix in styling
-* Added link to answers from admin menu
-
-= 1.0 =
-* Initial release
-
+> [View Release Notes in CM Answers Plugin Site](http://answers.cminds.com/cm-answers-plugin-free-edition-release-notes/)
+>
