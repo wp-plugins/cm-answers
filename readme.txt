@@ -122,14 +122,14 @@ In your template you can custom create a directory called "CMA". Inside this dir
 
 == Screenshots ==
 
-1. Question List Page.
-2. Question submission form.
-3. Answers Page.
+1. Questions List Page.
+2. Question Submission Form.
+3. Question Thread Page.
 4. Plugin's General Settings.
 5. Plugin's Access Control Settings.
-6. Usage Statistics.
+6. Plugins's Usage Statistics.
 7. Admin Questions Management.
-8. Plugin SHortcodes.
+8. Plugin Shortcodes.
 9. User Dashboard.
 
 
