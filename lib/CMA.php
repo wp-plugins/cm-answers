@@ -1,4 +1,5 @@
 <?php
+require_once CMA_PATH . "/licensing_api.php";
 include_once CMA_PATH . '/lib/models/AnswerThread.php';
 include_once CMA_PATH . '/lib/controllers/BaseController.php';
 
@@ -7,6 +8,10 @@ class CMA
 
     public static function init()
     {
+    	
+    	$licensingApi = new CMA_free_Cminds_Licensing_API('CM Answers', CMA_AnswerThread::ADMIN_MENU, 'CM Answers', CMA_PLUGIN_FILE,
+    		array('release-notes' => 'http://answers.cminds.com/release-notes/'), '', array('CM Answers'));
+    	
         CMA_AnswerThread::init();
         if (get_option('cma_afterActivation', 0) == 1) {
             add_action('admin_notices', array(get_class(), 'showProMessages'));

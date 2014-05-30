@@ -5,7 +5,7 @@ Donate link: http://answers.cminds.com/
 Tags: answers,forum,questions,comments,question and answer,Question and Answer Forum,support forum,q&a,list,stackoverflow,stack overflow,stackoverflow answers,splunkbase,bbPress,board,boards,bulletin,bulletin board,bulletin boards,discussion,discussion board,discussion forums,discussions,simple forum,forum plugin,forums,message,message board,messages,messaging,user messages,threads,user forum,wordpress forum,wp,resolved topics,user rankings,post rating,rate,rating,customer service,customer support,community,embed,embedded forum,discussion group,website forum,community,conversation,discussions,message,network,notification,social,thread,topic,group,groups,support
 Requires at least: 3.2
 Tested up to: 3.9.1
-Stable tag: 2.1.12
+Stable tag: 2.2.0
 
 Enables users to post questions and answers (Q&A) in a Stackoverflow style. Plugin includes social media login registration and can be customized easily
 
@@ -60,6 +60,9 @@ CM Answers is a plugin for WordPress that enables users to post questions and an
 >
 > [Pro Version Detailed Features List](http://answers.cminds.com/features/)
 >
+> * [New] Comments - Ability add comments for question and for answers.
+> * [New] Multiple Attachments - Multiple attachments in questions and answers.
+> * [New] Spam Report - User can report span questions or answers.
 > * [New] Access Control - Admin can define who can ask questions and who can answer based on user role.
 > * [New] Integration with Twitter - Users can register and post using existing Twitter account 
 > * [New] Edit Question / Answers - Users can edit the question or the answer after submission.

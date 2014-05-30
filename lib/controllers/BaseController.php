@@ -6,6 +6,7 @@ abstract class CMA_BaseController
     const MESSAGE_ERROR     = 'error';
     const ADMIN_SETTINGS    = 'CMA_admin_settings';
     const ADMIN_ABOUT       = 'CMA_admin_about';
+    const ADMIN_ADDONS = 'CMA_addons';
     const ADMIN_PRO         = 'CMA_admin_pro';
     const OPTION_TITLES     = 'CMA_panel_titles';
 
@@ -525,6 +526,7 @@ abstract class CMA_BaseController
         wp_enqueue_script('jquery');
         add_submenu_page(apply_filters('CMA_admin_parent_menu', 'options-general.php'), __('CM Answers Settings', 'cm-answers'), __('Settings', 'cm-answers'), 'manage_options', self::ADMIN_SETTINGS, array(get_class(), 'displaySettingsPage'));
         add_submenu_page(apply_filters('CMA_admin_parent_menu', 'options-general.php'), __('About', 'cm-answers'), __('About', 'cm-answers'), 'manage_options', self::ADMIN_ABOUT, array(get_class(), 'displayAboutPage'));
+        add_submenu_page(apply_filters('CMA_admin_parent_menu', 'options-general.php'), 'Add-ons', 'Add-ons', 'manage_options', self::ADMIN_ADDONS, array(get_class(), 'displayAboutPage'));
         add_submenu_page(apply_filters('CMA_admin_parent_menu', 'options-general.php'), __('Pro Version', 'cm-answers'), __('Pro Version', 'cm-answers'), 'manage_options', self::ADMIN_PRO, array(get_class(), 'displayProPage'));
         global $submenu;
         $current_user = wp_get_current_user();
@@ -589,13 +591,16 @@ abstract class CMA_BaseController
         require(CMA_PATH . '/views/backend/template.phtml');
     }
 
-    public static function displayAboutPage()
+	public static function displayAboutPage()
     {
         ob_start();
+        if ($_GET['page'] == self::ADMIN_ABOUT) {
+        	$iframeURL = 'https://plugins.cminds.com/product-catalog/?showfilter=No&cat=Plugin&nitems=3';
+        } else {
+        	$iframeURL = 'https://plugins.cminds.com/product-catalog/?showfilter=No&amp;tags=Answer&amp;nitems=3';
+        }
         require(CMA_PATH . '/views/backend/about.phtml');
-        $content = ob_get_contents();
-        ob_end_clean();
-        self::displayAdminPage($content);
+        self::displayAdminPage(ob_get_clean());
     }
 
     public static function displayProPage()
