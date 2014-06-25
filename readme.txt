@@ -23,6 +23,11 @@ CM Answers is a plugin for WordPress that enables users to post questions and an
 
 ---
  
+> #### Add-Ons & Extensions
+>
+> * New [CM MicroPayments](https://plugins.cminds.com/cm-micropayment-platform/)
+
+--- 
 
 > #### Demo & User Guide`
 > * Basic demo [Read Only mode](http://answers.cminds.com/answers/).
@@ -43,6 +48,7 @@ CM Answers is a plugin for WordPress that enables users to post questions and an
 * Questions & Answers - Users can answer questions sent in by other users.
 * Customer Support - Support for retail customer's questions.
 * StackOverflow - Adds a StackOverflow style forum to your site.
+* Paid Support - Charge users for posted questions & answers.
 
 **Basic Features**
 
@@ -60,6 +66,7 @@ CM Answers is a plugin for WordPress that enables users to post questions and an
 >
 > [Pro Version Detailed Features List](http://answers.cminds.com/features/)
 >
+> * [New] MicroPayment - Grant or Charge virtual currency based on use-case.
 > * [New] Comments - Ability add comments for question and for answers.
 > * [New] Multiple Attachments - Multiple attachments in questions and answers.
 > * [New] Spam Report - User can report span questions or answers.
@@ -98,6 +105,7 @@ CM Answers is a plugin for WordPress that enables users to post questions and an
 * [CM Ad Changer](http://wordpress.org/plugins/cm-ad-changer/) - Manage, Track and Report Advertising Campaigns Across Sites. Can turn your Turn your WP into an Ad Server
 * [CM Super ToolTip Glossary](http://wordpress.org/extend/plugins/enhanced-tooltipglossary/) - Easily creates a Glossary, Encyclopaedia or Dictionary of your website's terms and shows them as a tooltip in posts and pages when hovering. With many more powerful features.
 * [CM Download Manager](http://wordpress.org/extend/plugins/cm-download-manager) - Allows users to upload, manage, track and support documents or files in a download directory listing database for others to contribute, use and comment upon.
+* [CM MicroPayments]((https://plugins.cminds.com/cm-micropayment-platform/)) - Adds the in-site support for your own “virtual currency“. The purpose of this plugin is to allow in-site transactions without the necessity of processing the external payments each time (quicker & easier). Developers can use it as a platform to integrate with their own plugins.
 
 
 == Installation ==
