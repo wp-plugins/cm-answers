@@ -6,7 +6,7 @@
     endforeach;
 endif;
     ?>
-<style>
+<style type="text/css">
     #cm-answers-settings-form table {border-spacing:0;}
     #cm-answers-settings-form tr td, #cm-answers-settings-form tr th {padding:10px; border-bottom: solid 1px #ccc;}
 </style>
@@ -17,6 +17,8 @@ if (get_option('permalink_structure') == '') {
 }
 
 ?>
+
+<?php include 'sharebox.phtml'; ?>
 
 <h3>Upgrade to Pro</h3>
 <table>

@@ -621,7 +621,7 @@ abstract class CMA_BaseController
     {
         echo self::getAdminNav();
         ?>
-        <script>
+        <script type="text/javascript">
             jQuery(document).ready(function($){
                 $('#col-container').prepend($('#CMA_admin_nav'));
             });
