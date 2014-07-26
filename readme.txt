@@ -5,7 +5,7 @@ Donate link: http://answers.cminds.com/
 Tags: answers,forum,questions,comments,question and answer,Question and Answer Forum,support forum,q&a,list,stackoverflow,stack overflow,stackoverflow answers,splunkbase,bbPress,board,boards,bulletin,bulletin board,bulletin boards,discussion,discussion board,discussion forums,discussions,simple forum,forum plugin,forums,message,message board,messages,messaging,user messages,threads,user forum,wordpress forum,wp,resolved topics,user rankings,post rating,rate,rating,customer service,customer support,community,embed,embedded forum,discussion group,website forum,community,conversation,discussions,message,network,notification,social,thread,topic,group,groups,support
 Requires at least: 3.2
 Tested up to: 3.9.1
-Stable tag: 2.2.2
+Stable tag: 2.3.0
 
 Enables users to post questions and answers (Q&A) in a Stackoverflow style. Plugin includes social media login registration and can be customized easily
 
@@ -20,6 +20,7 @@ CM Answers is a plugin for WordPress that enables users to post questions and an
 > * [Plugin Site](http://answers.cminds.com/)
 > * [Pro Version Detailed Features List](http://answers.cminds.com/features/)
 > * [Installation Guide](http://answers.cminds.com/initial-plugin-installation/)
+> * [Video Tutorials](http://www.youtube.com/playlist?list=PLr5qMhtn_l9ZMJ4usSEahGZmgOjwqgC1_)
 
 ---
  
@@ -66,6 +67,10 @@ CM Answers is a plugin for WordPress that enables users to post questions and an
 >
 > [Pro Version Detailed Features List](http://answers.cminds.com/features/)
 >
+> * [New] Private Answers - Mark answer as private so only question author can see.
+> * [New] Private Question - Send questions privately to question author.
+> * [New] Advertisements - Integration with Ad-Sense or other Ads networks.
+> * [New] Comments - GAdd comments to question or answers.
 > * [New] MicroPayment - Grant or Charge virtual currency based on use-case.
 > * [New] Comments - Ability add comments for question and for answers.
 > * [New] Multiple Attachments - Multiple attachments in questions and answers.

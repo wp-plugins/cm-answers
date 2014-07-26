@@ -76,7 +76,7 @@ abstract class CMA_BaseController
 //        flush_rewrite_rules();
         add_filter('query_vars', array(get_class(), 'registerQueryVars'));
         add_filter('wp_title', array(get_class(), '_showPageTitle'), 1, 3);
-        add_filter('the_posts', array(get_class(), 'editQuery'), 10, 1);
+        add_filter('the_posts', array(get_class(), 'editQuery'), 10, 2);
         add_filter('the_content', array(get_class(), 'showPageContent'), 10, 1);
         if(!is_admin()) wp_enqueue_style('CMA-css', CMA_URL . '/views/resources/app.css');
     }
@@ -200,14 +200,13 @@ abstract class CMA_BaseController
         return $title;
     }
 
-    public static function editQuery($posts)
+    public static function editQuery($posts, WP_Query $wp_query)
     {
         if(!self::$_fired)
         {
-            global $wp_query;
             foreach(self::$_pages as $page)
             {
-                if(get_query_var($page['query_var']) == 1)
+                if($wp_query->get($page['query_var']) == 1)
                 {
                     if(!empty($page['headerCallback']))
                     {

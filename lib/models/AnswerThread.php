@@ -73,7 +73,7 @@ Click to see: [comment_link]';
                 'with_front' => FALSE,
             ),
             'supports'     => array('title', 'editor'),
-            'hierarchical' => TRUE
+            'hierarchical' => false
         );
         $plural = self::getQuestionsTitle();
         self::registerPostType(self::POST_TYPE, __('Question', 'cm-answers'), $plural, 'CM Answers', $post_type_args);
