@@ -27,6 +27,7 @@ CM Answers is a plugin for WordPress that enables users to post questions and an
 > #### Add-Ons & Extensions
 >
 > * New [CM MicroPayments](https://plugins.cminds.com/cm-micropayment-platform/)
+> * New [CM Answers Anonymous User Posting](https://answers.cminds.com/anonymous-user-posting-extension/)
 
 --- 
 
@@ -50,6 +51,7 @@ CM Answers is a plugin for WordPress that enables users to post questions and an
 * Customer Support - Support for retail customer's questions.
 * StackOverflow - Adds a StackOverflow style forum to your site.
 * Paid Support - Charge users for posted questions & answers.
+* Anonymous Posting - Support anonymous posting with aditional add-on
 
 **Basic Features**
 
@@ -67,6 +69,8 @@ CM Answers is a plugin for WordPress that enables users to post questions and an
 >
 > [Pro Version Detailed Features List](http://answers.cminds.com/features/)
 >
+
+> * [New] Anonymous Posting - Support anonymous non logged-in user posting when used with Add-on.
 > * [New] Private Answers - Mark answer as private so only question author can see.
 > * [New] Private Question - Send questions privately to question author.
 > * [New] Advertisements - Integration with Ad-Sense or other Ads networks.
