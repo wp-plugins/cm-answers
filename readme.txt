@@ -32,7 +32,7 @@ CM Answers is a plugin for WordPress that enables users to post questions and an
 --- 
 
 > #### Demo & User Guide`
-> * Basic demo [Read Only mode](http://answers.cminds.com/answers/).
+> * Plugin demo [Read Only mode](http://answers.cminds.com/demo/).
 > * Ajax demo [Read Only mode](http://answers.cminds.com/answers-ajax/).
 > * [User Guide](http://answers.cminds.com/cm-answers-user-guide/)
 
