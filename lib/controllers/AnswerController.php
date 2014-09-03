@@ -128,8 +128,8 @@ class CMA_AnswerController extends CMA_BaseController
         $post      = $wp_query->post;
         $thread    = CMA_AnswerThread::getInstance($post->ID);
         $content   = $_POST['content'];
-        $notify    = (bool) $_POST['thread_notify'];
-        $resolved  = (bool) $_POST['thread_resolved'];
+        $notify    = !empty($_POST['thread_notify']);
+        $resolved  = !empty($_POST['thread_resolved']);
         $author_id = get_current_user_id();
         $error     = false;
         $messages  = array();

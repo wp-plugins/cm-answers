@@ -4,8 +4,8 @@ Contributors: CreativeMindsSolutions
 Donate link: http://answers.cminds.com/
 Tags: answers,forum,questions,comments,question and answer,Question and Answer Forum,support forum,q&a,list,stackoverflow,stack overflow,stackoverflow answers,splunkbase,bbPress,board,boards,bulletin,bulletin board,bulletin boards,discussion,discussion board,discussion forums,discussions,simple forum,forum plugin,forums,message,message board,messages,messaging,user messages,threads,user forum,wordpress forum,wp,resolved topics,user rankings,post rating,rate,rating,customer service,customer support,community,embed,embedded forum,discussion group,website forum,community,conversation,discussions,message,network,notification,social,thread,topic,group,groups,support
 Requires at least: 3.2
-Tested up to: 3.9.2
-Stable tag: 2.3.0
+Tested up to: 4.0.0
+Stable tag: 2.4.0
 
 Enables users to post questions and answers (Q&A) in a Stackoverflow style. Plugin includes social media login registration and can be customized easily
 
@@ -33,6 +33,7 @@ CM Answers is a plugin for WordPress that enables users to post questions and an
 
 > #### Demo & User Guide`
 > * Basic demo [Read Only mode](http://answers.cminds.com/answers/).
+> * Ajax demo [Read Only mode](http://answers.cminds.com/answers-ajax/).
 > * [User Guide](http://answers.cminds.com/cm-answers-user-guide/)
 
 ---
@@ -70,6 +71,7 @@ CM Answers is a plugin for WordPress that enables users to post questions and an
 > [Pro Version Detailed Features List](http://answers.cminds.com/features/)
 >
 
+> * [New] Mobile Responsive - Adjusted design and uex for mobile devices.
 > * [New] Anonymous Posting - Support anonymous non logged-in user posting when used with Add-on.
 > * [New] Private Answers - Mark answer as private so only question author can see.
 > * [New] Private Question - Send questions privately to question author.
