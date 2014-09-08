@@ -28,7 +28,9 @@ abstract class CMA_BaseController
     {
         add_action('CMA_custom_post_type_nav', array(get_class(), 'addCustomPostTypeNav'), 1, 1);
         add_action('CMA_custom_taxonomy_nav', array(get_class(), 'addCustomTaxonomyNav'), 1, 1);
-        add_action('admin_menu', array(get_class(), 'registerAdminPages'));
+        if (current_user_can('manage_options')) {
+        	add_action('admin_menu', array(get_class(), 'registerAdminPages'));
+        }
     }
 
     public static function initSessions()

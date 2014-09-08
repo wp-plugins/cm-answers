@@ -117,7 +117,7 @@ Click to see: [comment_link]';
     {
         $current_user = wp_get_current_user();
 
-        if( user_can($current_user, 'edit_posts') )
+        if( user_can($current_user, 'manage_options') )
         {
 
             $page = add_menu_page(__('Questions', 'cm-answers'), 'CM Answers', 'edit_posts', self::ADMIN_MENU, create_function('$q', 'return;'));
