@@ -338,14 +338,21 @@ Click to see: [comment_link]';
                 'post_id' => $this->getId(),
                 'status'  => 'approve',
                 'order'   => 'DESC',
-                'fields'  => 'ids'
+//                 'fields'  => 'ids'
             );
             $rawComments = get_comments($args);
         }
         elseif( $sort == 'votes' )
         {
             global $wpdb;
-            $sql = $wpdb->prepare("SELECT c.comment_ID FROM {$wpdb->comments} c JOIN {$wpdb->commentmeta} cm ON c.comment_post_ID=%d AND c.comment_ID=cm.comment_id AND c.comment_approved AND cm.meta_key=%s ORDER BY cm.meta_value*1 DESC", $this->getId(), self::$_commentMeta['rating']);
+            $sql = $wpdb->prepare("SELECT c.comment_ID
+            	FROM {$wpdb->comments} c
+            	LEFT JOIN {$wpdb->commentmeta} cm ON c.comment_ID=cm.comment_id AND cm.meta_key=%s
+            	WHERE c.comment_post_ID=%d AND c.comment_approved
+            	ORDER BY cm.meta_value*1 DESC",
+            	self::$_commentMeta['rating'],
+            	$this->getId()
+            );
             $rawComments = $wpdb->get_results($sql);
         }
         $comments = array();

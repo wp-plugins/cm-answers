@@ -5,7 +5,7 @@
   Plugin URI: http://answers.cminds.com/
   Description: Allow users to post questions and answers (Q&A) in a stackoverflow style forum which is easy to use and install. Easy social integration & Customization
   Author: CreativeMindsSolutions
-  Version: 2.4.2
+  Version: 2.4.3
  */
 
 /*
