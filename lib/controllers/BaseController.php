@@ -9,6 +9,7 @@ abstract class CMA_BaseController
     const ADMIN_ADDONS = 'CMA_addons';
     const ADMIN_PRO         = 'CMA_admin_pro';
     const OPTION_TITLES     = 'CMA_panel_titles';
+    const ADMIN_BP_NOTIFY = 'CMA_BP_notify';
 
     protected static $_titles          = array();
     protected static $_fired           = false;
@@ -31,6 +32,13 @@ abstract class CMA_BaseController
         if (current_user_can('manage_options')) {
         	add_action('admin_menu', array(get_class(), 'registerAdminPages'));
         }
+        
+    	if (isset($_GET['page'])) {
+    		if ($_GET['page'] == self::ADMIN_BP_NOTIFY) {
+    			CMA_BuddyPress::notifyAllUsers();
+    		}
+    	}
+        
     }
 
     public static function initSessions()

@@ -23,15 +23,15 @@ $thread = CMA_AnswerThread::getInstance($post->ID);
                                 thumbs(comment_id, 'down');
                             }<?php endif; ?>
                         function thumbs(comment_id, upDown){
-                            jQuery('#comment-' + comment_id + ' .cma-answer-rating-loading').show();
+                            jQuery('#answer-' + comment_id + ' .cma-answer-rating-loading').show();
                             jQuery.post(self.location, {'cma-action': 'vote', 'cma-comment': comment_id, 'cma-value': upDown}, function(data){
                                 if(data.success == 1){
-                                    jQuery('#comment-' + comment_id + ' .cma-answer-rating-count').text(data.message);
+                                    jQuery('#answer-' + comment_id + ' .cma-answer-rating-count').text(data.message);
                                     jQuery().toastmessage('showSuccessToast', "<?php _e('Thank you for voting!', 'cm-answers'); ?>");
                                 }else {
                                     jQuery().toastmessage('showErrorToast', data.message);
                                 }
-                                jQuery('#comment-' + comment_id + ' .cma-answer-rating-loading').hide();
+                                jQuery('#answer-' + comment_id + ' .cma-answer-rating-loading').hide();
                             });
                         }
                     </script>
@@ -61,7 +61,7 @@ $thread = CMA_AnswerThread::getInstance($post->ID);
                     foreach($answers as $answer):
                         ?>
                         <table class="cma-answers-list">
-                            <tr id="comment-<?php echo $answer['id']; ?>">
+                            <tr id="answer-<?php echo $answer['id']; ?>">
                                 <?php if(CMA_AnswerThread::isRatingAllowed()): ?><td class="cma-answer-rating" >
                                         <div class="cma-answer-rating-loading"></div>
                                         <a href="javascript:void(0)" onclick="thumbsUp(<?php echo $answer['id']; ?>)" class="cma-thumbs-up" title="<?php _e('Thumbs Up!', 'cm-answers'); ?>">▲</a>

@@ -160,6 +160,9 @@ class CMA_AnswerController extends CMA_BaseController
             }
             else
             {
+            	
+            	do_action('cma_answer_post_after', $thread, CMA_Answer::getById($comment_id));
+            	
                 $autoApprove = CMA_AnswerThread::isAnswerAutoApproved();
                 if($autoApprove)
                 {

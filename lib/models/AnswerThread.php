@@ -134,6 +134,16 @@ Click to see: [comment_link]';
     {
         return $this->post->post_content;
     }
+    
+    
+	public function getLightContent() {
+    	return self::lightContent($this->getContent());
+    }
+    
+    
+    public static function lightContent($content) {
+    	return preg_replace('/[\s\n\r\t]+/', ' ', strip_tags($content));
+    }
 
     /**
      * Set content of question
@@ -417,6 +427,7 @@ Click to see: [comment_link]';
             $instance->savePost();
             if( !self::isQuestionAutoApproved() ) $instance->notifyModerator();
             $instance->notifyAboutNewQuestion();
+            do_action('cma_question_post_after', $instance);
             return $instance;
         }
     }
@@ -894,6 +905,22 @@ Click to see: [comment_link]';
         }
         return $comments;
     }
+    
+    
+    public function isVisible() {
+    	return true;
+    }
+    
+    
+    public function getPermalink(array $query = array(), $backlink = false, $append = '') {
+    	$result = get_permalink($this->getId()) . $append;
+    	return add_query_arg($query, $result);
+    }
+    
+	public function isPublished() {
+    	return ($this->post->post_status == 'publish');
+    }
 
 }
-?>
+
+class CMA_Thread extends CMA_AnswerThread {}

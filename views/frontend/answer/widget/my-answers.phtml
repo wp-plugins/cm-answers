@@ -27,7 +27,7 @@
             <?php endif; ?>
             <td class="cma-thread-summary">
                 <div class="cma-answer-title">
-                    <a href="<?php echo get_permalink($answer['questionId']); ?>#comment-<?php echo $answer['id']; ?>"><?php echo substr(strip_tags($answer['content']), 0, 100); ?>...</a>
+                    <a href="<?php echo get_permalink($answer['questionId']); ?>#answer-<?php echo $answer['id']; ?>"><?php echo substr(strip_tags($answer['content']), 0, 100); ?>...</a>
                 </div>
                 <div class="cma-thread-updated">
                     <?php

@@ -37,6 +37,10 @@ define('CMA_URL', plugins_url('', __FILE__));
 define('CMA_PLUGIN_FILE', __FILE__);
 //Init the plugin
 require_once CMA_PATH . '/lib/CMA.php';
+require_once CMA_PATH . '/lib/models/Labels.php';
+require_once CMA_PATH . '/lib/models/Answer.php';
+require_once CMA_PATH . '/lib/models/Category.php';
+require_once CMA_PATH . '/lib/helpers/BuddyPress.php';
 register_activation_hook(__FILE__, array('CMA', 'install'));
 register_uninstall_hook(__FILE__, array('CMA', 'uninstall'));
 CMA::init();
