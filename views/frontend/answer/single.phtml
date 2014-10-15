@@ -8,7 +8,7 @@ $thread = CMA_AnswerThread::getInstance($post->ID);
         <div class="cma-wrapper">
             <div id="content" role="main" class="entry-content">
                 <header class="entry-header">
-                    <h1 class="entry-title"><?php echo $thread->getTitle(); ?><a class="cma-backlink" href="<?php echo get_post_type_archive_link(CMA_AnswerThread::POST_TYPE); ?>">&laquo; <?php _e('Back to Questions List', 'cm-answers'); ?></a></h1>
+                    <h1 class="entry-title"><?php echo $thread->getTitle(); ?><a class="cma-backlink" href="<?php echo esc_attr(get_post_type_archive_link(CMA_AnswerThread::POST_TYPE)); ?>">&laquo; <?php _e('Back to Questions List', 'cm-answers'); ?></a></h1>
 
                 </header>
                 <?php

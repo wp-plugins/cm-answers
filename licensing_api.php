@@ -123,8 +123,8 @@ if( !class_exists('CMA_free_Cminds_Licensing_API') )
                     <ol>
                         <li>
                             <p>
-                                You can get your license keys by logging in the <a target="_blank" href="<?php echo self::$customerAreaLoginUrl ?>">Cminds Customer Area</a>. <br/>
-                                If you don't have an account yet. You have to first <a target="_blank" href="<?php echo self::$customerAreaRegisterUrl ?>">register</a> using the e-mail you've used for the purchase. <br/>
+                                You can get your license keys by logging in the <a target="_blank" href="<?php echo esc_attr(self::$customerAreaLoginUrl); ?>">Cminds Customer Area</a>. <br/>
+                                If you don't have an account yet. You have to first <a target="_blank" href="<?php echo esc_attr(self::$customerAreaRegisterUrl); ?>">register</a> using the e-mail you've used for the purchase. <br/>
                                 Your license key will be available as shown in the screenshot below.
                             </p>
                             <img title="Cminds Customer Area screenshot" alt="Example Cminds Customer Area screenshot" src="<?php echo plugin_dir_url(__FILE__) ?>cminds_user_area.png" />

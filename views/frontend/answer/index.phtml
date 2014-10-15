@@ -16,10 +16,10 @@ get_header();
                 $currentSort = !empty($_GET['sort']) ? $_GET['sort'] : 'newest';
                 ?>
                 <ul class="cma-thread-orderby">
-                    <li<?php if( $currentSort == 'newest' ): ?> class="cma-current-sort"<?php endif; ?>><a href="<?php echo add_query_arg(array('sort' => 'newest'), get_pagenum_link(0)); ?>"><?php _e('Newest', 'cm-answers'); ?></a></li>
-                    <li<?php if( $currentSort == 'hottest' ): ?> class="cma-current-sort"<?php endif; ?>><a href="<?php echo add_query_arg(array('sort' => 'hottest'), get_pagenum_link(0)); ?>"><?php _e('Hottest', 'cm-answers'); ?></a></li>
-                    <?php if( CMA_AnswerThread::isRatingAllowed() ): ?><li<?php if( $currentSort == 'votes' ): ?> class="cma-current-sort"<?php endif; ?>><a href="<?php echo add_query_arg(array('sort' => 'votes'), get_pagenum_link(0)); ?>"><?php _e('Most votes', 'cm-answers'); ?></a></li><?php endif; ?>
-                    <li<?php if( $currentSort == 'views' ): ?> class="cma-current-sort"<?php endif; ?>><a href="<?php echo add_query_arg(array('sort' => 'views'), get_pagenum_link(0)); ?>"><?php _e('Most views', 'cm-answers'); ?></a></li>
+                    <li<?php if( $currentSort == 'newest' ): ?> class="cma-current-sort"<?php endif; ?>><a href="<?php echo esc_attr(add_query_arg(array('sort' => 'newest'), get_pagenum_link(0))); ?>"><?php _e('Newest', 'cm-answers'); ?></a></li>
+                    <li<?php if( $currentSort == 'hottest' ): ?> class="cma-current-sort"<?php endif; ?>><a href="<?php echo esc_attr(add_query_arg(array('sort' => 'hottest'), get_pagenum_link(0))); ?>"><?php _e('Hottest', 'cm-answers'); ?></a></li>
+                    <?php if( CMA_AnswerThread::isRatingAllowed() ): ?><li<?php if( $currentSort == 'votes' ): ?> class="cma-current-sort"<?php endif; ?>><a href="<?php echo esc_attr(add_query_arg(array('sort' => 'votes'), get_pagenum_link(0))); ?>"><?php _e('Most votes', 'cm-answers'); ?></a></li><?php endif; ?>
+                    <li<?php if( $currentSort == 'views' ): ?> class="cma-current-sort"<?php endif; ?>><a href="<?php echo esc_attr(add_query_arg(array('sort' => 'views'), get_pagenum_link(0))); ?>"><?php _e('Most views', 'cm-answers'); ?></a></li>
                 </ul>
                 <div class="cma-clear"></div>
                 <?php
@@ -48,14 +48,20 @@ get_header();
                                             else _e('views', 'cm-answers');
                                             ?></div></div></td>
                                     <?php $numberOfAnswers = $thread->getNumberOfAnswers(); ?>
-                                <td class="cma-thread-meta"><div class="cma-thread-numbers cma-thread-answers<?php if( $numberOfAnswers == 0 ): ?> cma-thread-no-answers<?php endif; ?>"><div class="cma-thread-numbers-count cma-thread-answers-count"><?php echo $numberOfAnswers; ?></div><div class="cma-thread-numbers-caption cma-thread-answers-caption"><?php
+                                <td class="cma-thread-meta"><div class="cma-thread-numbers cma-thread-answers<?php
+                                	if( $numberOfAnswers == 0 ): ?> cma-thread-no-answers<?php endif; ?>">
+                                	<div class="cma-thread-numbers-count cma-thread-answers-count"><?php echo $numberOfAnswers; ?></div>
+                                	<div class="cma-thread-numbers-caption cma-thread-answers-caption"><?php
                                             if( $numberOfAnswers == 1 ) _e('answer', 'cm-answers');
                                             else _e('answers', 'cm-answers');
                                             ?></div></div>
                                 </td>
                                 <td class="cma-thread-summary">
-                                    <div class="cma-thread-title"><a href="<?php echo get_permalink($post->ID); ?>"><?php echo $thread->getTitle(); ?></a></div>
-                                    <div class="cma-thread-updated"><?php printf(__('updated %s by %s', 'cm-answers'), CMA_AnswerThread::renderDaysAgo($thread->getUnixUpdated()), $thread->getLastPosterName()); ?></div></td></tr>
+                                    <div class="cma-thread-title"><a href="<?php echo esc_attr(get_permalink($post->ID)); ?>"><?php echo $thread->getTitle(); ?></a></div>
+                                    <div class="cma-thread-updated"><?php printf(__('updated %s by %s', 'cm-answers'),
+                                    	CMA_AnswerThread::renderDaysAgo($thread->getUnixUpdated()), $thread->getLastPosterName()); ?></div>
+                                </td>
+                            </tr>
                             <?php
                         endwhile;
                         ?>

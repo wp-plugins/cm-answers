@@ -42,7 +42,7 @@
                 </td><?php endif; ?>
             <td class="cma-thread-summary">
                 <div class="cma-thread-title">
-                    <a href="<?php echo get_permalink($thread->getId()); ?>"><?php echo $thread->getTitle(); ?></a>
+                    <a href="<?php echo esc_attr(get_permalink($thread->getId())); ?>"><?php echo $thread->getTitle(); ?></a>
                 </div>
                 <div class="cma-thread-updated"><?php printf(__('updated %s by %s', 'cm-answers'), CMA_AnswerThread::renderDaysAgo($thread->getUnixUpdated()), $thread->getLastPosterName()); ?>
                 </div>

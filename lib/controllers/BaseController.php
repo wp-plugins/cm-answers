@@ -524,7 +524,7 @@ abstract class CMA_BaseController
     {
         if(!is_user_logged_in())
         {
-            self::_addError('You have to be logged in to see this page. <a href="' . wp_login_url($_SERVER['REQUEST_URI']) . '">Log in</a>');
+            self::_addError('You have to be logged in to see this page. <a href="' . esc_attr(wp_login_url($_SERVER['REQUEST_URI'])) . '">Log in</a>');
             return false;
         }
         return true;
@@ -680,7 +680,7 @@ abstract class CMA_BaseController
                 $isCurrent          = ($slug == $plugin_page || strpos($item[2], '.php') === strpos($currentUri, '.php'));
                 $url                = (strpos($item[2], '.php') !== false || strpos($slug, 'http://') !== false ) ? $slug : get_admin_url('', 'admin.php?page=' . $slug);
                 $submenus[$item[0]] =
-                        '<a href="' . $url . '" class="' . ($isCurrent ? 'current' : '') . '">' . $item[0] . '</a>';
+                        '<a href="' . esc_attr($url) . '" class="' . ($isCurrent ? 'current' : '') . '">' . $item[0] . '</a>';
             }
         }
         return $submenus;

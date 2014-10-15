@@ -205,12 +205,15 @@ class CMA_BuddyPress {
 	
 	protected static function createNotifyLink($param, $id) {
 		$page = CMA_BaseController::ADMIN_BP_NOTIFY;
-		return sprintf('<a href="./?page=%s&amp;%s=%d&amp;nonce=%s&backlink=%s" title="%s">%s</a>',
-			$page,
-			$param,
-			$id,
-			wp_create_nonce($page),
-			urlencode(base64_encode($_SERVER['REQUEST_URI'])),
+		$url = sprintf('./?page=%s&%s=%d&nonce=%s&backlink=%s',
+			urlencode($page),
+			urlencode($param),
+			urlencode($id),
+			urlencode(wp_create_nonce($page)),
+			urlencode(base64_encode($_SERVER['REQUEST_URI']))
+		);
+		return sprintf('<a href="%s" title="%s">%s</a>',
+			esc_attr($url),
 			esc_attr(CMA::__('Notify all users using BuddyPress notifications')),
 			esc_html(CMA::__('Notify all BP users'))
 		);

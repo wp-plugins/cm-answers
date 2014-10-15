@@ -27,12 +27,15 @@
             <?php endif; ?>
             <td class="cma-thread-summary">
                 <div class="cma-answer-title">
-                    <a href="<?php echo get_permalink($answer['questionId']); ?>#answer-<?php echo $answer['id']; ?>"><?php echo substr(strip_tags($answer['content']), 0, 100); ?>...</a>
+                    <a href="<?php echo esc_attr(get_permalink($answer['questionId']) . '#answer-'. $answer['id']); ?>"><?php echo substr(strip_tags($answer['content']), 0, 100); ?>...</a>
                 </div>
                 <div class="cma-thread-updated">
                     <?php
                     $question = CMA_AnswerThread::getInstance($answer['questionId']);
-                    printf(__('posted %s in reply to %s', 'cm-answers'), $answer['date'], '<a href="' . get_permalink($answer['questionId']) . '" >' . $question->getTitle() . '</a>');
+                    printf(__('posted %s in reply to %s', 'cm-answers'),
+                    	$answer['date'],
+                    	'<a href="' . esc_attr(get_permalink($answer['questionId'])) . '" >' . $question->getTitle() . '</a>'
+                    );
                     ?>
                 </div>
             </td>

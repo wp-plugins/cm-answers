@@ -13,7 +13,8 @@ endif;
 <?php
 // check permalink settings 
 if (get_option('permalink_structure') == '') {
-      echo '<span style="color:red">Your WordPress Permalinks needs to be set to allow plugin to work correctly. Please Go to <a href="'.admin_url().'options-permalink.php" target="new">Settings->Permalinks</a> to set Permalinks to Post Name.</span><br><br>';
+      echo '<span style="color:red">Your WordPress Permalinks needs to be set to allow plugin to work correctly. Please Go to <a href="'
+        	. esc_attr(admin_url()).'options-permalink.php" target="new">Settings->Permalinks</a> to set Permalinks to Post Name.</span><br><br>';
 }
 
 ?>
@@ -32,11 +33,11 @@ if (get_option('permalink_structure') == '') {
 <form method="post" enctype="multipart/form-data" id="cm-answers-settings-form">
     <h3><?php _e('General Settings', 'cm-answers'); ?>:</h3>
     <p><?php _e('You can add "My Questions" and "My Answers" profile views per user anywhere on the site by using shortcodes: [cma-my-questions] and [cma-my-answers]', 'cm-answers'); ?></p>
-    <p><?php _e('Link to questions frontend list', 'cm-answers'); ?>: <a href="<?php echo get_post_type_archive_link('cma_thread'); ?>" target="_blank"><?php echo get_post_type_archive_link('cma_thread'); ?></a></p>
+    <p><?php _e('Link to questions frontend list', 'cm-answers'); ?>: <a href="<?php echo esc_attr(get_post_type_archive_link('cma_thread')); ?>" target="_blank"><?php echo get_post_type_archive_link('cma_thread'); ?></a></p>
     <table>
         <tr valign="top">
                    <th scope="row" valign="middle" align="left" ><?php _e('Questions listing title', 'cm-answers'); ?>:</th>
-                   <td ><input type="text" name="questions_title" value="<?php echo esc_attr($questions_title); ?>" placeholder="<?php _e('Questions listing title', 'cm-answers'); ?>"/></td>
+                   <td ><input type="text" name="questions_title" value="<?php echo esc_attr($questions_title); ?>" placeholder="<?php echo esc_attr(__('Questions listing title', 'cm-answers')); ?>"/></td>
                    <td></td>
                </tr>
          <tr valign="top">
