@@ -73,6 +73,7 @@ class CMA_AnswerController extends CMA_BaseController
         {
             $query         = CMA_AnswerThread::customOrder($query, $_GET['sort']);
             $query->is_top = true;
+//             $query->set('posts_per_page', 5);
         }
     }
 

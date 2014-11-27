@@ -101,7 +101,7 @@ Click to see: [comment_link]';
         {
             self::$instances[$id] = new self($id);
         }
-        if( self::$instances[$id]->post->post_type != self::POST_TYPE )
+        if( empty(self::$instances[$id]->post) OR self::$instances[$id]->post->post_type != self::POST_TYPE )
         {
             return NULL;
         }

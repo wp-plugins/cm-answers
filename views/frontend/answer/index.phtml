@@ -14,6 +14,7 @@ get_header();
 
                 <?php
                 $currentSort = !empty($_GET['sort']) ? $_GET['sort'] : 'newest';
+                if (!ctype_alnum($currentSort)) $currentSort = 'newest';
                 ?>
                 <ul class="cma-thread-orderby">
                     <li<?php if( $currentSort == 'newest' ): ?> class="cma-current-sort"<?php endif; ?>><a href="<?php echo esc_attr(add_query_arg(array('sort' => 'newest'), get_pagenum_link(0))); ?>"><?php _e('Newest', 'cm-answers'); ?></a></li>

@@ -50,6 +50,7 @@ $thread = CMA_AnswerThread::getInstance($post->ID);
 
                 <?php
                 $currentSort = !empty($_GET['sort']) ? $_GET['sort'] : 'newest';
+                if (!ctype_alnum($currentSort)) $currentSort = 'newest';
                 $answers     = $thread->getAnswers($currentSort);
                 if(!empty($answers)):
                     ?>
