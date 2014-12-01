@@ -548,6 +548,11 @@ abstract class CMA_BaseController
     public static function displaySettingsPage()
     {
 
+        // CSRF protection
+        if (!empty($_POST) AND (empty($_POST['nonce']) OR !wp_verify_nonce($_POST['nonce'], self::ADMIN_SETTINGS))) {
+        	die('Invalid nonce');
+        }
+    	
         $messages = array();
         if(!empty($_POST['titles']))
         {

@@ -83,6 +83,7 @@ get_header();
                         <div style="clear:both;height:40px;"></div>
                         <form method="post" class="cma-thread-add" id="cma-thread-add">
                             <input type="hidden" name="cma-action" value="add" />
+                            <input type="hidden" name="nonce" value="<?php echo esc_attr(wp_create_nonce('cma_question')); ?>" />
                             <h3><?php _e('Ask a Question', 'cm-answers'); ?></h3>
                             <div style="clear:both;height:10px;"></div>
                             <ul class="cma-form-notes">

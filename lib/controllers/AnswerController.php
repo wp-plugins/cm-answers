@@ -141,6 +141,9 @@ class CMA_AnswerController extends CMA_BaseController
         $messages  = array();
         try
         {
+        	if (empty($_POST['nonce']) OR !wp_verify_nonce($_POST['nonce'], 'cma_answer')) {
+        		throw new Exception(serialize(array('Invalid nonce.')));
+        	}
             $comment_id = $thread->addCommentToThread($content, $author_id, $notify, $resolved);
         }
         catch(Exception $e)
@@ -205,6 +208,9 @@ class CMA_AnswerController extends CMA_BaseController
         );
         try
         {
+        	if (empty($_POST['nonce']) OR !wp_verify_nonce($_POST['nonce'], 'cma_question')) {
+        		throw new Exception(serialize(array('Invalid nonce.')));
+        	}
             $thread    = CMA_AnswerThread::newThread($data);
             $thread_id = $thread->getId();
         }
@@ -260,7 +266,8 @@ class CMA_AnswerController extends CMA_BaseController
             {
                 $thread  = CMA_AnswerThread::getInstance($post->ID);
                 $comment = self::_getParam('cma-comment');
-                if(!empty($comment))
+                $nonce = self::_getParam('nonce');
+                if(!empty($comment) AND !empty($nonce) AND wp_verify_nonce($nonce, 'cma_vote'))
                 {
                     $response = array('success' => 0, 'message' => __('There was an error while processing your vote', 'cm-answers'));
                     $votes    = 0;

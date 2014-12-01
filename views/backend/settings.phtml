@@ -133,7 +133,7 @@ if (get_option('permalink_structure') == '') {
                 <em>[comment_link]</em> - <?php _e('Link to the new answer', 'cm-answers'); ?></td>
         </tr>
     </table>
-
+	<input type="hidden" name="nonce" value="<?php echo esc_attr(wp_create_nonce(CMA_BaseController::ADMIN_SETTINGS)); ?>" />
     <input type="submit" class="button" value="<?php _e('Update', 'cm-answers', 'cm-answers'); ?>" />
 </form>
 </p>

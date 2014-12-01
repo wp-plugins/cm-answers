@@ -24,12 +24,13 @@ $thread = CMA_AnswerThread::getInstance($post->ID);
                             }<?php endif; ?>
                         function thumbs(comment_id, upDown){
                             jQuery('#answer-' + comment_id + ' .cma-answer-rating-loading').show();
-                            jQuery.post(self.location, {'cma-action': 'vote', 'cma-comment': comment_id, 'cma-value': upDown}, function(data){
+                            var nonce = jQuery('#answer-' + comment_id).parents('.cma-answers-list').first().data('voteNonce');
+                            jQuery.post(self.location, {'cma-action': 'vote', 'cma-comment': comment_id, 'cma-value': upDown, nonce: nonce}, function(data){
                                 if(data.success == 1){
                                     jQuery('#answer-' + comment_id + ' .cma-answer-rating-count').text(data.message);
                                     jQuery().toastmessage('showSuccessToast', "<?php _e('Thank you for voting!', 'cm-answers'); ?>");
                                 }else {
-                                    jQuery().toastmessage('showErrorToast', data.message);
+                                    if (data.message) jQuery().toastmessage('showErrorToast', data.message);
                                 }
                                 jQuery('#answer-' + comment_id + ' .cma-answer-rating-loading').hide();
                             });
@@ -61,7 +62,7 @@ $thread = CMA_AnswerThread::getInstance($post->ID);
                     <?php
                     foreach($answers as $answer):
                         ?>
-                        <table class="cma-answers-list">
+                        <table class="cma-answers-list" data-vote-nonce="<?php echo esc_attr(wp_create_nonce('cma_vote')); ?>">
                             <tr id="answer-<?php echo $answer['id']; ?>">
                                 <?php if(CMA_AnswerThread::isRatingAllowed()): ?><td class="cma-answer-rating" >
                                         <div class="cma-answer-rating-loading"></div>
@@ -94,6 +95,7 @@ $thread = CMA_AnswerThread::getInstance($post->ID);
                             <div style="clear:both;height:25px;"></div>
                             <form method="post">
                                 <input type="hidden" name="cma-action" value="add" />
+                                <input type="hidden" name="nonce" value="<?php echo esc_attr(wp_create_nonce('cma_answer')); ?>" />
                                 <h3><?php _e('Post your Answer', 'cm-answers'); ?></h3>
                                 <div style="clear:both;height:10px;"></div>
                                 <ul class="cma-form-notes">
