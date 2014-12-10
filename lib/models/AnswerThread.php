@@ -348,7 +348,7 @@ Click to see: [comment_link]';
                 'post_id' => $this->getId(),
                 'status'  => 'approve',
                 'order'   => 'DESC',
-//                 'fields'  => 'ids'
+                'fields'  => 'ids'
             );
             $rawComments = get_comments($args);
         }
@@ -363,14 +363,15 @@ Click to see: [comment_link]';
             	self::$_commentMeta['rating'],
             	$this->getId()
             );
-            $rawComments = $wpdb->get_results($sql);
+            $rawComments = $wpdb->get_col($sql);
         }
+        
         $comments = array();
         if( !empty($rawComments) )
         {
-            foreach($rawComments as $row)
+            foreach($rawComments as $commentId)
             {
-                $comments[] = $this->getCommentData($row->comment_ID);
+                $comments[] = $this->getCommentData(intval($commentId));
             }
         }
         return $comments;

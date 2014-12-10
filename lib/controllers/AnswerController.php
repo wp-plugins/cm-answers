@@ -15,8 +15,12 @@ class CMA_AnswerController extends CMA_BaseController
         add_filter('wp_nav_menu_items', array(get_class(), 'addMenuItem'), 1, 1);
         add_action('pre_get_posts', array(get_class(), 'registerCustomOrder'), 1, 1);
         add_action('CMA_login_form', array(get_class(), 'showLoginForm'));
-
-        register_sidebar(array(
+        add_action( 'widgets_init', array(__CLASS__, 'registerSidebars') );
+    }
+    
+    
+    public static function registerSidebars() {
+    	register_sidebar(array(
             'id' => 'cm-answers-sidebar',
             'name' => __('CM Answers Sidebar', 'cm-answers'),
             'description' => __('This sidebar is shown on CM Answers pages', 'cm-answers')
