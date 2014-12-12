@@ -1,0 +1,21 @@
+<div class="cma">
+<?php if (!empty($messages[CMA_BaseController::MESSAGE_SUCCESS])):
+    ?><ul class="cma_success"><?php
+    foreach ($messages[CMA_BaseController::MESSAGE_SUCCESS] as $msg):
+        ?>
+            <li><?php echo $msg; ?></li>
+            <?php
+        endforeach;
+        ?></ul><?php
+endif;
+if (!empty($messages[CMA_BaseController::MESSAGE_ERROR])):
+        ?><ul class="cma_error"><?php
+    foreach ($messages[CMA_BaseController::MESSAGE_ERROR] as $msg):
+            ?>
+            <li><?php echo $msg; ?></li>
+            <?php
+        endforeach;
+        ?></ul><?php
+
+endif;
+?></div>

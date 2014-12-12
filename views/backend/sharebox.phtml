@@ -1,0 +1,72 @@
+<?php
+$pluginReviewLink = 'http://wordpress.org/support/view/plugin-reviews/cm-answers';
+$twitterTweet = rawurlencode('Checkout the CM Answers ( http://wordpress.org/plugins/cm-answers/ https://answers.cminds.com ) #WordPress #Plugin by @CMPLUGINS');
+?>
+
+<div class="cminds_call_to_action">
+    <div class="inner_box">
+        <h3>Share your Appreciation</h3>
+        <a target="_blank" href="<?php echo esc_attr($pluginReviewLink); ?>">
+            <div class="btn button">
+                <div class="dashicons dashicons-share-alt2"></div><span>Submit a review</span>
+            </div>
+        </a>
+        <a target="_blank"  href="http://twitter.com/home/?status=<?php echo esc_attr(urlencode($twitterTweet)) ?>">
+            <div class="btn button">
+                <div class="dashicons dashicons-twitter"></div><span>Tweet</span>
+            </div>
+        </a>
+        <h3>Stay Up-to-Date</h3>
+        <a href="https://twitter.com/CMPLUGINS" class="twitter-follow-button" data-show-count="false" data-size="large" data-dnt="true">Follow @CMPLUGINS</a>
+        <script>!function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+                if (!d.getElementById(id)) {
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = p + '://platform.twitter.com/widgets.js';
+                    fjs.parentNode.insertBefore(js, fjs);
+                }
+            }(document, 'script', 'twitter-wjs');
+        </script>
+
+        <div class="g-follow" data-annotation="none" data-height="24" data-href="https://plus.google.com/108513627228464018583" data-rel="publisher"></div>
+
+        <script type="text/javascript">
+            (function () {
+                var po = document.createElement('script');
+                po.type = 'text/javascript';
+                po.async = true;
+                po.src = 'https://apis.google.com/js/platform.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(po, s);
+            })();
+        </script>
+    </div>
+    
+    <div class="clear"></div>
+</div>
+
+<style type="text/css">
+div.cminds_call_to_action{
+    display: flex;
+    float: right;
+    margin: 0 0 2em 2em;
+}
+
+div.cminds_call_to_action .inner_box{
+    border: 1px solid #999;
+    padding: 0 0.5em 0.5em;
+    margin: 0 auto;
+    min-width: 290px;
+    background: #f9f9f9;
+}
+
+div.cminds_call_to_action a{
+    text-decoration: none;
+}
+
+div.cminds_settings_description{
+    float: left;
+    max-width: 55%;
+}
+</style>
