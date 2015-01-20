@@ -1,0 +1,708 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: CM Answers v1.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-07-16 14:10+0100\n"
+"PO-Revision-Date: 2013-10-09 14:08+0100\n"
+"Last-Translator: J.L.Dokter <jldokter@gmail.com>\n"
+"Language-Team: \n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-Basepath: ../\n"
+"X-Textdomain-Support: yes\n"
+"X-Poedit-SearchPath-0: .\n"
+
+# @ default
+#: cm-answers.php:29
+#, php-format
+msgid ""
+"We are sorry, but you need to have at least PHP 5.3 to run this plugin "
+"(currently installed version: %s) - please upgrade or contact your system "
+"administrator."
+msgstr ""
+"We vinden het jammer, maar u moet op zijn minst PHP 5.3 om deze plugin te "
+"voeren (momenteel geïnstalleerde versie: %s) - upgrade of neem contact op "
+"met uw systeembeheerder."
+
+# @ cm-answers
+#: lib/controllers/AnswerController.php:18
+msgid "CM Answers Sidebar"
+msgstr "CM Answers Sidebar"
+
+# @ cm-answers
+#: lib/controllers/AnswerController.php:19
+msgid "This sidebar is shown on CM Answers pages"
+msgstr "Deze sidecar wordt weergegeven op CM Answers pagina's"
+
+# @ cm-answers
+#: lib/controllers/AnswerController.php:34
+#: lib/controllers/AnswerController.php:42 lib/models/AnswerThread.php:82
+msgid "Question"
+msgstr "Vraag"
+
+# @ default
+#: lib/controllers/AnswerController.php:34
+#, php-format
+msgid "\"%s\" has been succesfully approved"
+msgstr "\"%s\" is goedgekeurd"
+
+# @ default
+#: lib/controllers/AnswerController.php:42
+#, php-format
+msgid "\"%s\" has been succesfully moved to trash"
+msgstr "\"%s\" is verwijderd"
+
+# @ cm-answers
+#: lib/controllers/AnswerController.php:115
+msgid "Your answer has been succesfully added."
+msgstr "Uw antwoord is geplaatst."
+
+# @ cm-answers
+#: lib/controllers/AnswerController.php:119
+msgid "Thank you for your answer, it has been held for moderation."
+msgstr ""
+"Bedankt voor uw antwoord, nadat een beheerder het heeft goedgekeurd wordt "
+"het geplaatst."
+
+# @ cm-answers
+#: lib/controllers/AnswerController.php:165
+msgid "New question has been succesfully added."
+msgstr "Nieuwe vraag succesvol geplaatst."
+
+# @ cm-answers
+#: lib/controllers/AnswerController.php:168
+msgid "Thank you for your question, it has been held for moderation."
+msgstr ""
+"Bedankt voor uw vraag, nadat een beheerder het heeft goedgekeurd wordt het "
+"geplaatst."
+
+# @ cm-answers
+#: lib/controllers/AnswerController.php:187
+msgid "There was an error while processing your vote"
+msgstr "Er is iets misgegaan bij het verwerken van uw stem."
+
+# @ cm-answers
+#: lib/controllers/AnswerController.php:191
+msgid "You have to be logged-in to vote"
+msgstr "U moet ingelogd zijn om te stemmen."
+
+# @ cm-answers
+#: lib/controllers/AnswerController.php:200
+msgid "You have already voted for this comment"
+msgstr "U heeft al op deze reactie gestemd."
+
+# @ cm-answers
+#: lib/controllers/AnswerController.php:238 lib/models/AnswerThread.php:430
+msgid "Author"
+msgstr "Auteur"
+
+# @ cm-answers
+#: lib/controllers/AnswerController.php:239
+msgid "Views"
+msgstr "Gezien"
+
+# @ cm-answers
+#: lib/controllers/AnswerController.php:240
+msgid "Status"
+msgstr "Status"
+
+# @ cm-answers
+#: lib/controllers/AnswerController.php:241 lib/models/AnswerThread.php:122
+#: lib/models/AnswerThread.php:123
+msgid "Answers"
+msgstr "Antwoorden"
+
+# @ cm-answers
+#: lib/controllers/AnswerController.php:258 lib/models/AnswerThread.php:168
+msgid "pending"
+msgstr "afwachtend"
+
+# @ cm-answers
+#: lib/controllers/AnswerController.php:260
+msgid "Approve"
+msgstr "Goedkeuren"
+
+# @ cm-answers
+#: lib/controllers/BaseController.php:467
+msgid "CM Answers Settings"
+msgstr "CM Answers instellingen"
+
+# @ cm-answers
+#: lib/controllers/BaseController.php:467
+msgid "Settings"
+msgstr "Instellingen"
+
+# @ cm-answers
+#: lib/controllers/BaseController.php:468
+msgid "About"
+msgstr "Over"
+
+#: lib/controllers/BaseController.php:469
+msgid "Pro Version"
+msgstr "Pro Versie"
+
+# @ cm-answers
+#: lib/controllers/BaseController.php:480
+msgid "Settings succesfully updated"
+msgstr "Instellingen bijgewerkt"
+
+# @ cm-answers
+#: lib/controllers/BaseController.php:560
+msgid "Filter by status"
+msgstr "Filter op status"
+
+# @ cm-answers
+#: lib/controllers/BaseController.php:562
+msgid "Approved"
+msgstr "Goedgekeurd"
+
+# @ cm-answers
+#: lib/controllers/BaseController.php:564
+msgid "Pending"
+msgstr "Afwachtend"
+
+# @ cm-answers
+#: lib/controllers/BaseController.php:566
+msgid "Trash"
+msgstr "Prullenmand"
+
+# @ cm-answers
+#: lib/models/AnswerThread.php:120
+#: views/frontend/answer/meta/menu-item.phtml:1
+msgid "Questions"
+msgstr "vragen"
+
+# @ cm-answers
+#: lib/models/AnswerThread.php:125 lib/models/AnswerThread.php:126
+msgid "Add New"
+msgstr "Voeg toe"
+
+# @ cm-answers
+#: lib/models/AnswerThread.php:169
+msgid "approved"
+msgstr "goedgekeurd"
+
+# @ cm-answers
+#: lib/models/AnswerThread.php:238
+msgid "RESOLVED"
+msgstr "GESLOTEN"
+
+# @ cm-answers
+#: lib/models/AnswerThread.php:380
+msgid "Title cannot be empty"
+msgstr "Titel mag niet leeg zijn"
+
+# @ cm-answers
+#: lib/models/AnswerThread.php:382 lib/models/AnswerThread.php:529
+msgid "Content cannot be empty"
+msgstr "Inhoud mag niet leeg zijn"
+
+# @ cm-answers
+#: lib/models/AnswerThread.php:425
+msgid "Please moderate"
+msgstr "Controleer, AUB"
+
+# @ cm-answers
+#: lib/models/AnswerThread.php:427
+msgid "A new question has been asked and is waiting for your approval"
+msgstr "Een nieuwe vraag is ingediend en wacht op uw goedkeuring"
+
+# @ cm-answers
+#: lib/models/AnswerThread.php:431
+msgid "E-mail"
+msgstr "E-mail"
+
+# @ cm-answers
+#: lib/models/AnswerThread.php:433
+msgid "Title"
+msgstr "Titel"
+
+# @ cm-answers
+#: lib/models/AnswerThread.php:434
+msgid "Content"
+msgstr "Inhoud"
+
+# @ cm-answers
+#: lib/models/AnswerThread.php:439
+msgid "Approve it"
+msgstr "Beoordeel het"
+
+# @ cm-answers
+#: lib/models/AnswerThread.php:441
+msgid "Trash it"
+msgstr "Gooi weg"
+
+# @ cm-answers
+#: lib/models/AnswerThread.php:443
+msgid "Please visit the questions moderation panel"
+msgstr "Bezoek AUB het vragen moderatie-panel"
+
+#: lib/models/AnswerThread.php:646
+msgid "some time ago"
+msgstr "enige tijd terug"
+
+# @ cm-answers
+#: lib/models/AnswerThread.php:649
+#, php-format
+msgid "1 second ago"
+msgid_plural "%d seconds ago"
+msgstr[0] "1 seconde geleden"
+msgstr[1] "%d seconden geleden"
+
+# @ cm-answers
+#: lib/models/AnswerThread.php:654
+#, php-format
+msgid "1 minute ago"
+msgid_plural "%d minutes ago"
+msgstr[0] "1 minuut geleden"
+msgstr[1] "%d minuten geleden"
+
+# @ cm-answers
+#: lib/models/AnswerThread.php:659
+#, php-format
+msgid "1 hour ago"
+msgid_plural "%d hours ago"
+msgstr[0] "1 uur terug"
+msgstr[1] "%d uur geleden"
+
+# @ cm-answers
+#: lib/models/AnswerThread.php:664
+#, php-format
+msgid "1 day ago"
+msgid_plural "%d days ago"
+msgstr[0] "gisteren"
+msgstr[1] "%d dagen geleden"
+
+# @ cm-answers
+#: lib/models/AnswerThread.php:669
+#, php-format
+msgid "1 week ago"
+msgid_plural "%d weeks ago"
+msgstr[0] "1 week geleden"
+msgstr[1] "%d weken geleden"
+
+# @ cm-answers
+#: lib/models/AnswerThread.php:674
+#, php-format
+msgid "1 month ago"
+msgid_plural "%d months ago"
+msgstr[0] "1 maand geleden"
+msgstr[1] "%d maanden geleden"
+
+# @ cm-answers
+#: lib/models/AnswerThread.php:679
+#, php-format
+msgid "1 year ago"
+msgid_plural "%d years ago"
+msgstr[0] "1 jaar geleden"
+msgstr[1] "%d jaar geleden"
+
+# @ cm-answers
+#: lib/models/PostType.php:64
+#, php-format
+msgid "Add %s"
+msgstr "%s toevoegen"
+
+# @ cm-answers
+#: lib/models/PostType.php:65
+#, php-format
+msgid "Add New %s"
+msgstr "%s toevoegen als nieuw"
+
+# @ cm-answers
+#: lib/models/PostType.php:66
+#, php-format
+msgid "Edit %s"
+msgstr "Bewerken %s"
+
+# @ cm-answers
+#: lib/models/PostType.php:67
+#, php-format
+msgid "New %s"
+msgstr "Nieuw %s"
+
+# @ cm-answers
+#: lib/models/PostType.php:69
+#, php-format
+msgid "View %s"
+msgstr "Bekijken %s"
+
+# @ cm-answers
+#: lib/models/PostType.php:70
+#, php-format
+msgid "Search %s"
+msgstr "Zoeken %s"
+
+# @ cm-answers
+#: lib/models/PostType.php:71
+#, php-format
+msgid "No %s found"
+msgstr "Geen %s gevonden"
+
+# @ cm-answers
+#: lib/models/PostType.php:72
+#, php-format
+msgid "No %s found in Trash"
+msgstr "Geen %s in de prullenbak gevonden"
+
+# @ cm-answers
+#: views/backend/settings.phtml:24
+msgid "General Settings"
+msgstr "Algemene Instellingen"
+
+# @ cm-answers
+#: views/backend/settings.phtml:25
+msgid ""
+"You can add \"My Questions\" and \"My Answers\" profile views per user "
+"anywhere on the site by using shortcodes: [cma-my-questions] and [cma-my-"
+"answers]"
+msgstr ""
+"U kunt \"Mijn vragen\" en \"My Answers\" profiel-overzichten per gebruiker "
+"overal op de site toevoegen met behulp van de volgende codes: [cma-my-"
+"questions] en [cma-my-answers]"
+
+# @ cm-answers
+#: views/backend/settings.phtml:26
+msgid "Link to questions frontend list"
+msgstr "Link naar de het vragen-overzicht"
+
+# @ cm-answers
+#: views/backend/settings.phtml:29 views/backend/settings.phtml:30
+msgid "Questions listing title"
+msgstr "Vragenlijst titel"
+
+# @ cm-answers
+#: views/backend/settings.phtml:34
+msgid "Enable ratings for answers"
+msgstr "Aanzetten van antwoord-waardering"
+
+# @ cm-answers
+#: views/backend/settings.phtml:36 views/backend/settings.phtml:43
+#: views/backend/settings.phtml:59 views/backend/settings.phtml:66
+#: views/backend/settings.phtml:87
+msgid "No"
+msgstr "Nee"
+
+# @ cm-answers
+#: views/backend/settings.phtml:37 views/backend/settings.phtml:44
+#: views/backend/settings.phtml:60 views/backend/settings.phtml:67
+#: views/backend/settings.phtml:88
+msgid "Yes"
+msgstr "Ja"
+
+# @ cm-answers
+#: views/backend/settings.phtml:38
+msgid "If enabled, users will be able to rate answers"
+msgstr ""
+"Wanneer geactiveerd, is de gebruiker in staat om antwoorden te waarderen"
+
+# @ cm-answers
+#: views/backend/settings.phtml:41
+msgid "Enable negative ratings"
+msgstr "Activeren van negatieve waarderingen"
+
+# @ cm-answers
+#: views/backend/settings.phtml:45
+msgid ""
+"If enabled, users will be able to give \"thumbs down\" for an answer. If "
+"previous settings is disabled, this will be ignored."
+msgstr ""
+"Wanneer geactiveerd, is de gebruiker in staat om \"Duim omhoog\" voor een "
+"antwoord te geven. Als de vorige instelling is uitgezet, wordt deze "
+"instelling genegeerd."
+
+# @ cm-answers
+#: views/backend/settings.phtml:48
+msgid "On questions list in \"votes\" box show"
+msgstr "Bij de vragenlijst het \"Waarderingen\" kader tonen"
+
+# @ cm-answers
+#: views/backend/settings.phtml:50
+msgid "Total number of votes of its answers"
+msgstr "Totaal aantal waarderingen van de antwoorden"
+
+# @ cm-answers
+#: views/backend/settings.phtml:52
+msgid "Rating of the best answer"
+msgstr "Waardering van het beste antwoord"
+
+# @ cm-answers
+#: views/backend/settings.phtml:53
+msgid "If ratings are disabled, this setting will be ignored."
+msgstr "Als waarderingen zijn uitgeschakeld, wordt deze instelling genegeerd."
+
+# @ cm-answers
+#: views/backend/settings.phtml:57
+msgid "Auto-approve new questions"
+msgstr "Automatisch toestaan van nieuwe vragen"
+
+# @ cm-answers
+#: views/backend/settings.phtml:64
+msgid "Auto-approve answers"
+msgstr "Automatisch toestaan van antwoorden"
+
+# @ cm-answers
+#: views/backend/settings.phtml:85
+msgid "Add \"Answers\" to WP Nav Menu"
+msgstr "Voeg \"Antwoorden\" toe aan het WP Navigatie Menu"
+
+# @ cm-answers
+#: views/backend/settings.phtml:89
+msgid "You need to have \"wp_nav_menu\" trigger in your template"
+msgstr "U dient een \"wp_nav_menu\" trigger in uw template te hebben"
+
+# @ cm-answers
+#: views/backend/settings.phtml:92
+msgid "Notifications"
+msgstr "Notificaties"
+
+# @ cm-answers
+#: views/backend/settings.phtml:95
+msgid "Notify about new questions"
+msgstr "Informeer over nieuwe vragen"
+
+# @ cm-answers
+#: views/backend/settings.phtml:96
+msgid "Example"
+msgstr "Voorbeeld"
+
+# @ cm-answers
+#: views/backend/settings.phtml:97
+msgid "Separate e-mail addresses by commas or leave empty to disable."
+msgstr ""
+"Afzonderlijke e-mail-adressen door komma's scheiden of laat leeg om uit te "
+"schakelen. "
+
+# @ cm-answers
+#: views/backend/settings.phtml:100
+msgid "New question notification title"
+msgstr "Titel \"Nieuwe vraag\" bericht"
+
+# @ cm-answers
+#: views/backend/settings.phtml:105
+msgid "New question notification content"
+msgstr "Inhoud \"Nieuwe vraag\" bericht"
+
+# @ cm-answers
+#: views/backend/settings.phtml:107 views/backend/settings.phtml:121
+msgid "Name of the site"
+msgstr "Naam van de website"
+
+# @ cm-answers
+#: views/backend/settings.phtml:108
+msgid "Author of the question"
+msgstr "Auteur van de vraag"
+
+# @ cm-answers
+#: views/backend/settings.phtml:109 views/backend/settings.phtml:122
+msgid "Title of the question"
+msgstr "Titel van de vraag"
+
+# @ cm-answers
+#: views/backend/settings.phtml:110
+msgid "Approval status of the question (pending, approved)"
+msgstr "Status van de vraag (afwachtend, goedgekeurd) "
+
+# @ cm-answers
+#: views/backend/settings.phtml:111
+msgid "Link to the new question"
+msgstr "Link naar de nieuwe vraag"
+
+# @ cm-answers
+#: views/backend/settings.phtml:114
+msgid "New answer notification title"
+msgstr "Titel \"Nieuw antwoord\" bericht"
+
+# @ cm-answers
+#: views/backend/settings.phtml:119
+msgid "New answer notification content"
+msgstr "Inhoud \"Nieuw antwoord\" bericht"
+
+# @ cm-answers
+#: views/backend/settings.phtml:123
+msgid "Link to the new answer"
+msgstr "Link naar het nieuwe antwoord"
+
+# @ cm-answers
+#: views/backend/settings.phtml:127
+msgid "Update"
+msgstr "Bijgewerkt"
+
+# @ cm-answers
+#: views/frontend/error.phtml:8
+msgid "Go back to previous page"
+msgstr "Terug naar de vorige pagina"
+
+# @ cm-answers
+#: views/frontend/answer/index.phtml:8
+msgid "All Questions"
+msgstr "Alle vragen"
+
+# @ cm-answers
+#: views/frontend/answer/index.phtml:18 views/frontend/answer/single.phtml:55
+msgid "Newest"
+msgstr "Nieuwste"
+
+# @ cm-answers
+#: views/frontend/answer/index.phtml:19
+msgid "Hottest"
+msgstr "Populairste"
+
+# @ cm-answers
+#: views/frontend/answer/index.phtml:20
+msgid "Most votes"
+msgstr "De meeste waarderingen"
+
+# @ cm-answers
+#: views/frontend/answer/index.phtml:21
+msgid "Most views"
+msgstr "Het meest bekeken"
+
+# @ cm-answers
+#: views/frontend/answer/index.phtml:36
+#: views/frontend/answer/widget/my-answers.phtml:7
+#: views/frontend/answer/widget/my-questions.phtml:7
+msgid "vote"
+msgstr "waardering"
+
+# @ cm-answers
+#: views/frontend/answer/index.phtml:36
+#: views/frontend/answer/widget/my-answers.phtml:7
+msgid "votes"
+msgstr "waarderingen"
+
+# @ cm-answers
+#: views/frontend/answer/index.phtml:38
+#: views/frontend/answer/widget/my-questions.phtml:9
+msgid "view"
+msgstr "Bekijk"
+
+# @ cm-answers
+#: views/frontend/answer/index.phtml:38
+msgid "views"
+msgstr "Gezien"
+
+# @ cm-answers
+#: views/frontend/answer/index.phtml:40
+#: views/frontend/answer/widget/my-questions.phtml:11
+msgid "answer"
+msgstr "antwoord"
+
+# @ cm-answers
+#: views/frontend/answer/index.phtml:40
+msgid "answers"
+msgstr "antwoorden"
+
+# @ cm-answers
+#: views/frontend/answer/index.phtml:44
+#: views/frontend/answer/widget/my-questions.phtml:19
+#, php-format
+msgid "updated %s by %s"
+msgstr "Bewerkt %s: %s"
+
+# @ cm-answers
+#: views/frontend/answer/index.phtml:65
+msgid "Ask a Question"
+msgstr "Stel een vraag"
+
+# @ cm-answers
+#: views/frontend/answer/index.phtml:68 views/frontend/answer/single.phtml:95
+msgid "Allow markup"
+msgstr "Sta opmaak toe"
+
+# @ cm-answers
+#: views/frontend/answer/index.phtml:69 views/frontend/answer/single.phtml:96
+msgid "Wrap your code using"
+msgstr "Zet uw code tussen"
+
+# @ cm-answers
+#: views/frontend/answer/index.phtml:71
+msgid "Question Title"
+msgstr "Titel van uw vraag"
+
+# @ cm-answers
+#: views/frontend/answer/index.phtml:72
+msgid "What is your Question about?"
+msgstr "Waar gaat uw vraag over?"
+
+# @ cm-answers
+#: views/frontend/answer/index.phtml:76 views/frontend/answer/single.phtml:103
+msgid "Notify me of follow"
+msgstr "Stuur bericht bij opvolging"
+
+# @ cm-answers
+#: views/frontend/answer/index.phtml:78
+msgid "Add Question"
+msgstr "Vraag toevoegen"
+
+# @ cm-answers
+#: views/frontend/answer/single.phtml:9
+msgid "Back to Questions List"
+msgstr "Terug naar de vragenlijst"
+
+# @ cm-answers
+#: views/frontend/answer/single.phtml:28
+msgid "Thank you for voting!"
+msgstr "Hartelijk dank voor uw waardering!"
+
+# @ cm-answers
+#: views/frontend/answer/single.phtml:42 views/frontend/answer/single.phtml:77
+#, php-format
+msgid "Posted by %s"
+msgstr "Gepost door %s"
+
+# @ cm-answers
+#: views/frontend/answer/single.phtml:43
+#, php-format
+msgid "Asked on %s"
+msgstr "Gevraagd op %s"
+
+# @ cm-answers
+#: views/frontend/answer/single.phtml:56
+msgid "Highest Rating"
+msgstr "Hoogste waardering"
+
+# @ cm-answers
+#: views/frontend/answer/single.phtml:65
+msgid "Thumbs Up!"
+msgstr "Duim omhoog!"
+
+# @ cm-answers
+#: views/frontend/answer/single.phtml:67
+msgid "Thumbs Down!"
+msgstr "Duim omlaag!"
+
+# @ cm-answers
+#: views/frontend/answer/single.phtml:78
+#, php-format
+msgid "Answered On %s"
+msgstr "Beantwoord op %s"
+
+# @ cm-answers
+#: views/frontend/answer/single.phtml:92
+#: views/frontend/answer/single.phtml:109
+msgid "Post your Answer"
+msgstr "Post uw antwoord"
+
+# @ cm-answers
+#: views/frontend/answer/single.phtml:99
+msgid "Write your Answer here"
+msgstr "Schrijf uw antwoord hier"
+
+# @ cm-answers
+#: views/frontend/answer/single.phtml:107
+msgid "Mark as resolved"
+msgstr "Markeer als gesloten"
+
+# @ cm-answers
+#: views/frontend/answer/widget/my-answers.phtml:16
+#, php-format
+msgid "posted %s in reply to %s"
+msgstr "gepost %s als antwoord op %s"
