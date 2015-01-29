@@ -1,0 +1,33 @@
+<?php
+
+if( ! empty($questions) ): ?>
+	<div class="cma-container">
+		<div class="cma-list-question">
+			<div class="cma-question" id="archive-question">
+				<?php foreach ($questions as $q): ?>
+					
+					<article id="question-<?php echo $q->ID ?>" class="cma-question" style="margin-bottom:1em;">
+						<header class="cma-header">
+							<a class="cma-title" href="<?php echo esc_attr(get_post_permalink($q->ID)); ?>" title="Permalink to <?php
+								echo esc_attr($q->post_title); ?>" rel="bookmark"><?php echo esc_html($q->post_title); ?></a>
+							<div class="cma-meta">
+								<small><?php echo get_the_time( 'M d, Y, g:i a', $q->ID ); ?></small>
+								<?php $cat = get_the_term_list( $q->ID, CMA_Category::TAXONOMY, '<small>Category: ', ', ', '</small>' );
+								if ($cat AND is_scalar($cat)) echo ' &bull; '. $cat; ?>
+							</div>
+						</header>
+					</article>
+					
+				<?php endforeach; ?>
+			</div>
+		</div>
+	</div>
+<?php else: ?>
+	<div class="info" id="message">
+		<?php if( get_current_user_id() == bp_displayed_user_id() ) : ?>
+			Why don't you have question for us. <a href="<?php echo esc_attr($submit_question_link); ?>">Start asking</a>!
+		<?php else : ?>
+			<p><strong><?php bp_displayed_user_fullname(); ?></strong> has not asked any question.</p>
+		<?php endif; ?>
+	</div>
+<?php endif;

@@ -1,0 +1,7 @@
+<div class="cma-login">
+    <?php _e('Please log in to post questions/answers', 'cm-answers'); ?>:<br />
+    <div class="cma-login-wp"><?php wp_login_form(); ?></div>
+    <?php if( get_option('users_can_register') ) {
+		echo sprintf('<p><a href="%s">%s</a></p>', esc_attr(wp_registration_url()), __('Register'));
+	} ?>
+</div>
