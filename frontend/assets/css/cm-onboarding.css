@@ -1,0 +1,8 @@
+body {overflow-x: hidden;}
+#cmob-widget-container-wrapper{z-index: 99999999;}
+#cmob-widget-container {z-index: 99999999 !important;
+
+                        &.show {
+                            display: block!important;
+                        }
+}
