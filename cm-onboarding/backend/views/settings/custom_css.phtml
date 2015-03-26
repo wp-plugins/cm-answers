@@ -1,0 +1,99 @@
+<h3>Custom CSS</h3>
+<p>Place your styles here to override any CSS rule of the plugin.</p>
+
+<?php
+$customCSSFieldName = CMOB_Settings::OPTION_CUSTOM_CSS;
+echo $settingsView->renderOptionControls($customCSSFieldName);
+?>
+
+<h3>Typical style modifications</h3>
+<p>Click on the red value to change it. Press "Add" button to add custom CSS to the textarea. You can change it after adding and update.</p>
+
+<div id="custom-css-editor">
+
+    <h4>Change the padding of the product</h4>
+    <pre><code class="no-highlight">.cmob-container .cmob-items .cmob-module {padding: <span>0</span> }</code></pre>
+
+    <h4>Change background for common product</h4>
+    <pre><code class="no-highlight">.cmob-container .cmob-items .cmob-module {background: <span>#fff</span>}</code></pre>
+
+    <h4>Change title for the common product </h4>
+    <pre><code class="no-highlight">.cmob-container .cmob-items .cmob-module .cmob-product-title {color:<span>#141412 !important</span>;font-size:<span>13px</span>}</code></pre>
+
+    <h4>Change background for "Featured" product</h4>
+    <pre><code class="no-highlight">.cmob-container .cmob-items .cmob-module.featured {background: <span>#ffffe0 !important</span>}</code></pre>
+
+    <h4>Change background for "New" product indicator</h4>
+    <pre><code class="no-highlight">.cmob-container .cmob-items .cmob-module .cmob-new {background: <span>#006400 !important</span>}</code></pre>
+
+    <h4>Change background for the product category (in Tiles view)</h4>
+    <pre><code class="no-highlight">.cmob-container.tiles .cmob-module div.module-image {background: <span>#78AB46 !important</span>}</code></pre>
+
+    <h4>Change "Product Info Link: " button styles</h4>
+    <pre><code class="no-highlight">.cmob-container .cmob-items .cmob-module a.button.details{color: <span>#888</span>;background-color: <span>#E4E03A</span>}</code></pre>
+
+    <h4>Change "Product Purchase Link: " button styles</h4>
+    <pre><code class="no-highlight">.cmob-container .cmob-items .cmob-module a.button.checkprice{color: <span>#fff</span>;background-color: <span>#90EE90</span>}</code></pre>
+
+    <h4>Change the styles of the links</h4>
+    <pre><code class="no-highlight">.cmob-container .cmob-items .cmob-module a.more-info-link{color: <span>#888</span>;}</code></pre>
+
+    <h4>Change background for discount information</h4>
+    <pre><code class="no-highlight">.cmob-container .cmob-items .cmob-module .cmob-discount {background: <span>#7F0000 !important</span>}</code></pre>
+
+    <h4>Change the font size &amp; color for discount information</h4>
+    <pre><code class="no-highlight">.cmob-container .cmob-items .cmob-module .cmob-discount {color: <span>#FFFFFF !important</span>;font-size: <span>9px</span>}</code></pre>
+</div>
+
+<script type="text/javascript">
+    (function ($) {
+        $(document).ready(function ($) {
+            $('#custom-css-editor code').append('<button>Add</button>');
+            $('#custom-css-editor code span').click(function () {
+                var obj = $(this);
+                if (obj.find('input').length)
+                    return;
+                var value = obj.text();
+                var input = document.createElement('input');
+                input.setAttribute('value', value);
+                input.style.width = value.length + "em";
+                obj.html(input);
+                input.select();
+                $(input).blur(function () {
+                    obj.text($(this).val().length > 0 ? $(this).val() : value);
+                });
+            });
+
+            $('#custom-css-editor  code button').click(function () {
+                var code = this.parentNode;
+                code.removeChild(this);
+                var textarea = $('textarea[name=<?php echo $customCSSFieldName; ?>]');
+                textarea.val(textarea.val() + "\n" + $(code).text());
+                code.appendChild(this);
+                return false;
+            });
+
+            $('#custom-css-editor button').click(function (e) {
+                e.preventDefault();
+                return false;
+            });
+            $('#custom-css-editor a').click(function (e) {
+                e.preventDefault();
+                return false;
+            });
+        });
+    })(jQuery);
+</script>
+
+<style type="text/css">
+    textarea[name="cmob_custom_css"] {
+        min-width: 300px;
+        max-width: 840px;
+        width: 70%;
+        height: 200px;
+    }
+    #custom-css-editor {margin-left: 20px;}
+    #custom-css-editor code {padding: 10px; margin-left: 20px; display: block; width: 60em; background: #f0f0f0;}
+    #custom-css-editor button {float: right; margin-top: -3px;}
+    #custom-css-editor span {color: red; cursor: pointer;}
+</style>

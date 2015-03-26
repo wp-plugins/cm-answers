@@ -1,0 +1,108 @@
+
+<div id="cmob-widget-container">
+
+    <a href="#" class="cmob-btn-open"></a>
+
+    <div class="cmob-btn-close"></div>
+
+    <?php
+    /*
+     * Title
+     */
+    $showTitle = CMOB_Settings::getOption(CMOB_Settings::OPTION_WIDGET_SHOWTITLE);
+
+    if( !empty($showTitle) ) :
+        ?>
+        <div class="cmob-widget-title"><?php echo $helpItem->title; ?></div>
+        <?php
+    endif;
+    ?>
+
+    <?php
+    /*
+     * Header
+     */
+    if( !empty($helpItem->header) ) :
+        ?>
+
+        <div class="cmob-widget-header">
+            <?php
+            echo $helpItem->header;
+            ?>
+        </div>
+
+        <?php
+    endif;
+    ?>
+
+    <?php
+    /*
+     * Search
+     */
+    $showSearch = CMOB_Settings::getOption(CMOB_Settings::OPTION_WIDGET_SHOWSEARCH);
+
+    if( !empty($showSearch) ) :
+        ?>
+
+        <div class="cmob-widget-search">
+            <label><?php echo CMOB_Labels::getLocalized('search_label'); ?></label>
+            <input type="search" id="cmob-search" name="cmob-search" placeholder="<?php echo CMOB_Labels::getLocalized('search_placeholder');?>" />
+        </div>
+
+        <?php
+    endif;
+    ?>
+
+    <ul id="cmob-widget-content" class="bxslider">
+
+        <?php
+        $showFirst = 1;
+        foreach($helpItem->helpItems as $itemId => $item) :
+            ?>
+            <li class="first">
+                <div class="cmob-widget-item-content">
+
+                    <?php if( !empty($item->url) ) : ?>
+
+                        <h5 class="cmob-widget-item-header">
+                            <a href="<?php echo $item->url; ?>" target="_blank" class="cmob-external-link"><?php echo $item->title; ?></a>
+                        </h5>
+
+                        <span class="count"></span>
+
+                    <?php else: ?>
+
+                        <h5 class="cmob-widget-item-title">
+                            <?php echo $item->title; ?>
+                        </h5>
+                        <?php echo $item->content; ?>
+                        <span class="count"></span>
+
+                    <?php endif; ?>
+                </div>
+            </li>
+            <?php
+            $showFirst = 0;
+        endforeach;
+        ?>
+
+    </ul> <!-- MAIN UL -->
+
+    <?php
+    /*
+     * Footer
+     */
+    if( !empty($helpItem->footer) ) :
+        ?>
+
+        <div class="cmob-widget-footer">
+            <?php
+            echo $helpItem->footer;
+            ?>
+        </div>
+
+        <?php
+    endif;
+    ?>
+
+</div>

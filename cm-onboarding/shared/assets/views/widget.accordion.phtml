@@ -1,0 +1,61 @@
+
+<div id="cmob-widget-container">
+
+    <a href="#" class="cmob-btn-open"></a>
+
+    <div class="cmob-btn-close"></div>
+
+    <?php
+    /*
+     * Title
+     */
+    $showTitle = CMOB_Settings::getOption(CMOB_Settings::OPTION_WIDGET_SHOWTITLE);
+
+    if( !empty($showTitle) ) :
+        ?>
+        <div class="cmob-widget-title"><?php echo $helpItem->title; ?></div>
+        <?php
+    endif;
+    ?>
+
+    <ul id="cmob-widget-content" class="accordion">
+
+        <?php
+        $showFirst = 1;
+        if( !empty($helpItem->helpItems) ) :
+
+            foreach($helpItem->helpItems as $itemId => $item) :
+                ?>
+                <li class="first">
+
+                    <?php if( !empty($item->url) ) : ?>
+
+                        <a href="<?php echo $item->url; ?>" target="_blank" class="cmob-external-link-inline"><?php echo $item->title; ?></a>
+
+                    <?php else: ?>
+
+                        <a class="trigger <?php echo $showFirst ? 'open' : ''; ?>" href="#"><?php echo $item->title; ?></a>
+
+                        <ul style="display: none;">
+                            <li class="<?php echo 'item-' . $itemId; ?>">
+                                <h5 class="cmob-widget-item-title">
+                                    <?php echo $item->title; ?>
+                                </h5>
+                                <?php echo $item->content; ?>
+                            </li>
+                        </ul>
+
+                    <?php endif; ?>
+
+                </li>
+                <?php
+                $showFirst = 0;
+            endforeach;
+        endif;
+        ?>
+
+    </ul> <!-- MAIN UL -->
+
+    <?php echo CMOnBoarding::getAuthorUrl(); ?>
+
+</div>

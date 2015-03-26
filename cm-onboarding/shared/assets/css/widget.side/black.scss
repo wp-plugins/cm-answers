@@ -1,0 +1,111 @@
+#cmob-widget-container-wrapper {
+  #cmob-widget-container {
+    background-color: #252525;
+  }
+
+  #cmob-widget-container * {
+    color: #ffffff;
+  }
+
+  #cmob-widget-container input {
+    color: #252525;
+  }
+
+  #cmob-widget-container .cmob-btn-close {
+    background: url(../../images/btn-close-dark.png) no-repeat; }
+
+  #cmob-widget-container #cmob-widget-content::-webkit-scrollbar {
+    border: 1px solid #555555; }
+
+  #cmob-widget-container #cmob-widget-content::-webkit-scrollbar-button:start {
+    background: url(../../images/scroll_up.png) no-repeat center;
+    border: 1px solid #555555; }
+
+  #cmob-widget-container #cmob-widget-content::-webkit-scrollbar-button:end {
+    background: url(../../images/scroll_down.png) no-repeat center;
+    border: 1px solid #555555; }
+
+  #cmob-widget-container #cmob-widget-content::-webkit-scrollbar-thumb {
+    background: #555555; }
+
+  #cmob-widget-container .widget-title {
+    color: #ffffff; }
+
+  #cmob-widget-container .cmob-btn-open {
+    background-color: #252525; }
+
+  ul li {
+    color: #fff; }
+
+  ul li a {
+    color: #fff; }
+
+  ul li span {
+    color: #b0b0b0; }
+
+  /* Template specific */
+
+  #cmob-widget-container #cmob-widget-content{
+    width: 60%;
+    margin: 1%;
+    float: left;
+    box-sizing: border-box;
+  }
+
+  .cmob-widget-content > ul {
+    display: none;
+  }
+
+  .cmob-widget-content > ul.show {
+    display: block;
+  }
+
+  .cmob-widget-nav {
+    width: 38%;
+    background-color: #464646;
+    margin-top: 0;
+    padding-top: 35px;
+    box-sizing: border-box;
+    float: left;
+  }
+
+  .cmob-widget-nav li {
+    height: auto;
+    line-height: 15px;
+    font-size: 12px;
+    padding: 12px;
+    box-sizing: border-box; }
+
+  .cmob-widget-nav li.header {
+    font-size: 13px;
+    text-align: center;
+    color: #fff;
+    padding: 0;
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+    top: -10px; }
+  .cmob-widget-nav li.header h5 {
+    font-size: 14px;
+    font-weight: normal; }
+  .cmob-widget-nav li.header:hover {
+    background-color: transparent; }
+  .cmob-widget-nav li:hover {
+    background-color: #252525;
+    cursor: pointer;
+    color: #fff; }
+  .cmob-widget-nav li.active {
+    background-color: #252525; }
+  .cmob-widget-nav li ul li {
+    padding: 0;
+    font-size: 12px;
+    line-height: 12px; }
+  .cmob-widget-nav li ul.list {
+    position: relative;
+    left: 0;
+    top: 0; }
+  .cmob-widget-nav li ul.list li {
+    line-height: 12px;
+    padding: 6px 18px;
+    margin: 2px 0; }
+}

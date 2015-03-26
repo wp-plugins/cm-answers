@@ -1,0 +1,160 @@
+.my_meta_control {
+}
+.my_meta_control .description {
+    display: none;
+}
+.my_meta_control label {
+    display: block;
+    font-weight: bold;
+    margin: 6px;
+    margin-bottom: 0;
+    margin-top: 12px;
+}
+.my_meta_control label span {
+    display: inline;
+    font-weight: normal;
+}
+.my_meta_control span {
+    color: #999;
+}
+.my_meta_control textarea,
+.my_meta_control input[type='text'] {
+    margin-bottom: 3px;
+    width: 99%;
+}
+.my_meta_control h4 {
+    color: #999;
+    font-size: 1em;
+    margin: 15px 6px;
+    text-transform: uppercase;
+}
+.my_meta_control .hidden {
+    display: none;
+}
+.my_meta_control .warning {
+    color: red;
+}
+.my_meta_control .dodelete-repeating_textareas {
+    float: right;
+}
+.my_meta_control .wpa_loop {
+    clear: both;
+    margin-top: 1.625em;
+}
+.my_meta_control .wpa_loop .wpa_group {
+    border: 1px solid #DFDFDF;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+    margin: 6px 0px 8px;
+    overflow: hidden;
+    position: relative;
+    background: white;
+}
+.my_meta_control .connectedSortable {
+    clear: both;
+    border: 1px solid #DFDFDF;
+    margin: 0.3em;
+    padding: 0.3em;
+}
+.my_meta_control .connectedSortable .wpa_group {
+    border: 1px solid #DFDFDF;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+    margin: 6px 0px 8px;
+    overflow: hidden;
+    position: relative;
+    background: white;
+}
+.my_meta_control .wpa_loop .wpa_group .handle {
+    min-height: 20px;
+}
+
+#wpa_loop-cm-help-item-group h3.handle {
+    font-size: 16pt;
+}
+.my_meta_control .wpa_loop .wpa_group .group-control {
+    float: right;
+    width: 27px;
+    height: 30px;
+    color: #aaa;
+}
+.my_meta_control .wpa_loop .wpa_group .group-control::after {
+    right: 12px;
+    font: 400 20px/1 dashicons;
+    speak: none;
+    display: inline-block;
+    padding: 8px 10px;
+    top: 0;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-decoration: none!important;
+    content: '\f142';
+}
+.my_meta_control .wpa_loop .wpa_group .group-control.dodelete {
+    float: right;
+}
+.my_meta_control .wpa_loop .wpa_group .group-control.dodelete::after {
+    content: '\f335';
+}
+.my_meta_control .wpa_loop .wpa_group .group-control.toggle::after {
+    content: '\f140';
+}
+.my_meta_control .wpa_loop .wpa_group .group-inside {
+    padding: 1em;
+    overflow: hidden;
+}
+.my_meta_control .icon {
+    display: inline-block;
+}
+.my_meta_control .icon::before,
+.my_meta_control .icon::after {
+    font: 400 16px/1 dashicons;
+    vertical-align: middle;
+    speak: none;
+    display: inline-block;
+}
+.my_meta_control .icon.delete::before {
+    content: "\f335";
+}
+.my_meta_control .icon.add::before {
+    content: "\f132";
+}
+.my_meta_control .icon.change::before {
+    content: "\f463";
+}
+.my_meta_control .customEditor {
+    margin: 15px 0px;
+}
+.my_meta_control .customEditor > .mce-container {
+    border: 1px solid #dedede;
+    clear: both;
+}
+.js .my_meta_control {
+    /*
+           * Repeating Groups
+           */
+}
+.js .my_meta_control .warning {
+    display: none;
+}
+.js .my_meta_control .html-active .mce-container,
+.js .my_meta_control .tmce-active .wp-editor-area {
+    display: none;
+}
+.js .my_meta_control .group-wrap.closed .group-inside {
+    display: none;
+}
+.js .my_meta_control .group-control {
+    cursor: pointer;
+}
+.js .my_meta_control .togglebutton {
+    cursor: pointer;
+}
+.js .my_meta_control .togglewrap {
+    display: none;
+}
+
+.connectedSortable{
+    min-height: 20px;
+}

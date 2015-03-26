@@ -1,0 +1,27 @@
+<?php
+$labelsByCategories = CMOB_Labels::getLabelsByCategories();
+
+foreach($labelsByCategories as $category => $labels):
+    ?>
+    <table>
+        <caption><?php echo (empty($category) ? 'Other' : $category); ?></caption>
+        <?php
+        foreach($labels as $key):
+
+            if( $default = CMOB_Labels::getDefaultLabel($key) ) :
+                ?>
+
+                <tr valign="top">
+                    <th scope="row" valign="middle" align="left" >"<?php echo esc_html($default) ?>" label:</th>
+                    <td>
+                        <input type="text" size="60" name="label_<?php echo esc_attr($key); ?>"
+                                value="<?php echo esc_attr(CMOB_Labels::getLabel($key)); ?>"
+                                placeholder="<?php echo esc_attr($default) ?>"/>
+                    </td>
+                    <td><?php echo CMOB_Labels::getDescription($key); ?></td>
+                </tr>
+
+        <?php endif; ?>
+        <?php endforeach; ?>
+    </table>
+    <?php endforeach; ?>
