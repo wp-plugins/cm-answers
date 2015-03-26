@@ -1,0 +1,115 @@
+
+<div id="cmob-widget-container">
+
+    <a href="#" class="cmob-btn-open"></a>
+
+    <div class="cmob-btn-close"></div>
+
+    <?php
+    /*
+     * Title
+     */
+    $showTitle = CMOB_Settings::getOption(CMOB_Settings::OPTION_WIDGET_SHOWTITLE);
+
+    if( !empty($showTitle) ) :
+        ?>
+        <div class="cmob-widget-title"><?php echo $helpItem->title; ?></div>
+        <?php
+    endif;
+    ?>
+
+    <?php
+    /*
+     * Header
+     */
+    if( !empty($helpItem->header) ) :
+        ?>
+
+        <div class="cmob-widget-header">
+            <?php
+            echo $helpItem->header;
+            ?>
+        </div>
+
+        <?php
+    endif;
+    ?>
+
+    <?php
+    /*
+     * Search
+     */
+    $showSearch = CMOB_Settings::getOption(CMOB_Settings::OPTION_WIDGET_SHOWSEARCH);
+
+    if( !empty($showSearch) ) :
+        ?>
+
+        <div class="cmob-widget-search">
+            <label><?php echo CMOB_Labels::getLocalized('search_label'); ?></label>
+            <input type="search" id="cmob-search" name="cmob-search" placeholder="<?php echo CMOB_Labels::getLocalized('search_placeholder');?>" />
+        </div>
+
+        <?php
+    endif;
+    ?>
+
+    <?php if( !empty($helpItem->helpItems) ) : ?>
+        <select name="select">
+            <?php
+            foreach($helpItem->helpItems as $itemId => $item) :
+
+                $data = '';
+                $class = '';
+                if( !empty($item->url) )
+                {
+                    $data = 'data-url="' . $item->url . '"';
+                    $class = 'class="cmob-external-link"';
+                }
+                ?>
+
+                <option id="<?php echo 'item-' . $itemId; ?>" <?php echo $data; echo $class; ?> ><?php echo $item->title ?></option>
+                <?php
+            endforeach;
+        endif;
+        ?>
+    </select>
+
+    <div class="cmob-widget-content" id="cmob-widget-content">
+
+        <?php
+        $showFirst = 1;
+        foreach($helpItem->helpItems as $itemId => $item) :
+            ?>
+            <ul class="<?php echo 'item-' . $itemId; ?> <?php echo $showFirst ? 'show' : ''; ?>">
+                <li>
+                    <h5 class="cmob-widget-item-title">
+                        <?php echo $item->title; ?>
+                    </h5>
+                    <?php echo $item->content; ?>
+                </li>
+            </ul>
+            <?php
+            $showFirst = 0;
+        endforeach;
+        ?>
+
+    </div>
+
+    <?php
+    /*
+     * Footer
+     */
+    if( !empty($helpItem->footer) ) :
+        ?>
+
+        <div class="cmob-widget-footer">
+            <?php
+            echo $helpItem->footer;
+            ?>
+        </div>
+
+        <?php
+    endif;
+    ?>
+
+</div>
