@@ -1,0 +1,52 @@
+<table class="cma-thread-list">
+    <?php foreach($questions as $thread): ?>
+        <tr>
+            <?php if( CMA_AnswerThread::isRatingAllowed() ): ?>
+                <td class="cma-thread-meta">
+                    <div class="cma-thread-numbers cma-thread-votes">
+                        <div class="cma-thread-numbers-count cma-thread-votes-count"><?php
+                            $votes = $thread->getVotes();
+                            echo $votes;
+                            ?>
+                        </div>
+                        <div class="cma-thread-numbers-caption cma-thread-votes-caption"><?php _n('vote', 'votes', $votes, 'cm-answers'); ?>
+                        </div>
+                    </div>
+                </td>
+            <?php endif; ?>
+            <td class="cma-thread-meta">
+                <div class="cma-thread-numbers cma-thread-views">
+                    <div class="cma-thread-numbers-count cma-thread-views-count"><?php
+                        $views = $thread->getViews();
+                        echo $views;
+                        ?>
+                    </div>
+                    <div class="cma-thread-numbers-caption cma-thread-views-caption"><?php _n('view', 'views', $views, 'cm-answers'); ?>
+                    </div>
+                </div>
+            </td>
+            <?php $numberOfAnswers = $thread->getNumberOfAnswers(); ?>
+            <td class="cma-thread-meta">
+                <div class="cma-thread-numbers cma-thread-answers<?php if( $numberOfAnswers == 0 ): ?> cma-thread-no-answers<?php endif; ?>">
+                    <div class="cma-thread-numbers-count cma-thread-answers-count">
+                        <?php echo $numberOfAnswers; ?>
+                    </div>
+                    <div class="cma-thread-numbers-caption cma-thread-answers-caption">
+                        <?php _n('answer', 'answers', $numberOfAnswers, 'cm-answers'); ?>
+                    </div>
+                </div>
+            </td>
+            <?php if( !CMA_AnswerThread::isQuestionAutoApproved() ): ?>
+                <td class="cma-thread-meta">
+                    <?php echo $thread->getStatus(); ?>
+                </td><?php endif; ?>
+            <td class="cma-thread-summary">
+                <div class="cma-thread-title">
+                    <a href="<?php echo esc_attr(get_permalink($thread->getId())); ?>"><?php echo $thread->getTitle(); ?></a>
+                </div>
+                <div class="cma-thread-updated"><?php printf(__('updated %s by %s', 'cm-answers'), CMA_AnswerThread::renderDaysAgo($thread->getUnixUpdated()), $thread->getLastPosterName()); ?>
+                </div>
+            </td>
+        </tr>
+    <?php endforeach; ?>
+</table>
