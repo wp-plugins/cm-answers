@@ -1,0 +1,704 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: CM Answers v1.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-07-16 14:10+0100\n"
+"PO-Revision-Date: 2013-09-14 18:13+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-Basepath: ../\n"
+"X-Textdomain-Support: yes\n"
+"X-Poedit-SearchPath-0: .\n"
+
+# @ default
+#: cm-answers.php:29
+#, php-format
+msgid ""
+"We are sorry, but you need to have at least PHP 5.3 to run this plugin "
+"(currently installed version: %s) - please upgrade or contact your system "
+"administrator."
+msgstr ""
+"Ho sentim però és necesari tenir almenys PHP 5.3 per fer servir aquest "
+"plugin (actualment te instalat la versió %s). Actualitza o contacta el teu "
+"adminstrador. "
+
+# @ cm-answers
+#: lib/controllers/AnswerController.php:18
+msgid "CM Answers Sidebar"
+msgstr "Barra Lateral CM Answers"
+
+# @ cm-answers
+#: lib/controllers/AnswerController.php:19
+msgid "This sidebar is shown on CM Answers pages"
+msgstr "Aquesta barra lateral es mostra a CM Answers page"
+
+# @ cm-answers
+#: lib/controllers/AnswerController.php:34
+#: lib/controllers/AnswerController.php:42 lib/models/AnswerThread.php:82
+msgid "Question"
+msgstr "Pregunta"
+
+# @ default
+#: lib/controllers/AnswerController.php:34
+#, php-format
+msgid "\"%s\" has been succesfully approved"
+msgstr "\"%s\" ha estat aprovada correctament"
+
+# @ default
+#: lib/controllers/AnswerController.php:42
+#, php-format
+msgid "\"%s\" has been succesfully moved to trash"
+msgstr "\"%s\" s'ha mogut a la paperara correctament"
+
+# @ cm-answers
+#: lib/controllers/AnswerController.php:115
+msgid "Your answer has been succesfully added."
+msgstr "La teva resposta s'ha afegit correctament."
+
+# @ cm-answers
+#: lib/controllers/AnswerController.php:119
+msgid "Thank you for your answer, it has been held for moderation."
+msgstr "Gràcies, la teva resposta està pendent de moderació."
+
+# @ cm-answers
+#: lib/controllers/AnswerController.php:165
+msgid "New question has been succesfully added."
+msgstr "La nova pregunta s'ha afegit correctament."
+
+# @ cm-answers
+#: lib/controllers/AnswerController.php:168
+msgid "Thank you for your question, it has been held for moderation."
+msgstr "Gràcies, la teva pregunta està pendent de moderació."
+
+# @ cm-answers
+#: lib/controllers/AnswerController.php:187
+msgid "There was an error while processing your vote"
+msgstr "Hi ha hagut un error."
+
+# @ cm-answers
+#: lib/controllers/AnswerController.php:191
+msgid "You have to be logged-in to vote"
+msgstr ""
+"Has d'iniciar sessió amb el teu compte per votar. Si no disposes de cap "
+"compte també et pots registrar."
+
+# @ cm-answers
+#: lib/controllers/AnswerController.php:200
+msgid "You have already voted for this comment"
+msgstr "Ja havies votat aquest comentari."
+
+# @ cm-answers
+#: lib/controllers/AnswerController.php:238 lib/models/AnswerThread.php:430
+msgid "Author"
+msgstr "Autor"
+
+# @ cm-answers
+#: lib/controllers/AnswerController.php:239
+msgid "Views"
+msgstr "Visites"
+
+# @ cm-answers
+#: lib/controllers/AnswerController.php:240
+msgid "Status"
+msgstr "Estat"
+
+# @ cm-answers
+#: lib/controllers/AnswerController.php:241 lib/models/AnswerThread.php:122
+#: lib/models/AnswerThread.php:123
+msgid "Answers"
+msgstr "Respostes"
+
+# @ cm-answers
+#: lib/controllers/AnswerController.php:258 lib/models/AnswerThread.php:168
+msgid "pending"
+msgstr "pendent"
+
+# @ cm-answers
+#: lib/controllers/AnswerController.php:260
+msgid "Approve"
+msgstr "Aprovar"
+
+# @ cm-answers
+#: lib/controllers/BaseController.php:467
+msgid "CM Answers Settings"
+msgstr "Ajustos"
+
+# @ cm-answers
+#: lib/controllers/BaseController.php:467
+msgid "Settings"
+msgstr "Ajustos"
+
+# @ cm-answers
+#: lib/controllers/BaseController.php:468
+msgid "About"
+msgstr "Sobre"
+
+#: lib/controllers/BaseController.php:469
+msgid "Pro Version"
+msgstr "Pro Version"
+
+# @ cm-answers
+#: lib/controllers/BaseController.php:480
+msgid "Settings succesfully updated"
+msgstr "Configuració actualizada correctament"
+
+# @ cm-answers
+#: lib/controllers/BaseController.php:560
+msgid "Filter by status"
+msgstr "Filtrar por estat"
+
+# @ cm-answers
+#: lib/controllers/BaseController.php:562
+msgid "Approved"
+msgstr "Aprovat"
+
+# @ cm-answers
+#: lib/controllers/BaseController.php:564
+msgid "Pending"
+msgstr "Pendent"
+
+# @ cm-answers
+#: lib/controllers/BaseController.php:566
+msgid "Trash"
+msgstr "Paperera"
+
+# @ cm-answers
+#: lib/models/AnswerThread.php:120
+#: views/frontend/answer/meta/menu-item.phtml:1
+msgid "Questions"
+msgstr "Preguntes"
+
+# @ cm-answers
+#: lib/models/AnswerThread.php:125 lib/models/AnswerThread.php:126
+msgid "Add New"
+msgstr "Afegir nova"
+
+# @ cm-answers
+#: lib/models/AnswerThread.php:169
+msgid "approved"
+msgstr "aprovat"
+
+# @ cm-answers
+#: lib/models/AnswerThread.php:238
+msgid "RESOLVED"
+msgstr "RESOLT"
+
+# @ cm-answers
+#: lib/models/AnswerThread.php:380
+msgid "Title cannot be empty"
+msgstr "El títol no pot estar buit."
+
+# @ cm-answers
+#: lib/models/AnswerThread.php:382 lib/models/AnswerThread.php:529
+msgid "Content cannot be empty"
+msgstr "El contingut no pot estar buit."
+
+# @ cm-answers
+#: lib/models/AnswerThread.php:425
+msgid "Please moderate"
+msgstr "Moderar siusplau."
+
+# @ cm-answers
+#: lib/models/AnswerThread.php:427
+msgid "A new question has been asked and is waiting for your approval"
+msgstr "Una nova pregunta s'ha formulat i està pendent de moderació."
+
+# @ cm-answers
+#: lib/models/AnswerThread.php:431
+msgid "E-mail"
+msgstr "Email"
+
+# @ cm-answers
+#: lib/models/AnswerThread.php:433
+msgid "Title"
+msgstr "Títol"
+
+# @ cm-answers
+#: lib/models/AnswerThread.php:434
+msgid "Content"
+msgstr "Contingut"
+
+# @ cm-answers
+#: lib/models/AnswerThread.php:439
+msgid "Approve it"
+msgstr "Aprovar"
+
+# @ cm-answers
+#: lib/models/AnswerThread.php:441
+msgid "Trash it"
+msgstr "Enviar a la paperera"
+
+# @ cm-answers
+#: lib/models/AnswerThread.php:443
+msgid "Please visit the questions moderation panel"
+msgstr "Por favor, visite el panel de moderación preguntas"
+
+#: lib/models/AnswerThread.php:646
+msgid "some time ago"
+msgstr "fa una estona"
+
+# @ cm-answers
+#: lib/models/AnswerThread.php:649
+#, php-format
+msgid "1 second ago"
+msgid_plural "%d seconds ago"
+msgstr[0] "fa 1 segon"
+msgstr[1] "fa %d segons"
+
+# @ cm-answers
+#: lib/models/AnswerThread.php:654
+#, php-format
+msgid "1 minute ago"
+msgid_plural "%d minutes ago"
+msgstr[0] "fa 1 minut"
+msgstr[1] "fa %d minuts"
+
+# @ cm-answers
+#: lib/models/AnswerThread.php:659
+#, php-format
+msgid "1 hour ago"
+msgid_plural "%d hours ago"
+msgstr[0] "fa 1 hora"
+msgstr[1] "fa %d hores"
+
+# @ cm-answers
+#: lib/models/AnswerThread.php:664
+#, php-format
+msgid "1 day ago"
+msgid_plural "%d days ago"
+msgstr[0] "ahir"
+msgstr[1] "fa %d dies"
+
+# @ cm-answers
+#: lib/models/AnswerThread.php:669
+#, php-format
+msgid "1 week ago"
+msgid_plural "%d weeks ago"
+msgstr[0] "fa 1 setmana"
+msgstr[1] "fa %d setmanes"
+
+# @ cm-answers
+#: lib/models/AnswerThread.php:674
+#, php-format
+msgid "1 month ago"
+msgid_plural "%d months ago"
+msgstr[0] "fa 1 mes"
+msgstr[1] "fa %d mesos"
+
+# @ cm-answers
+#: lib/models/AnswerThread.php:679
+#, php-format
+msgid "1 year ago"
+msgid_plural "%d years ago"
+msgstr[0] "fa 1 any"
+msgstr[1] "fa %d anys"
+
+# @ cm-answers
+#: lib/models/PostType.php:64
+#, php-format
+msgid "Add %s"
+msgstr "Afegir %s"
+
+# @ cm-answers
+#: lib/models/PostType.php:65
+#, php-format
+msgid "Add New %s"
+msgstr "Afegir nou %s"
+
+# @ cm-answers
+#: lib/models/PostType.php:66
+#, php-format
+msgid "Edit %s"
+msgstr "Editar %s"
+
+# @ cm-answers
+#: lib/models/PostType.php:67
+#, php-format
+msgid "New %s"
+msgstr "Nou %s"
+
+# @ cm-answers
+#: lib/models/PostType.php:69
+#, php-format
+msgid "View %s"
+msgstr "Veure %s"
+
+# @ cm-answers
+#: lib/models/PostType.php:70
+#, php-format
+msgid "Search %s"
+msgstr "Buscar %s"
+
+# @ cm-answers
+#: lib/models/PostType.php:71
+#, php-format
+msgid "No %s found"
+msgstr "No s'ha trobat %s"
+
+# @ cm-answers
+#: lib/models/PostType.php:72
+#, php-format
+msgid "No %s found in Trash"
+msgstr "No s'ha trobat %s a la Paperera"
+
+# @ cm-answers
+#: views/backend/settings.phtml:24
+msgid "General Settings"
+msgstr "Configuració general"
+
+# @ cm-answers
+#: views/backend/settings.phtml:25
+msgid ""
+"You can add \"My Questions\" and \"My Answers\" profile views per user "
+"anywhere on the site by using shortcodes: [cma-my-questions] and [cma-my-"
+"answers]"
+msgstr ""
+"Pots afegir \"Mis preguntas \" y \"Mis respuestas \" vistas de perfil por "
+"usuario en cualquier parte del sitio usando de códigos cortos: [cma-my-"
+"questions] y [cma-my-answers]"
+
+# @ cm-answers
+#: views/backend/settings.phtml:26
+msgid "Link to questions frontend list"
+msgstr "Enllaç a la llista de preguntes a la part de davant"
+
+# @ cm-answers
+#: views/backend/settings.phtml:29 views/backend/settings.phtml:30
+msgid "Questions listing title"
+msgstr "Títol de la pregunta"
+
+# @ cm-answers
+#: views/backend/settings.phtml:34
+msgid "Enable ratings for answers"
+msgstr "Habilitar qualificacions per les respostes"
+
+# @ cm-answers
+#: views/backend/settings.phtml:36 views/backend/settings.phtml:43
+#: views/backend/settings.phtml:59 views/backend/settings.phtml:66
+#: views/backend/settings.phtml:87
+msgid "No"
+msgstr "No"
+
+# @ cm-answers
+#: views/backend/settings.phtml:37 views/backend/settings.phtml:44
+#: views/backend/settings.phtml:60 views/backend/settings.phtml:67
+#: views/backend/settings.phtml:88
+msgid "Yes"
+msgstr "Sí"
+
+# @ cm-answers
+#: views/backend/settings.phtml:38
+msgid "If enabled, users will be able to rate answers"
+msgstr "Si està habilitat els usuaris podran votar les respostes"
+
+# @ cm-answers
+#: views/backend/settings.phtml:41
+msgid "Enable negative ratings"
+msgstr "Habilitar qualificacions negatives"
+
+# @ cm-answers
+#: views/backend/settings.phtml:45
+msgid ""
+"If enabled, users will be able to give \"thumbs down\" for an answer. If "
+"previous settings is disabled, this will be ignored."
+msgstr ""
+"Si està habilitat els usuaris podran  \"votar positivament\" per una "
+"resposta. Si els ajustos anteriors es desactiven, serà ignorat."
+
+# @ cm-answers
+#: views/backend/settings.phtml:48
+msgid "On questions list in \"votes\" box show"
+msgstr "En la llista de preguntes a \"vots\" mostrar caixa."
+
+# @ cm-answers
+#: views/backend/settings.phtml:50
+msgid "Total number of votes of its answers"
+msgstr "Nombre total de vosts per les respostes"
+
+# @ cm-answers
+#: views/backend/settings.phtml:52
+msgid "Rating of the best answer"
+msgstr "Qualificació de les millor resposta"
+
+# @ cm-answers
+#: views/backend/settings.phtml:53
+msgid "If ratings are disabled, this setting will be ignored."
+msgstr ""
+"Si les qualificacions són deshabilitades, aquestes configuracions seran "
+"ignorades."
+
+# @ cm-answers
+#: views/backend/settings.phtml:57
+msgid "Auto-approve new questions"
+msgstr "Auto-aprobar preguntes noves."
+
+# @ cm-answers
+#: views/backend/settings.phtml:64
+msgid "Auto-approve answers"
+msgstr "Auto-aprovar respostes."
+
+# @ cm-answers
+#: views/backend/settings.phtml:85
+msgid "Add \"Answers\" to WP Nav Menu"
+msgstr "Afegir \"Respuestes\" al Menú de Navegació WP"
+
+# @ cm-answers
+#: views/backend/settings.phtml:89
+msgid "You need to have \"wp_nav_menu\" trigger in your template"
+msgstr "Necessites tenir \"wp_nav_menu\" posat a la seva plantilla."
+
+# @ cm-answers
+#: views/backend/settings.phtml:92
+msgid "Notifications"
+msgstr "Notificacions"
+
+# @ cm-answers
+#: views/backend/settings.phtml:95
+msgid "Notify about new questions"
+msgstr "Avisar-me de noves preguntes"
+
+# @ cm-answers
+#: views/backend/settings.phtml:96
+msgid "Example"
+msgstr "Exemple"
+
+# @ cm-answers
+#: views/backend/settings.phtml:97
+msgid "Separate e-mail addresses by commas or leave empty to disable."
+msgstr "Separi els emails per comes o deixa-ho buit per deshabilitar-ho."
+
+# @ cm-answers
+#: views/backend/settings.phtml:100
+msgid "New question notification title"
+msgstr "Nuevo título de notificación de la pregunta"
+
+# @ cm-answers
+#: views/backend/settings.phtml:105
+msgid "New question notification content"
+msgstr "Nou contingut "
+
+# @ cm-answers
+#: views/backend/settings.phtml:107 views/backend/settings.phtml:121
+msgid "Name of the site"
+msgstr "Nom del lloc."
+
+# @ cm-answers
+#: views/backend/settings.phtml:108
+msgid "Author of the question"
+msgstr "Autor de la pregunta"
+
+# @ cm-answers
+#: views/backend/settings.phtml:109 views/backend/settings.phtml:122
+msgid "Title of the question"
+msgstr "Títul de la pregunta"
+
+# @ cm-answers
+#: views/backend/settings.phtml:110
+msgid "Approval status of the question (pending, approved)"
+msgstr "Estat d'aprovació de la pregunta (pendent, aprovat)"
+
+# @ cm-answers
+#: views/backend/settings.phtml:111
+msgid "Link to the new question"
+msgstr "Enllaç a la nova pregunta"
+
+# @ cm-answers
+#: views/backend/settings.phtml:114
+msgid "New answer notification title"
+msgstr "Nou títol de notificació"
+
+# @ cm-answers
+#: views/backend/settings.phtml:119
+msgid "New answer notification content"
+msgstr "Contenido de la notificación de la nueva respuesta"
+
+# @ cm-answers
+#: views/backend/settings.phtml:123
+msgid "Link to the new answer"
+msgstr "Enllaç a la nova resposta"
+
+# @ cm-answers
+#: views/backend/settings.phtml:127
+msgid "Update"
+msgstr "Actualitzar"
+
+# @ cm-answers
+#: views/frontend/error.phtml:8
+msgid "Go back to previous page"
+msgstr "Pàgina anterior"
+
+# @ cm-answers
+#: views/frontend/answer/index.phtml:8
+msgid "All Questions"
+msgstr "Totes les preguntes"
+
+# @ cm-answers
+#: views/frontend/answer/index.phtml:18 views/frontend/answer/single.phtml:55
+msgid "Newest"
+msgstr "Les més recents"
+
+# @ cm-answers
+#: views/frontend/answer/index.phtml:19
+msgid "Hottest"
+msgstr "Les més contestades"
+
+# @ cm-answers
+#: views/frontend/answer/index.phtml:20
+msgid "Most votes"
+msgstr "Les més votades"
+
+# @ cm-answers
+#: views/frontend/answer/index.phtml:21
+msgid "Most views"
+msgstr "Les més vistes"
+
+# @ cm-answers
+#: views/frontend/answer/index.phtml:36
+#: views/frontend/answer/widget/my-answers.phtml:7
+#: views/frontend/answer/widget/my-questions.phtml:7
+msgid "vote"
+msgstr "votar"
+
+# @ cm-answers
+#: views/frontend/answer/index.phtml:36
+#: views/frontend/answer/widget/my-answers.phtml:7
+msgid "votes"
+msgstr "vots"
+
+# @ cm-answers
+#: views/frontend/answer/index.phtml:38
+#: views/frontend/answer/widget/my-questions.phtml:9
+msgid "view"
+msgstr "visita"
+
+# @ cm-answers
+#: views/frontend/answer/index.phtml:38
+msgid "views"
+msgstr "visites"
+
+# @ cm-answers
+#: views/frontend/answer/index.phtml:40
+#: views/frontend/answer/widget/my-questions.phtml:11
+msgid "answer"
+msgstr "resposta"
+
+# @ cm-answers
+#: views/frontend/answer/index.phtml:40
+msgid "answers"
+msgstr "respostes"
+
+# @ cm-answers
+#: views/frontend/answer/index.phtml:44
+#: views/frontend/answer/widget/my-questions.phtml:19
+#, php-format
+msgid "updated %s by %s"
+msgstr "%s actualitzat per %s"
+
+# @ cm-answers
+#: views/frontend/answer/index.phtml:65
+msgid "Ask a Question"
+msgstr "Fes una pregunta"
+
+# @ cm-answers
+#: views/frontend/answer/index.phtml:68 views/frontend/answer/single.phtml:95
+msgid "Allow markup"
+msgstr "Marcatge permès"
+
+# @ cm-answers
+#: views/frontend/answer/index.phtml:69 views/frontend/answer/single.phtml:96
+msgid "Wrap your code using"
+msgstr "Pots embolicar el codi amb"
+
+# @ cm-answers
+#: views/frontend/answer/index.phtml:71
+msgid "Question Title"
+msgstr "Títol de la pregunta"
+
+# @ cm-answers
+#: views/frontend/answer/index.phtml:72
+msgid "What is your Question about?"
+msgstr "Quina és la teva pregunta?"
+
+# @ cm-answers
+#: views/frontend/answer/index.phtml:76 views/frontend/answer/single.phtml:103
+msgid "Notify me of follow"
+msgstr "Avisam quan hi hagi noves respostes"
+
+# @ cm-answers
+#: views/frontend/answer/index.phtml:78
+msgid "Add Question"
+msgstr "Afegir pregunta"
+
+# @ cm-answers
+#: views/frontend/answer/single.phtml:9
+msgid "Back to Questions List"
+msgstr "Tornar a la llista de preguntes"
+
+# @ cm-answers
+#: views/frontend/answer/single.phtml:28
+msgid "Thank you for voting!"
+msgstr "Gràcies per votar!"
+
+# @ cm-answers
+#: views/frontend/answer/single.phtml:42 views/frontend/answer/single.phtml:77
+#, php-format
+msgid "Posted by %s"
+msgstr "Publicat per %s"
+
+# @ cm-answers
+#: views/frontend/answer/single.phtml:43
+#, php-format
+msgid "Asked on %s"
+msgstr "Preguntat el %s"
+
+# @ cm-answers
+#: views/frontend/answer/single.phtml:56
+msgid "Highest Rating"
+msgstr "Puntuació més alta"
+
+# @ cm-answers
+#: views/frontend/answer/single.phtml:65
+msgid "Thumbs Up!"
+msgstr "Vot positiu"
+
+# @ cm-answers
+#: views/frontend/answer/single.phtml:67
+msgid "Thumbs Down!"
+msgstr "Vot negatiu"
+
+# @ cm-answers
+#: views/frontend/answer/single.phtml:78
+#, php-format
+msgid "Answered On %s"
+msgstr "Respost als %s"
+
+# @ cm-answers
+#: views/frontend/answer/single.phtml:92
+#: views/frontend/answer/single.phtml:109
+msgid "Post your Answer"
+msgstr "Deixa la teva resposta"
+
+# @ cm-answers
+#: views/frontend/answer/single.phtml:99
+msgid "Write your Answer here"
+msgstr "Escriu la teva resposta aquí"
+
+# @ cm-answers
+#: views/frontend/answer/single.phtml:107
+msgid "Mark as resolved"
+msgstr "Marcar com a resolt"
+
+# @ cm-answers
+#: views/frontend/answer/widget/my-answers.phtml:16
+#, php-format
+msgid "posted %s in reply to %s"
+msgstr "publicat %s en resposta a %s"
