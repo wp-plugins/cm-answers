@@ -1,0 +1,68 @@
+#tabs {clear: right;}
+#settings {margin: 1em 0;}
+#settings .inner {background: white; border: solid 1px #cccccc; border-top: none; border-radius: 5px; padding: 20px 20px 20px 20px; z-index: 99; position: relative;}
+#settings table {border-spacing:0; width: 100%;}
+#settings tr td, #settings tr th {padding: 15px; border-bottom: solid 1px #f0f0f0; width: 30%; font-size: 14px !important;}
+#settings tr th[colspan] {width: 100% !important;}
+#settings table td input[type=text] {width: 90%; min-width: 100px; max-width: 300px;}
+#settings table th {padding-left: 20px; font-weight: normal; text-align: right; vertical-align: top; padding: 15px;}
+#settings table td {vertical-align: top;}
+#settings caption {color: #333333; font-weight: bold; font-size: 120%; padding: 2em 0 0.2em 0; text-align: left; border-bottom: solid 1px #f0f0f0;}
+#settings tr:last-child td, #settings tr:last-child th {border-bottom: none}
+#settings label {margin-right: 2em;}
+#settings .multiline label {display: block; margin-right: 0 !important;}
+textarea.cma-custom-css {min-width: 300px; max-width: 840px; width: 70%; height: 200px;}
+#settings .tg-table-plain td, #settings .tg-table-plain th { border: 1px #555 solid; padding: 5px;border-collapse: collapse;text-align: center;vertical-align: middle; }
+#settings .tab-content ul {list-style: circle; margin: 1em 0 1em 30px;}
+#settings td ul, #settings td li {margin-top: 0 !important; padding: 0; list-style: disc;}
+.server-info-table td:nth-child(3) {}
+.server-info-table span {color: green; font-weight: bold;}
+.server-info-table strong {color: red; font-weight: bold;}
+h4 {font-weight: bold; margin: 2em 0 0.3em 0;}
+#settings .option-controls code {display: block; margin-top: 4px; line-height: 1.4em;}
+#authorsAutoApprovedResults {list-style: none; margin: 0 0 0 100px !important; margin-top: -14px; border:solid 1px #ccc; padding:5px !important; width:190px; display: none;}
+#authorsAutoApprovedResults li {list-style: none !important; margin: 0; padding: 0;}
+#authorsAutoApprovedSearch {width: 200px;}
+.cma-frontend-link {font-size: 120%;}
+.cma-warning {border: 1px solid #dddddd; border-left: 4px solid #ff9900; font-size: 90%; margin: 5px 0 15px; padding: 1px 12px;}
+.cma-warning p {margin: .5em 0; padding: 2px;}
+#settings .form-finalize input {font-size: 18px; padding-left: 1em; padding-right: 1em; font-weight: bold;}
+.ac_results {
+	padding: 0.3em;
+	margin: 0;
+	list-style: none;
+	position: absolute;
+	z-index: 100;
+	display: none;
+	border-width: 1px;
+	border-style: solid;
+	background: white;
+}
+
+.cma-shortcodes {display: none;}
+
+.ac_results li {
+	padding: 2px 5px;
+	white-space: nowrap;
+	text-align: left;
+}
+
+.ac_over {
+	cursor: pointer;
+}
+
+.ac_match {
+	text-decoration: underline;
+}
+
+.cma-settings-tabs, .cma-settings-tabs li {list-style: none; padding: 0; margin: 0;}
+.cma-settings-tabs li, .cma-settings-tabs a {display: inline-block;}
+.cma-settings-tabs a {padding: 0.5em 1em 12px 1em; font-size: 130%; font-weight: bold; text-decoration: none; border: solid #cccccc 1px; border-bottom: none;
+	border-radius: 5px; position: relative; top: 4px; margin-right: 0.4em; z-index: 88; background: #e9e9e9; color: #666666;}
+.cma-settings-tabs a.current {color: black; background: white;}
+.settings-category {display: none;}
+.settings-category.current {display: block;}
+
+
+.cma-upgrade {display: inline-block; padding: 1em; background: white; border: solid 1px #e0e0e0; max-width: 650px; margin: 1em 0;}
+.cma-upgrade h3 {margin-top: 0;}
